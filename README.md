@@ -17,6 +17,10 @@
 | `governed-iac-reference` | Reference infrastructure-as-code with governance policy, change validation, and audit | github.com/hummbl-dev/governed-iac-reference |
 | `HUMMBL-Unified-Tier-Framework` | Cognitive curricula & wickedness assessment for HUMMBL mental models | github.com/hummbl-dev/HUMMBL-Unified-Tier-Framework |
 
+## Case Studies
+
+- [Building the HUMMBL Base120 Cognitive Framework](./case-studies/base120-claude-architecture.md) — A Claude-powered architecture for structured reasoning at scale (2+ years, 120 models, 7,700+ tests, 8-module governance package)
+
 ## Supporting references
 
 - `hummbl-bibliography`: publication list and reference library.
