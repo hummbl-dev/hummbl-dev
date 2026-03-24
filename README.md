@@ -2,7 +2,7 @@
 
 ## What this profile is today
 
-- **Structured reasoning** (Base120) → explicit execution contracts (CAES) → governed runtime (IDP tuples + governance bus) → production-grade briefing & automation (founder-mode, MCP server).
+- **Structured reasoning** (Base120) → explicit execution contracts → governed runtime (delegation tuples + governance bus) → production-grade briefing & automation (MCP server).
 - **Publication thesis**: typed governance tuples for delegation, evidence, and attestation within a HUMMBL-structured reasoning stack.
 - **Current priorities**: secure evidence-first execution, publishable standards/experiments, and reproducible assurance tooling.
 
@@ -11,9 +11,10 @@
 | Project | Purpose | Link |
 | --- | --- | --- |
 | `base120` | Authoritative Base120 reference implementation + contract validation CLI | github.com/hummbl-dev/base120 |
-| `hummbl-governance` | Governance primitives (DCT, DCTX, governance bus, circuit breaker, kill switch) | github.com/hummbl-dev/hummbl-governance |
+| `hummbl-governance` | Governance primitives (delegation tokens, governance bus, circuit breaker, kill switch) — [PyPI](https://pypi.org/project/hummbl-governance/) | github.com/hummbl-dev/hummbl-governance |
 | `mcp-server` | MCP (Model Context Protocol) server exposing Base120 mental models and skills | github.com/hummbl-dev/mcp-server |
 | `hummbl-agent` | Deterministic agent infrastructure (registry-first, policy-bounded) | github.com/hummbl-dev/hummbl-agent |
+| `hummbl-assurance` | Governance assurance — deterministic verification, contract compatibility, compliance claims | github.com/hummbl-dev/hummbl-assurance |
 | `governed-iac-reference` | Reference infrastructure-as-code with governance policy, change validation, and audit | github.com/hummbl-dev/governed-iac-reference |
 | `HUMMBL-Unified-Tier-Framework` | Cognitive curricula & wickedness assessment for HUMMBL mental models | github.com/hummbl-dev/HUMMBL-Unified-Tier-Framework |
 
