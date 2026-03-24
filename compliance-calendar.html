@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="HUMMBL Calendar">
+<meta name="theme-color" content="#0a0a0a">
+<title>AI Governance Compliance Calendar 2025-2027 | HUMMBL</title>
+<style>
+:root {
+  --bg:#0a0a0a; --bg2:#111; --bg3:#151515; --border:#222; --border2:#2a2a2a;
+  --accent:#00ff88; --accent-dim:#00cc6a; --accent-bg:rgba(0,255,136,0.08);
+  --text:#d4d4d4; --text2:#999; --text3:#666; --white:#fff;
+  --red:#ff4444; --red-bg:rgba(255,68,68,0.12); --yellow:#ffaa00; --yellow-bg:rgba(255,170,0,0.12);
+  --green:#00ff88; --green-bg:rgba(0,255,136,0.1); --blue:#4488ff; --blue-bg:rgba(68,136,255,0.12);
+  --font:-apple-system,'Helvetica Neue',system-ui,sans-serif; --mono:'Courier New','SF Mono',monospace;
+  --radius:10px; --radius-sm:6px;
+}
+@media print {
+  body { background:#fff!important; color:#1a1a1a!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .no-print { display:none!important; }
+  .timeline-entry { break-inside:avoid; page-break-inside:avoid; }
+  .entry-details { display:block!important; max-height:none!important; }
+  :root { --bg:#fff; --bg2:#f5f5f5; --bg3:#eee; --border:#ccc; --text:#1a1a1a; --text2:#555; --text3:#888; --white:#000; }
+  .stats-bar,.header,.cta-bottom { border-color:#ccc!important; }
+}
+@media(prefers-reduced-motion:reduce){ *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;} }
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;}
+
+/* Header */
+.header{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.brand{font-family:var(--mono);font-size:20px;font-weight:900;letter-spacing:3px;color:var(--accent);}
+.brand-sub{font-size:11px;color:var(--text3);margin-top:2px;}
+.header-right{display:flex;gap:10px;align-items:center;}
+.btn-pdf{background:var(--accent);color:var(--bg);border:none;padding:8px 18px;border-radius:var(--radius-sm);font-size:12px;font-weight:700;cursor:pointer;font-family:var(--mono);letter-spacing:1px;}
+.btn-pdf:hover{opacity:0.85;}
+
+/* Stats */
+.stats-bar{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--border);text-align:center;}
+.stat{padding:14px 8px;border-right:1px solid var(--border);}
+.stat:last-child{border-right:none;}
+.stat-num{font-family:var(--mono);font-size:26px;font-weight:900;color:var(--accent);line-height:1;}
+.stat-label{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-top:4px;}
+
+/* Filters */
+.filters{padding:14px 24px;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.filter-group{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+.filter-label{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-right:4px;font-weight:700;}
+.filter-btn{background:var(--bg2);color:var(--text2);border:1px solid var(--border);padding:5px 12px;border-radius:var(--radius-sm);font-size:12px;cursor:pointer;transition:all .15s;}
+.filter-btn:hover{border-color:var(--accent-dim);color:var(--text);}
+.filter-btn.active{background:var(--accent-bg);border-color:var(--accent);color:var(--accent);font-weight:600;}
+.filter-sep{width:1px;height:20px;background:var(--border);margin:0 6px;}
+
+/* Timeline */
+.timeline{padding:0 24px 24px;max-width:900px;margin:0 auto;}
+.month-marker{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:2px;padding:20px 0 8px;border-bottom:1px solid var(--border);margin-bottom:2px;}
+.timeline-entry{border-bottom:1px solid var(--border2);cursor:pointer;transition:background .15s;}
+.timeline-entry:hover{background:var(--bg2);}
+.entry-header{display:flex;align-items:center;padding:12px 0;gap:10px;}
+.entry-date{font-family:var(--mono);font-size:11px;color:var(--text3);min-width:72px;flex-shrink:0;}
+.entry-flag{font-size:16px;flex-shrink:0;}
+.entry-info{flex:1;min-width:0;}
+.entry-name{font-weight:700;font-size:14px;color:var(--white);}
+.entry-desc{font-size:12px;color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.entry-badges{display:flex;gap:6px;flex-shrink:0;align-items:center;}
+.badge{font-size:10px;font-weight:700;padding:3px 8px;border-radius:var(--radius-sm);text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;}
+.badge-red{background:var(--red-bg);color:var(--red);}
+.badge-yellow{background:var(--yellow-bg);color:var(--yellow);}
+.badge-green{background:var(--green-bg);color:var(--green);}
+.badge-blue{background:var(--blue-bg);color:var(--blue);}
+.days-badge{font-family:var(--mono);font-size:10px;color:var(--text3);min-width:50px;text-align:right;}
+
+/* Expanded details */
+.entry-details{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.entry-details.open{max-height:600px;}
+.details-inner{padding:0 0 16px;margin-left:82px;}
+.details-full{font-size:13px;color:var(--text);margin-bottom:12px;line-height:1.6;}
+.details-reqs{list-style:none;margin-bottom:12px;}
+.details-reqs li{font-size:12px;color:var(--text2);padding:3px 0;padding-left:16px;position:relative;}
+.details-reqs li::before{content:"\2023";position:absolute;left:0;color:var(--accent);}
+.details-affects{font-size:11px;color:var(--text3);margin-bottom:12px;}
+.details-affects strong{color:var(--text2);}
+.details-cta{display:inline-block;background:var(--accent);color:var(--bg);padding:6px 16px;border-radius:var(--radius-sm);font-size:12px;font-weight:700;text-decoration:none;font-family:var(--mono);}
+.details-cta:hover{opacity:0.85;}
+
+/* Bottom CTA */
+.cta-bottom{background:var(--bg2);border-top:1px solid var(--border);padding:32px 24px;text-align:center;}
+.cta-title{font-size:22px;font-weight:800;color:var(--white);margin-bottom:6px;}
+.cta-sub{font-size:13px;color:var(--text2);margin-bottom:16px;max-width:520px;margin-left:auto;margin-right:auto;}
+.cta-contact{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;}
+.cta-item{display:flex;flex-direction:column;align-items:center;font-size:12px;color:var(--text2);}
+.cta-item strong{color:var(--accent);font-family:var(--mono);font-size:13px;}
+.footer{text-align:center;padding:16px;font-size:10px;color:var(--text3);}
+
+@media(max-width:600px){
+  .header{padding:14px 16px;}
+  .brand{font-size:16px;}
+  .stats-bar{grid-template-columns:1fr;} .stat{border-right:none;border-bottom:1px solid var(--border);padding:10px;}
+  .stat:last-child{border-bottom:none;}
+  .filters{padding:10px 16px;}
+  .timeline{padding:0 16px 16px;}
+  .entry-header{flex-wrap:wrap;gap:6px;}
+  .entry-date{min-width:auto;}
+  .entry-badges{width:100%;justify-content:flex-end;}
+  .details-inner{margin-left:0;}
+  .entry-desc{white-space:normal;}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div>
+    <div class="brand">HUMMBL</div>
+    <div class="brand-sub">AI Governance &amp; Compliance</div>
+  </div>
+  <div class="header-right">
+    <button class="btn-pdf no-print" onclick="window.print()">Save as PDF</button>
+  </div>
+</header>
+
+<div class="stats-bar" id="stats-bar">
+  <div class="stat"><div class="stat-num" id="stat-active">--</div><div class="stat-label">Regulations Tracked</div></div>
+  <div class="stat"><div class="stat-num" id="stat-90">--</div><div class="stat-label">Deadlines in 90 Days</div></div>
+  <div class="stat"><div class="stat-num" id="stat-jurisdictions">--</div><div class="stat-label">Jurisdictions</div></div>
+</div>
+
+<div class="filters no-print">
+  <div class="filter-group">
+    <span class="filter-label">Region</span>
+    <button class="filter-btn active" data-filter="region" data-value="all">All</button>
+    <button class="filter-btn" data-filter="region" data-value="US">US</button>
+    <button class="filter-btn" data-filter="region" data-value="EU">EU</button>
+    <button class="filter-btn" data-filter="region" data-value="APAC">APAC</button>
+    <button class="filter-btn" data-filter="region" data-value="INTL">Int'l</button>
+  </div>
+  <div class="filter-sep"></div>
+  <div class="filter-group">
+    <span class="filter-label">Sector</span>
+    <button class="filter-btn active" data-filter="sector" data-value="all">All</button>
+    <button class="filter-btn" data-filter="sector" data-value="employment">Employment/HR</button>
+    <button class="filter-btn" data-filter="sector" data-value="healthcare">Healthcare</button>
+    <button class="filter-btn" data-filter="sector" data-value="financial">Financial</button>
+    <button class="filter-btn" data-filter="sector" data-value="defense">Defense</button>
+    <button class="filter-btn" data-filter="sector" data-value="technology">Technology</button>
+  </div>
+</div>
+
+<div class="timeline" id="timeline"></div>
+
+<div class="cta-bottom">
+  <div class="cta-title">Free Compliance Gap Assessment</div>
+  <div class="cta-sub">Not sure which regulations apply to your AI systems? We will map your exposure across all active jurisdictions and deliver a prioritized remediation plan.</div>
+  <div class="cta-contact">
+    <div class="cta-item"><strong>reuben@hummbl.io</strong>Email</div>
+    <div class="cta-item"><strong>hummbl.io</strong>Website</div>
+    <div class="cta-item"><strong>30-min call</strong>No obligation</div>
+  </div>
+</div>
+<div class="footer">HUMMBL AI Governance &amp; Compliance &mdash; Updated <span id="updated-date"></span></div>
+
+<script>
+(function(){
+"use strict";
+var NOW = new Date();
+document.getElementById("updated-date").textContent = NOW.toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"});
+
+var REGS = [
+  // Already in force
+  {id:"nyc-ll144",name:"NYC Local Law 144",date:"2023-07-05",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["employment"],desc:"Automated employment decision tools require annual bias audits",
+   full:"NYC LL144 requires employers using AI in hiring/promotion to conduct independent bias audits annually and publish results. Enforcement actions are increasing in 2026.",
+   reqs:["Annual independent bias audit of AEDT","Public summary of audit results on company website","Candidate notice 10 business days before use","Disparate impact testing across race/ethnicity and gender","Record retention for 4 years"],
+   affects:"Any employer or employment agency using AI tools for hiring or promotion decisions in New York City",
+   cta:"AI Employment Compliance Audit",ctaUrl:"mailto:reuben@hummbl.io?subject=NYC%20LL144%20Audit"},
+  {id:"ftc-s5",name:"FTC Section 5 Enforcement",date:"2024-01-01",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["technology","financial"],desc:"\"AI washing\" claims and algorithmic fairness under existing FTC authority",
+   full:"The FTC is using existing Section 5 unfair/deceptive practices authority to pursue companies making misleading AI claims or deploying algorithms that produce discriminatory outcomes.",
+   reqs:["Substantiate all AI capability claims in marketing","Document AI decision-making processes","Test for discriminatory outcomes before deployment","Maintain human oversight for consequential decisions","Retain training data and model documentation"],
+   affects:"Any company marketing AI products or using algorithms for consumer-facing decisions in the United States",
+   cta:"AI Claims & Disclosure Review",ctaUrl:"mailto:reuben@hummbl.io?subject=FTC%20AI%20Compliance"},
+  {id:"eeoc-vii",name:"EEOC Title VII + AI Guidance",date:"2023-05-18",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["employment"],desc:"Employer liability for AI-driven disparate impact in hiring",
+   full:"EEOC guidance confirms employers are liable under Title VII for disparate impact caused by AI hiring tools, even when provided by third-party vendors.",
+   reqs:["Validate vendor AI tools for disparate impact","Document selection rate analysis by protected class","Ensure AI screening criteria are job-related and consistent with business necessity","Provide reasonable accommodations for AI-screened applicants","Monitor ongoing outcomes, not just initial validation"],
+   affects:"All employers subject to Title VII using AI or algorithmic tools in any phase of employment decisions",
+   cta:"AI Employment Compliance Audit",ctaUrl:"mailto:reuben@hummbl.io?subject=EEOC%20AI%20Hiring"},
+  {id:"china-label",name:"China AI Labeling Standard",date:"2025-09-01",flag:"\ud83c\udde8\ud83c\uddf3",region:"APAC",
+   sectors:["technology"],desc:"GB 45438-2025 mandatory labeling for AI-generated content",
+   full:"China's national standard GB 45438-2025 mandates labeling of AI-generated content including text, images, audio, and video. Applies to all AI service providers operating in China.",
+   reqs:["Visible label on all AI-generated content","Machine-readable metadata embedded in outputs","Content provenance tracking infrastructure","Regular compliance reporting to CAC","User notification when interacting with AI systems"],
+   affects:"AI service providers generating or distributing synthetic content in China or to Chinese users",
+   cta:"Agentic AI Governance Design",ctaUrl:"mailto:reuben@hummbl.io?subject=China%20AI%20Labeling"},
+
+  // January 2026
+  {id:"il-hb3773",name:"Illinois HB 3773",date:"2026-01-01",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["employment"],desc:"AI employment discrimination — notice, impact assessment, opt-out rights",
+   full:"Illinois HB 3773 prohibits use of AI in employment decisions that result in discrimination. Requires employer notice, impact assessments, and candidate opt-out rights.",
+   reqs:["Written notice to applicants/employees before AI use","Annual disparate impact analysis","Right to opt out of AI-only decision processes","Human review available on request","Documentation of AI tool validation methodology"],
+   affects:"Employers with operations in Illinois using AI for hiring, termination, discipline, or promotion decisions",
+   cta:"AI Employment Compliance Audit",ctaUrl:"mailto:reuben@hummbl.io?subject=Illinois%20HB3773"},
+  {id:"ca-sb53",name:"California SB 53",date:"2026-01-01",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["technology"],desc:"Frontier AI transparency — safety protocols and incident reporting",
+   full:"SB 53 requires developers of large-scale AI models to implement safety protocols, publish transparency reports, and establish incident reporting mechanisms.",
+   reqs:["Publish pre-deployment safety evaluation results","Implement kill switch / shutdown procedures","Report safety incidents within 72 hours","Annual transparency report on model capabilities","Third-party red-team testing before deployment"],
+   affects:"Developers of frontier AI models (above compute thresholds) with California nexus",
+   cta:"Risk Framework Implementation",ctaUrl:"mailto:reuben@hummbl.io?subject=CA%20SB53%20Compliance"},
+  {id:"ca-ab2013",name:"California AB 2013",date:"2026-01-01",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["technology"],desc:"GenAI training data disclosure requirements",
+   full:"AB 2013 requires generative AI developers to disclose high-level summaries of training data, including data sources, types, and whether personal information or copyrighted material is included.",
+   reqs:["Publish training data summary on website","Disclose data source categories and types","State whether personal information is included","Indicate presence of copyrighted material","Update disclosures within 30 days of material changes"],
+   affects:"Developers of generative AI systems made available to Californians",
+   cta:"AI Claims & Disclosure Review",ctaUrl:"mailto:reuben@hummbl.io?subject=CA%20AB2013"},
+  {id:"kr-aiact",name:"South Korea AI Basic Act",date:"2026-01-22",flag:"\ud83c\uddf0\ud83c\uddf7",region:"APAC",
+   sectors:["technology","healthcare","financial"],desc:"Extraterritorial risk-tiered AI regulation with high-impact AI obligations",
+   full:"South Korea's AI Basic Act establishes a risk-tiered regulatory framework with extraterritorial reach. High-impact AI systems face mandatory impact assessments and registration requirements.",
+   reqs:["Classify AI systems by risk tier","Impact assessment for high-impact AI","Register high-impact AI with oversight authority","Transparency and explainability requirements","Data governance and quality management"],
+   affects:"Organizations deploying AI systems in South Korea or affecting Korean users, regardless of where the organization is headquartered",
+   cta:"Risk Framework Implementation",ctaUrl:"mailto:reuben@hummbl.io?subject=Korea%20AI%20Act"},
+  {id:"sg-agentic",name:"Singapore Agentic AI Framework",date:"2026-01-22",flag:"\ud83c\uddf8\ud83c\uddec",region:"APAC",
+   sectors:["technology","financial"],desc:"World's first governance framework specifically for agentic AI systems",
+   full:"Singapore's IMDA published the world's first governance framework for agentic AI, addressing autonomous decision-making, multi-agent coordination, delegation chains, and human oversight requirements.",
+   reqs:["Define and document agent autonomy boundaries","Implement human-in-the-loop checkpoints for high-stakes decisions","Audit trail for all autonomous agent actions","Multi-agent interaction governance protocols","Regular review of agent behavior drift"],
+   affects:"Organizations deploying agentic AI systems in Singapore's regulated sectors, particularly financial services",
+   cta:"Agentic AI Governance Design",ctaUrl:"mailto:reuben@hummbl.io?subject=Singapore%20Agentic%20AI"},
+
+  // February 2026
+  {id:"fda-iso13485",name:"FDA ISO 13485 Transition",date:"2026-02-02",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["healthcare"],desc:"AI/ML-enabled medical devices must meet updated QMS requirements",
+   full:"The FDA's transition to ISO 13485 alignment affects AI/ML-enabled medical devices, requiring updated quality management systems that account for continuous learning algorithms and adaptive AI.",
+   reqs:["Quality Management System compliant with ISO 13485","Predetermined change control plan for adaptive AI/ML","Real-world performance monitoring protocols","Clinical validation of AI algorithm updates","Software lifecycle documentation per IEC 62304"],
+   affects:"Manufacturers of AI/ML-enabled medical devices, SaMD, and clinical decision support tools seeking FDA clearance",
+   cta:"AI Medical Device Compliance",ctaUrl:"mailto:reuben@hummbl.io?subject=FDA%20AI%20Medical%20Device"},
+
+  // March 2026
+  {id:"ftc-policy",name:"FTC AI Policy Statement",date:"2026-03-11",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["technology","financial"],desc:"Section 5 clarification on AI-specific unfair and deceptive practices",
+   full:"The FTC's formal AI policy statement clarifies how Section 5 applies to AI systems, providing specific examples of AI practices the Commission considers unfair or deceptive.",
+   reqs:["Review AI marketing claims against FTC guidance","Audit algorithmic decision systems for bias","Document AI system limitations and failure modes","Implement consumer redress mechanisms","Maintain records of AI system testing and validation"],
+   affects:"All businesses using AI in consumer-facing products or marketing AI capabilities",
+   cta:"AI Claims & Disclosure Review",ctaUrl:"mailto:reuben@hummbl.io?subject=FTC%20AI%20Policy"},
+
+  // June 2026
+  {id:"dod-ai",name:"DoD AI Framework (CDAO)",date:"2026-06-01",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["defense"],desc:"Cross-functional AI governance team fully operational under Chief Digital and AI Officer",
+   full:"The Department of Defense CDAO establishes a cross-functional AI governance team to oversee responsible AI deployment across defense applications, including autonomous systems and intelligence analysis.",
+   reqs:["RAI principles integration in AI system lifecycle","Bias testing for defense AI applications","Human oversight protocols for autonomous systems","Interoperability standards compliance","Continuous monitoring and evaluation framework"],
+   affects:"Defense contractors, DoD agencies, and organizations providing AI systems for national security applications",
+   cta:"Risk Framework Implementation",ctaUrl:"mailto:reuben@hummbl.io?subject=DoD%20AI%20Framework"},
+  {id:"co-aiact",name:"Colorado AI Act (SB 24-205)",date:"2026-06-30",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["employment","healthcare","financial"],desc:"First comprehensive state AI law — risk assessments, notices, and discrimination prevention",
+   full:"Colorado's AI Act is the first comprehensive state-level AI regulation. It requires deployers and developers of high-risk AI systems to conduct impact assessments, provide consumer notices, and prevent algorithmic discrimination.",
+   reqs:["Annual impact assessment for high-risk AI systems","Consumer notification when AI is used in consequential decisions","Algorithmic discrimination prevention program","Risk management policy published on website","Attorney General notification of discovered discrimination within 90 days"],
+   affects:"Developers and deployers of high-risk AI systems operating in Colorado across insurance, employment, financial, housing, healthcare, and education",
+   cta:"AI Employment Compliance Audit",ctaUrl:"mailto:reuben@hummbl.io?subject=Colorado%20AI%20Act"},
+
+  // August 2026
+  {id:"eu-aiact-hr",name:"EU AI Act \u2014 High-Risk Obligations",date:"2026-08-02",flag:"\ud83c\uddea\ud83c\uddfa",region:"EU",
+   sectors:["technology","healthcare","employment","financial"],desc:"Conformity assessments, technical documentation, and post-market monitoring required",
+   full:"The EU AI Act's high-risk provisions take full effect, requiring conformity assessments, technical documentation, quality management systems, and post-market monitoring for AI systems in areas like employment, healthcare, and credit scoring.",
+   reqs:["Conformity assessment (self or third-party notified body)","Technical documentation including training data description","Quality management system implementation","Post-market monitoring plan","Human oversight measures documented and tested"],
+   affects:"Any organization placing high-risk AI systems on the EU market or deploying them in the EU, regardless of where the organization is based",
+   cta:"EU AI Act Conformity Assessment",ctaUrl:"mailto:reuben@hummbl.io?subject=EU%20AI%20Act%20High-Risk"},
+
+  // Late 2026
+  {id:"uk-fca",name:"UK FCA AI Guidance",date:"2026-12-31",flag:"\ud83c\uddec\ud83c\udde7",region:"EU",
+   sectors:["financial"],desc:"Financial services AI governance expectations from the Financial Conduct Authority",
+   full:"The UK FCA is expected to publish guidance on AI governance for financial services firms, covering model risk management, consumer outcomes, and algorithmic trading oversight.",
+   reqs:["AI model risk management framework","Consumer outcome testing for AI decisions","Algorithmic trading oversight and controls","Board-level AI governance accountability","Third-party AI vendor due diligence"],
+   affects:"UK-regulated financial services firms using AI in customer-facing decisions, risk management, or trading",
+   cta:"Financial AI Governance Program",ctaUrl:"mailto:reuben@hummbl.io?subject=UK%20FCA%20AI"},
+  {id:"sec-ai",name:"SEC AI Disclosure Rules",date:"2026-12-31",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["financial","technology"],desc:"AI use disclosure requirements in SEC filings for 2026 reporting season",
+   full:"The SEC is expected to require disclosure of material AI use in annual filings, including AI-related risks, governance structures, and the role of AI in financial decision-making.",
+   reqs:["Disclose material AI use in annual filings","AI risk factors in 10-K risk section","Board AI oversight and governance structure","AI-related cybersecurity risk assessment","Internal controls over AI-driven financial processes"],
+   affects:"SEC-reporting companies using AI in material business operations, financial analysis, or customer-facing services",
+   cta:"AI Claims & Disclosure Review",ctaUrl:"mailto:reuben@hummbl.io?subject=SEC%20AI%20Disclosure"},
+  {id:"uk-aibill",name:"UK AI Bill",date:"2026-12-31",flag:"\ud83c\uddec\ud83c\udde7",region:"EU",
+   sectors:["technology"],desc:"Expected introduction of UK's comprehensive AI legislation",
+   full:"The UK government is expected to introduce an AI and Digital Economy Bill establishing a pro-innovation regulatory framework with sector-specific AI governance requirements.",
+   reqs:["Sector-specific AI governance compliance","Transparency obligations for high-impact AI","Cross-sector AI principles adherence","Regulatory sandbox participation (optional)","AI incident reporting to sector regulators"],
+   affects:"Organizations deploying AI systems in the UK across all sectors, with sector regulators providing specific requirements",
+   cta:"Risk Framework Implementation",ctaUrl:"mailto:reuben@hummbl.io?subject=UK%20AI%20Bill"},
+
+  // 2027
+  {id:"osfi-e23",name:"OSFI Guideline E-23",date:"2027-05-01",flag:"\ud83c\udde8\ud83c\udde6",region:"INTL",
+   sectors:["financial"],desc:"Canada financial AI model risk management for federally regulated institutions",
+   full:"OSFI Guideline E-23 establishes model risk management expectations for Canadian federally regulated financial institutions, with specific provisions for AI/ML models including validation, monitoring, and governance.",
+   reqs:["Enterprise-wide model risk management framework","Independent model validation for AI/ML models","Ongoing performance monitoring and drift detection","Model inventory with risk tiering","Board-approved model risk appetite statement"],
+   affects:"Canadian federally regulated financial institutions (banks, insurers, pension plans) using AI/ML models",
+   cta:"Financial AI Governance Program",ctaUrl:"mailto:reuben@hummbl.io?subject=OSFI%20E-23"},
+  {id:"eu-aiact-gpai",name:"EU AI Act \u2014 GPAI Model Obligations",date:"2027-08-02",flag:"\ud83c\uddea\ud83c\uddfa",region:"EU",
+   sectors:["technology"],desc:"General-purpose AI models must comply \u2014 systemic risk models face additional obligations",
+   full:"Existing GPAI models must comply with EU AI Act transparency and documentation requirements. Models with systemic risk face additional obligations including adversarial testing and incident reporting.",
+   reqs:["Technical documentation and training data summaries","EU copyright law compliance processes","Transparency obligations for downstream deployers","Systemic risk: adversarial testing (red-teaming)","Systemic risk: serious incident reporting to AI Office"],
+   affects:"Providers of general-purpose AI models placed on the EU market, with enhanced obligations for models with systemic risk (>10^25 FLOPs training compute)",
+   cta:"EU AI Act Conformity Assessment",ctaUrl:"mailto:reuben@hummbl.io?subject=EU%20GPAI%20Compliance"},
+
+  // Standards (ongoing)
+  {id:"iso-42001",name:"ISO/IEC 42001",date:"2024-12-01",flag:"\ud83c\udf10",region:"INTL",
+   sectors:["technology","healthcare","financial","employment","defense"],desc:"AI Management System (AIMS) certification \u2014 the ISO 27001 for AI",
+   full:"ISO/IEC 42001 is the international standard for AI Management Systems, providing a framework for establishing, implementing, and continually improving responsible AI practices. It is increasingly recognized as a baseline for AI governance.",
+   reqs:["Establish AI management system with defined scope","AI risk assessment and treatment process","AI policy and objectives aligned with organizational strategy","Competence and awareness training for AI stakeholders","Internal audit and management review cycles"],
+   affects:"Any organization seeking to demonstrate responsible AI governance through internationally recognized certification",
+   cta:"AIMS Certification Readiness",ctaUrl:"mailto:reuben@hummbl.io?subject=ISO%2042001%20Readiness",isStandard:true},
+  {id:"nist-rmf",name:"NIST AI Risk Management Framework",date:"2023-01-26",flag:"\ud83c\uddfa\ud83c\uddf8",region:"US",
+   sectors:["technology","healthcare","financial","employment","defense"],desc:"Voluntary framework increasingly referenced by US regulators and procurement",
+   full:"The NIST AI RMF provides a structured approach to AI risk management through four core functions: Govern, Map, Measure, and Manage. Increasingly referenced in federal procurement requirements and state legislation.",
+   reqs:["Govern: establish AI risk management governance structure","Map: identify and categorize AI risks in context","Measure: assess and benchmark AI system trustworthiness","Manage: implement controls and monitor AI risks","Document and communicate AI risk posture to stakeholders"],
+   affects:"Organizations seeking to align with US federal AI governance expectations, particularly those in government contracting or regulated industries",
+   cta:"Risk Framework Implementation",ctaUrl:"mailto:reuben@hummbl.io?subject=NIST%20AI%20RMF",isStandard:true},
+  {id:"g7-hiroshima",name:"G7 Hiroshima AI Process",date:"2023-12-01",flag:"\ud83c\udf10",region:"INTL",
+   sectors:["technology"],desc:"Voluntary international code of conduct for advanced AI systems",
+   full:"The G7 Hiroshima Process established voluntary international guiding principles and a code of conduct for organizations developing advanced AI systems, emphasizing safety, transparency, and accountability.",
+   reqs:["Pre-deployment safety testing including red-teaming","Public reporting on AI system capabilities and limitations","Investment in cybersecurity for AI systems","Content authentication and provenance mechanisms","Research on societal risks and responsible AI deployment"],
+   affects:"Organizations developing or deploying frontier AI systems, particularly those operating across G7 member nations",
+   cta:"Risk Framework Implementation",ctaUrl:"mailto:reuben@hummbl.io?subject=G7%20AI%20Code",isStandard:true}
+];
+
+// State
+var activeRegion = "all";
+var activeSector = "all";
+var openEntry = null;
+var KEY = "hummbl-calendar-filters";
+
+// Load saved filters
+try {
+  var saved = JSON.parse(localStorage.getItem(KEY));
+  if (saved) { activeRegion = saved.region || "all"; activeSector = saved.sector || "all"; }
+} catch(e){}
+
+function saveFilters() {
+  try { localStorage.setItem(KEY, JSON.stringify({region:activeRegion,sector:activeSector})); } catch(e){}
+}
+
+function daysUntil(dateStr) {
+  var d = new Date(dateStr + "T00:00:00");
+  var diff = Math.ceil((d - NOW) / 86400000);
+  return diff;
+}
+
+function urgencyClass(days, isStandard) {
+  if (isStandard) return "badge-blue";
+  if (days <= 0) return "badge-red";
+  if (days <= 30) return "badge-red";
+  if (days <= 90) return "badge-yellow";
+  return "badge-green";
+}
+
+function urgencyLabel(days, isStandard) {
+  if (isStandard) return "Standard";
+  if (days <= 0) return "In Force";
+  if (days <= 30) return "Urgent";
+  if (days <= 90) return "Approaching";
+  return "Upcoming";
+}
+
+function daysLabel(days, isStandard) {
+  if (isStandard) return "Ongoing";
+  if (days <= 0) return "Active";
+  return days + "d";
+}
+
+function monthLabel(dateStr) {
+  var d = new Date(dateStr + "T00:00:00");
+  var days = daysUntil(dateStr);
+  if (days <= 0 && !dateStr.startsWith("2026") && !dateStr.startsWith("2027")) return "Already In Force";
+  var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  return months[d.getMonth()] + " " + d.getFullYear();
+}
+
+function matchesFilters(r) {
+  if (activeRegion !== "all" && r.region !== activeRegion) return false;
+  if (activeSector !== "all" && r.sectors.indexOf(activeSector) === -1) return false;
+  return true;
+}
+
+function render() {
+  var filtered = REGS.filter(matchesFilters);
+  filtered.sort(function(a,b){ return new Date(a.date) - new Date(b.date); });
+
+  // Stats
+  var totalVisible = filtered.length;
+  var in90 = 0;
+  var jurisdictions = {};
+  filtered.forEach(function(r){
+    var d = daysUntil(r.date);
+    if (d > 0 && d <= 90) in90++;
+    jurisdictions[r.region] = true;
+  });
+  document.getElementById("stat-active").textContent = totalVisible;
+  document.getElementById("stat-90").textContent = in90;
+  document.getElementById("stat-jurisdictions").textContent = Object.keys(jurisdictions).length;
+
+  // Timeline
+  var html = "";
+  var lastMonth = "";
+  filtered.forEach(function(r){
+    var days = daysUntil(r.date);
+    var ml = monthLabel(r.date);
+    if (ml !== lastMonth) {
+      html += '<div class="month-marker">' + ml + '</div>';
+      lastMonth = ml;
+    }
+    var uc = urgencyClass(days, r.isStandard);
+    var ul = urgencyLabel(days, r.isStandard);
+    var dl = daysLabel(days, r.isStandard);
+    var isOpen = openEntry === r.id;
+    var dateDisplay = new Date(r.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"});
+
+    html += '<div class="timeline-entry" data-id="'+r.id+'" onclick="toggleEntry(\''+r.id+'\')">';
+    html += '<div class="entry-header">';
+    html += '<div class="entry-date">'+dateDisplay+'</div>';
+    html += '<div class="entry-flag">'+r.flag+'</div>';
+    html += '<div class="entry-info"><div class="entry-name">'+r.name+'</div><div class="entry-desc">'+r.desc+'</div></div>';
+    html += '<div class="entry-badges"><span class="badge '+uc+'">'+ul+'</span><span class="days-badge">'+dl+'</span></div>';
+    html += '</div>';
+    html += '<div class="entry-details'+(isOpen?" open":"")+'">';
+    html += '<div class="details-inner">';
+    html += '<div class="details-full">'+r.full+'</div>';
+    html += '<ul class="details-reqs">';
+    r.reqs.forEach(function(q){ html += '<li>'+q+'</li>'; });
+    html += '</ul>';
+    html += '<div class="details-affects"><strong>Who it affects:</strong> '+r.affects+'</div>';
+    html += '<a class="details-cta" href="'+r.ctaUrl+'">Get Help: '+r.cta+' &rarr;</a>';
+    html += '</div></div></div>';
+  });
+
+  if (filtered.length === 0) {
+    html = '<div style="text-align:center;padding:60px 0;color:var(--text3);">No regulations match the selected filters.</div>';
+  }
+
+  document.getElementById("timeline").innerHTML = html;
+
+  // Update filter button states
+  document.querySelectorAll(".filter-btn").forEach(function(btn){
+    var f = btn.getAttribute("data-filter");
+    var v = btn.getAttribute("data-value");
+    if (f === "region") btn.classList.toggle("active", v === activeRegion);
+    if (f === "sector") btn.classList.toggle("active", v === activeSector);
+  });
+}
+
+window.toggleEntry = function(id) {
+  openEntry = openEntry === id ? null : id;
+  render();
+  if (openEntry) {
+    var el = document.querySelector('[data-id="'+id+'"] .entry-details');
+    if (el) setTimeout(function(){ el.scrollIntoView({behavior:"smooth",block:"nearest"}); }, 50);
+  }
+};
+
+document.querySelector(".filters").addEventListener("click", function(e){
+  var btn = e.target.closest(".filter-btn");
+  if (!btn) return;
+  var f = btn.getAttribute("data-filter");
+  var v = btn.getAttribute("data-value");
+  if (f === "region") activeRegion = v;
+  if (f === "sector") activeSector = v;
+  saveFilters();
+  render();
+});
+
+render();
+})();
+</script>
+</body>
+</html>

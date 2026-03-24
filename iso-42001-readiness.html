@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Your Organization Ready for ISO 42001? | HUMMBL</title>
+<style>
+  @page { size: letter; margin: 0.6in 0.7in; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .no-print { display: none; } }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1a1a1a; line-height: 1.5; font-size: 11pt; background: #fff; }
+  .print-btn { position: fixed; top: 16px; right: 16px; background: #0a0a0a; color: #00ff88; border: none; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: monospace; z-index: 100; }
+  .print-btn:hover { background: #00ff88; color: #0a0a0a; }
+  .page { max-width: 8.5in; margin: 0 auto; padding: 0.6in 0.7in; }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 3px solid #0a0a0a; }
+  .brand { font-family: 'Courier New', monospace; font-size: 24pt; font-weight: 900; letter-spacing: 3px; color: #0a0a0a; }
+  .brand-sub { font-size: 9pt; color: #666; margin-top: 2px; }
+  .header-right { text-align: right; }
+  .header-date { font-size: 9pt; color: #666; }
+  .title { font-size: 22pt; font-weight: 800; line-height: 1.15; color: #0a0a0a; margin-bottom: 6px; }
+  .subtitle { font-size: 11pt; color: #444; margin-bottom: 20px; }
+  .urgency { background: #0a0a0a; color: #fff; padding: 14px 20px; border-radius: 6px; margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
+  .urgency-days { font-family: 'Courier New', monospace; font-size: 18pt; font-weight: 900; color: #00ff88; line-height: 1.2; min-width: 80px; text-align: center; }
+  .urgency-text { font-size: 10pt; line-height: 1.4; }
+  .urgency-text strong { color: #00ff88; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .section { margin-bottom: 18px; }
+  .section-title { font-size: 11pt; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0a0a0a; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #ddd; }
+  .check-list { list-style: none; }
+  .check-list li { padding: 5px 0; padding-left: 22px; position: relative; font-size: 10pt; }
+  .check-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 14px; height: 14px; border: 2px solid #ccc; border-radius: 3px; }
+  .req { background: #f8f8f8; border-left: 3px solid #0a0a0a; padding: 10px 14px; margin-bottom: 8px; border-radius: 0 4px 4px 0; }
+  .req-title { font-weight: 700; font-size: 10pt; }
+  .req-desc { font-size: 9pt; color: #555; margin-top: 2px; }
+  .req-article { font-family: 'Courier New', monospace; font-size: 8pt; color: #888; }
+  .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+  .stat-box { text-align: center; padding: 12px; border: 1px solid #ddd; border-radius: 6px; }
+  .stat-num { font-family: 'Courier New', monospace; font-size: 20pt; font-weight: 900; color: #0a0a0a; }
+  .stat-label { font-size: 8pt; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+  .cta { background: #0a0a0a; color: #fff; padding: 20px; border-radius: 8px; text-align: center; margin-top: 16px; }
+  .cta-title { font-size: 14pt; font-weight: 800; margin-bottom: 4px; }
+  .cta-sub { font-size: 10pt; color: #aaa; margin-bottom: 12px; }
+  .cta-details { display: flex; justify-content: center; gap: 30px; font-size: 10pt; }
+  .cta-detail { display: flex; flex-direction: column; align-items: center; }
+  .cta-detail strong { color: #00ff88; font-family: 'Courier New', monospace; }
+  .footer { margin-top: 16px; padding-top: 12px; border-top: 1px solid #ddd; display: flex; justify-content: space-between; font-size: 8pt; color: #999; }
+</style>
+</head>
+<body>
+<button class="print-btn no-print" onclick="window.print()">Save as PDF</button>
+<div class="page">
+
+<div class="header">
+  <div>
+    <div class="brand">HUMMBL</div>
+    <div class="brand-sub">AI Governance & Compliance</div>
+  </div>
+  <div class="header-right">
+    <div class="header-date">hummbl.io | reuben@hummbl.io</div>
+  </div>
+</div>
+
+<div class="title">Is Your Organization Ready for<br>ISO 42001 Certification?</div>
+<div class="subtitle">The AI Management System standard enterprise clients are demanding</div>
+
+<div class="urgency">
+  <div class="urgency-days">Voluntary</div>
+  <div class="urgency-text">
+    Enterprise procurement teams are adding <strong>ISO 42001 to vendor requirements NOW</strong>.<br>
+    Certification takes <strong>6-12 months</strong>. Market advantage goes to first movers.
+  </div>
+</div>
+
+<div class="stats-row">
+  <div class="stat-box"><div class="stat-num">6-12</div><div class="stat-label">Months to certify</div></div>
+  <div class="stat-box"><div class="stat-num">42</div><div class="stat-label">Control objectives</div></div>
+  <div class="stat-box"><div class="stat-num">1st</div><div class="stat-label">AI-specific ISO standard</div></div>
+</div>
+
+<div class="cols">
+  <div>
+    <div class="section">
+      <div class="section-title">What ISO 42001 Requires</div>
+      <div class="req">
+        <div class="req-title">AI Policy & Objectives</div>
+        <div class="req-desc">Documented AI policy aligned with organizational strategy.</div>
+        <div class="req-article">Clause 5.2</div>
+      </div>
+      <div class="req">
+        <div class="req-title">Risk Assessment</div>
+        <div class="req-desc">Identify and assess risks from AI system development and use.</div>
+        <div class="req-article">Clause 6.1</div>
+      </div>
+      <div class="req">
+        <div class="req-title">AI System Lifecycle</div>
+        <div class="req-desc">Controls across design, development, deployment, monitoring, and retirement.</div>
+        <div class="req-article">Annex A</div>
+      </div>
+      <div class="req">
+        <div class="req-title">Stakeholder Requirements</div>
+        <div class="req-desc">Identify and address needs of interested parties affected by AI.</div>
+        <div class="req-article">Clause 4.2</div>
+      </div>
+      <div class="req">
+        <div class="req-title">Performance Evaluation</div>
+        <div class="req-desc">Monitor, measure, and evaluate AI system performance.</div>
+        <div class="req-article">Clause 9.1</div>
+      </div>
+      <div class="req">
+        <div class="req-title">Continual Improvement</div>
+        <div class="req-desc">Systematic improvement of AI management based on audit findings.</div>
+        <div class="req-article">Clause 10.1</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="section">
+      <div class="section-title">Self-Assessment Checklist</div>
+      <ul class="check-list">
+        <li>AI Management System (AIMS) scope defined</li>
+        <li>AI policy approved by leadership and communicated</li>
+        <li>AI risk assessment methodology documented</li>
+        <li>Inventory of all AI systems maintained</li>
+        <li>Roles and responsibilities for AI governance assigned</li>
+        <li>AI system lifecycle controls implemented</li>
+        <li>Training and competency requirements for AI teams defined</li>
+        <li>Internal audit programme for AIMS established</li>
+        <li>Management review process includes AI governance</li>
+        <li>Corrective action process covers AI-related nonconformities</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Who This Affects</div>
+      <p style="font-size: 10pt; color: #444; margin-bottom: 8px;">Organizations that need demonstrable AI governance for enterprise trust:</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; font-size: 9.5pt;">
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">AI vendors</div>
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">SaaS companies</div>
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">Consulting firms</div>
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">Enterprise customers</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="cta-title">Free 30-Minute Readiness Assessment</div>
+  <div class="cta-sub">I'll review your AI governance posture and map your path to ISO 42001 certification.</div>
+  <div class="cta-details">
+    <div class="cta-detail"><strong>reuben@hummbl.io</strong><span>Email</span></div>
+    <div class="cta-detail"><strong>hummbl.io</strong><span>Website</span></div>
+    <div class="cta-detail"><strong>linkedin.com/in/reubenbowlby</strong><span>LinkedIn</span></div>
+  </div>
+</div>
+
+<div class="footer">
+  <span>HUMMBL LLC | Reuben Bowlby | Agentic Systems Architect</span>
+  <span>hummbl.io</span>
+</div>
+
+</div>
+</body>
+</html>

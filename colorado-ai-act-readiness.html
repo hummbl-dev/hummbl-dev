@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Your AI System Colorado-Compliant? | HUMMBL</title>
+<style>
+  @page { size: letter; margin: 0.6in 0.7in; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .no-print { display: none; } }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1a1a1a; line-height: 1.5; font-size: 11pt; background: #fff; }
+  .print-btn { position: fixed; top: 16px; right: 16px; background: #0a0a0a; color: #00ff88; border: none; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: monospace; z-index: 100; }
+  .print-btn:hover { background: #00ff88; color: #0a0a0a; }
+  .page { max-width: 8.5in; margin: 0 auto; padding: 0.6in 0.7in; }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 3px solid #0a0a0a; }
+  .brand { font-family: 'Courier New', monospace; font-size: 24pt; font-weight: 900; letter-spacing: 3px; color: #0a0a0a; }
+  .brand-sub { font-size: 9pt; color: #666; margin-top: 2px; }
+  .header-right { text-align: right; }
+  .header-date { font-size: 9pt; color: #666; }
+  .title { font-size: 22pt; font-weight: 800; line-height: 1.15; color: #0a0a0a; margin-bottom: 6px; }
+  .subtitle { font-size: 11pt; color: #444; margin-bottom: 20px; }
+  .urgency { background: #0a0a0a; color: #fff; padding: 14px 20px; border-radius: 6px; margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
+  .urgency-days { font-family: 'Courier New', monospace; font-size: 32pt; font-weight: 900; color: #00ff88; line-height: 1; }
+  .urgency-text { font-size: 10pt; line-height: 1.4; }
+  .urgency-text strong { color: #00ff88; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .section { margin-bottom: 18px; }
+  .section-title { font-size: 11pt; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0a0a0a; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #ddd; }
+  .check-list { list-style: none; }
+  .check-list li { padding: 5px 0; padding-left: 22px; position: relative; font-size: 10pt; }
+  .check-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 14px; height: 14px; border: 2px solid #ccc; border-radius: 3px; }
+  .req { background: #f8f8f8; border-left: 3px solid #0a0a0a; padding: 10px 14px; margin-bottom: 8px; border-radius: 0 4px 4px 0; }
+  .req-title { font-weight: 700; font-size: 10pt; }
+  .req-desc { font-size: 9pt; color: #555; margin-top: 2px; }
+  .req-article { font-family: 'Courier New', monospace; font-size: 8pt; color: #888; }
+  .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+  .stat-box { text-align: center; padding: 12px; border: 1px solid #ddd; border-radius: 6px; }
+  .stat-num { font-family: 'Courier New', monospace; font-size: 20pt; font-weight: 900; color: #0a0a0a; }
+  .stat-label { font-size: 8pt; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+  .cta { background: #0a0a0a; color: #fff; padding: 20px; border-radius: 8px; text-align: center; margin-top: 16px; }
+  .cta-title { font-size: 14pt; font-weight: 800; margin-bottom: 4px; }
+  .cta-sub { font-size: 10pt; color: #aaa; margin-bottom: 12px; }
+  .cta-details { display: flex; justify-content: center; gap: 30px; font-size: 10pt; }
+  .cta-detail { display: flex; flex-direction: column; align-items: center; }
+  .cta-detail strong { color: #00ff88; font-family: 'Courier New', monospace; }
+  .footer { margin-top: 16px; padding-top: 12px; border-top: 1px solid #ddd; display: flex; justify-content: space-between; font-size: 8pt; color: #999; }
+</style>
+</head>
+<body>
+<button class="print-btn no-print" onclick="window.print()">Save as PDF</button>
+<div class="page">
+
+<div class="header">
+  <div>
+    <div class="brand">HUMMBL</div>
+    <div class="brand-sub">AI Governance & Compliance</div>
+  </div>
+  <div class="header-right">
+    <div class="header-date">hummbl.io | reuben@hummbl.io</div>
+  </div>
+</div>
+
+<div class="title">Is Your AI System<br>Colorado-Compliant?</div>
+<div class="subtitle">A readiness checklist for companies deploying AI in high-risk decisions</div>
+
+<div class="urgency">
+  <div class="urgency-days" id="days-left"></div>
+  <div class="urgency-text">
+    days until <strong>Colorado AI Act enforcement</strong> (June 30, 2026).<br>
+    Deployers AND developers must demonstrate reasonable care or face <strong>AG enforcement</strong>.
+  </div>
+</div>
+
+<div class="stats-row">
+  <div class="stat-box"><div class="stat-num">$50K</div><div class="stat-label">Max fine per violation</div></div>
+  <div class="stat-box"><div class="stat-num">60</div><div class="stat-label">Day cure period</div></div>
+  <div class="stat-box"><div class="stat-num">6</div><div class="stat-label">High-risk domains</div></div>
+</div>
+
+<div class="cols">
+  <div>
+    <div class="section">
+      <div class="section-title">What SB 24-205 Requires</div>
+      <div class="req">
+        <div class="req-title">Algorithmic Discrimination Prevention</div>
+        <div class="req-desc">Use reasonable care to avoid discriminatory outcomes in AI systems.</div>
+        <div class="req-article">&sect;6-1-1703</div>
+      </div>
+      <div class="req">
+        <div class="req-title">Impact Assessment</div>
+        <div class="req-desc">Document AI system purpose, data used, evaluation methods, and mitigation measures.</div>
+        <div class="req-article">&sect;6-1-1702</div>
+      </div>
+      <div class="req">
+        <div class="req-title">Deployer Risk Management</div>
+        <div class="req-desc">Identify, document, and mitigate risks of algorithmic discrimination.</div>
+        <div class="req-article">&sect;6-1-1703</div>
+      </div>
+      <div class="req">
+        <div class="req-title">Developer Disclosure</div>
+        <div class="req-desc">Provide deployers with system capabilities, limitations, and intended uses.</div>
+        <div class="req-article">&sect;6-1-1704</div>
+      </div>
+      <div class="req">
+        <div class="req-title">Consumer Notice</div>
+        <div class="req-desc">Inform consumers when AI is making consequential decisions about them.</div>
+        <div class="req-article">&sect;6-1-1703</div>
+      </div>
+      <div class="req">
+        <div class="req-title">60-Day Cure</div>
+        <div class="req-desc">Remedy violations within 60 days of AG notice to avoid enforcement.</div>
+        <div class="req-article">&sect;6-1-1706</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="section">
+      <div class="section-title">Self-Assessment Checklist</div>
+      <ul class="check-list">
+        <li>AI system inventory identifies all high-risk decision tools</li>
+        <li>Impact assessments completed for each high-risk system</li>
+        <li>Algorithmic discrimination testing conducted (disparate impact analysis)</li>
+        <li>Consumer notification process documented and deployed</li>
+        <li>Developer has provided capability documentation to deployers</li>
+        <li>Risk mitigation procedures documented and versioned</li>
+        <li>Internal governance policy assigns AI compliance responsibility</li>
+        <li>60-day cure process documented with escalation paths</li>
+        <li>Vendor contracts include AI compliance obligations</li>
+        <li>Annual review cycle established for impact assessments</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Who This Affects</div>
+      <p style="font-size: 10pt; color: #444; margin-bottom: 8px;">If your AI makes consequential decisions in these domains, SB 24-205 applies:</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; font-size: 9.5pt;">
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">Employment</div>
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">Education</div>
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">Financial services</div>
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">Healthcare</div>
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">Housing</div>
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">Legal services</div>
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">Insurance</div>
+        <div style="padding: 4px 8px; background: #f0f0f0; border-radius: 3px;">Government services</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="cta-title">Free 30-Minute Readiness Assessment</div>
+  <div class="cta-sub">I'll review your AI systems and tell you exactly where your compliance gaps are.</div>
+  <div class="cta-details">
+    <div class="cta-detail"><strong>reuben@hummbl.io</strong><span>Email</span></div>
+    <div class="cta-detail"><strong>hummbl.io</strong><span>Website</span></div>
+    <div class="cta-detail"><strong>linkedin.com/in/reubenbowlby</strong><span>LinkedIn</span></div>
+  </div>
+</div>
+
+<div class="footer">
+  <span>HUMMBL LLC | Reuben Bowlby | Agentic Systems Architect</span>
+  <span>hummbl.io</span>
+</div>
+
+</div>
+<script>
+  const diff = Math.ceil((new Date('2026-06-30') - new Date()) / 86400000);
+  document.getElementById('days-left').textContent = diff;
+</script>
+</body>
+</html>
