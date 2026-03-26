@@ -6,23 +6,23 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="HUMMBL">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="theme-color" content="#fafafa">
 <meta name="mobile-web-app-capable" content="yes">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0a'/><text y='68' x='50' text-anchor='middle' font-size='50' font-family='monospace' fill='%2300ff88' font-weight='bold'>H</text></svg>">
-<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0a'/><text y='68' x='50' text-anchor='middle' font-size='50' font-family='monospace' fill='%2300ff88' font-weight='bold'>H</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23fafafa'/><text y='68' x='50' text-anchor='middle' font-size='50' font-family='monospace' fill='%23166534' font-weight='bold'>H</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23fafafa'/><text y='68' x='50' text-anchor='middle' font-size='50' font-family='monospace' fill='%23166534' font-weight='bold'>H</text></svg>">
 <link rel="manifest" href="./manifest.json">
 <title>HUMMBL Dashboard</title>
 <style>
 :root {
   /* Global tokens */
-  --bg: #0a0a0a; --bg2: #111; --bg3: #141414; --bg4: #1a1a1a;
-  --border: #222; --border2: #2a2a2a;
-  --accent: #00ff88; --accent-dim: #00cc6a; --accent-bg: rgba(0,255,136,0.08); --accent-bg2: rgba(0,255,136,0.15);
-  --text: #d4d4d4; --text2: #999; --text3: #666; --white: #fff;
-  --red: #ff4444; --red-bg: rgba(255,68,68,0.1);
-  --yellow: #ffaa00; --yellow-bg: rgba(255,170,0,0.1);
-  --blue: #4488ff; --blue-bg: rgba(68,136,255,0.1);
-  --purple: #aa66ff; --purple-bg: rgba(170,102,255,0.12);
+  --bg: #fafafa; --bg2: #ffffff; --bg3: #f5f5f5; --bg4: #eeeeee;
+  --border: #e5e5e5; --border2: #d4d4d4;
+  --accent: #166534; --accent-dim: #15803d; --accent-bg: rgba(22,101,52,0.06); --accent-bg2: rgba(22,101,52,0.12);
+  --text: #374151; --text2: #6b7280; --text3: #9ca3af; --white: #111827;
+  --red: #dc2626; --red-bg: rgba(220,38,38,0.06);
+  --yellow: #d97706; --yellow-bg: rgba(217,119,6,0.06);
+  --blue: #2563eb; --blue-bg: rgba(37,99,235,0.06);
+  --purple: #7c3aed; --purple-bg: rgba(124,58,237,0.06);
   /* Semantic tokens */
   --color-success: var(--accent); --color-danger: var(--red); --color-warning: var(--yellow); --color-info: var(--blue);
   --color-surface: var(--bg3); --color-surface-elevated: var(--bg4);
@@ -32,7 +32,7 @@
   /* Spacing (4px base) */
   --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px; --space-6: 24px; --space-8: 32px;
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3); --shadow-md: 0 4px 8px rgba(0,0,0,0.4); --shadow-lg: 0 8px 24px rgba(0,0,0,0.5);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06); --shadow-md: 0 4px 8px rgba(0,0,0,0.08); --shadow-lg: 0 8px 24px rgba(0,0,0,0.1);
   /* Fonts — system font stack, no external fonts loaded, so font-display: swap is implicit.
      Using system-ui ensures no FOIT/FOUT. font-display applies to @font-face only. */
   --font: -apple-system, 'SF Pro Text', 'Helvetica Neue', system-ui, sans-serif;
@@ -43,8 +43,8 @@
   --radius: 12px; --radius-sm: 6px; --radius-lg: 16px; --radius-full: 9999px;
 }
 
-/* Dark theme is the default and only theme; .dark class alias for compatibility */
-.dark { color-scheme: dark; }
+/* Light theme is the default and only theme; .light class alias for compatibility */
+.light { color-scheme: light; }
 
 /* System font-display: swap fallback for any future @font-face additions */
 @font-face { font-family: 'SystemFallback'; src: local('-apple-system'); font-display: swap; }
@@ -154,7 +154,7 @@ body {
 .btn-ghost:hover { background: var(--bg4); }
 .btn-ghost:active { background: var(--bg4); color: var(--white); }
 .btn-danger { background: var(--red-bg); border-color: var(--red); color: var(--red); }
-.btn-danger:hover { background: rgba(255,68,68,0.2); }
+.btn-danger:hover { background: rgba(220,38,38,0.12); }
 .btn-danger:active { background: var(--red); color: var(--bg); }
 .btn-block { display: flex; justify-content: center; width: 100%; }
 
@@ -399,7 +399,38 @@ details .details-content { padding-top: 12px; }
 
   <!-- ═══ PIPELINE ═══ -->
   <div class="page" id="p-pipeline">
-    <div class="sh"><span class="sh-text">Pipeline</span><button class="btn btn-sm" onclick="openSheet('deal')">+ Deal</button></div>
+    <!-- Outreach Stats -->
+    <div id="outreach-stats"></div>
+
+    <!-- Daily Outreach -->
+    <div class="sh"><span class="sh-text">Today's Outreach</span><button class="btn btn-sm" onclick="openSheet('outreach')">+ Log</button></div>
+    <div id="outreach-today"></div>
+
+    <!-- Templates (collapsible) -->
+    <details>
+      <summary style="font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;padding:8px 0;margin-bottom:8px">Outreach Templates (tap to copy)</summary>
+      <div class="details-content">
+        <div class="card" style="cursor:pointer" onclick="copyTemplate('cold')">
+          <div class="card-title" style="color:var(--accent)">Template 1: Cold Outreach</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6" id="tpl-cold">Hi [Name], I noticed [specific thing]. I've been building governance infrastructure for multi-agent AI systems — audit trails, delegation identity, compliance mapping. With the EU AI Act Annex III enforcement hitting August 2, I'm offering free 30-minute readiness assessments for teams running AI agents in regulated domains. No pitch, just a gap analysis. Would that be useful for your team? — Reuben, HUMMBL | hummbl.io</div>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="copyTemplate('warm')">
+          <div class="card-title" style="color:var(--yellow)">Template 2: Warm Follow-Up</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6" id="tpl-warm">Hi [Name], Saw your [post/comment about X]. I run a governance stack across 12 Claude terminals daily — delegation tokens, append-only audit logs, compliance mapping to SOC2/GDPR/EU AI Act. Published the core as hummbl-governance on PyPI. If your team is dealing with similar challenges, happy to share what's worked. No consulting pitch — genuinely interested in how others are approaching this. — Reuben</div>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="copyTemplate('direct')">
+          <div class="card-title" style="color:var(--purple)">Template 3: Direct Ask</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6" id="tpl-direct">Hi [Name], Quick question — are you thinking about EU AI Act compliance for [product]? The Annex III deadline (August 2) is getting real. I've been doing readiness audits for teams building with Claude/GPT agents — reviewing architecture against the six Annex III requirements. Takes a week, $5-15K. If that's on your radar, I'd love to chat. If not, no worries. — Reuben</div>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="copyTemplate('community')">
+          <div class="card-title" style="color:var(--blue)">Template 4: Community Post</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6" id="tpl-community">EU AI Act Annex III goes enforceable August 2, 2026. If you're building AI agents that touch finance, healthcare, employment, education, or critical infrastructure — your agents need: append-only audit logs (Art. 12), kill switches with human override (Art. 14), signed delegation chains (Art. 9), compliance evidence bundles on demand (Art. 11). I've been running these governance primitives across a 12-agent fleet for 6 months. Zero dependencies, stdlib-only Python, production-tested daily. The core is open source: pip install hummbl-governance. Free 30-minute readiness assessments through April. DM me or reuben@hummbl.io</div>
+        </div>
+      </div>
+    </details>
+
+    <!-- Pipeline Deals -->
+    <div class="sh"><span class="sh-text">Deals</span><button class="btn btn-sm" onclick="openSheet('deal')">+ Deal</button></div>
     <div id="pipe-list"></div>
   </div>
 
@@ -478,6 +509,118 @@ details .details-content { padding-top: 12px; }
     </div>
   </div>
 
+  <!-- ═══ BUSINESS ═══ -->
+  <div class="page" id="p-biz">
+    <div class="sh" style="margin-top:0"><span class="sh-text">HUMMBL LLC — Business Reference</span></div>
+
+    <div class="card">
+      <div style="font-size:16px;font-weight:700;color:var(--white);margin-bottom:4px">Agentic Systems Architect</div>
+      <div style="font-size:13px;color:var(--text2)">AI Governance &amp; Multi-Agent Orchestration</div>
+      <div style="font-size:12px;color:var(--text3);margin-top:8px">reuben@hummbl.io &middot; hummbl.io &middot; cal.com/hummbl/30min</div>
+    </div>
+
+    <div class="sh"><span class="sh-text">Service Packages</span></div>
+
+    <div class="card-title" style="margin-top:12px;color:var(--accent)">Tier 1: Entry Point ($5-15K)</div>
+    <div class="card card-flush">
+      <div class="li"><div class="li-body"><div class="li-title">AI Claims & Disclosure Review</div><div class="li-sub">FTC, SEC, CA AB 2013 &middot; ~30 hrs &middot; 1 week</div></div><div class="li-right"><div class="li-amount">$5-10K</div></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Readiness Audit</div><div class="li-sub">EU AI Act Annex III gap analysis &middot; ~40 hrs &middot; 1 week</div></div><div class="li-right"><div class="li-amount">$5-15K</div><div class="li-meta">Primary conversion</div></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">AI Employment Compliance</div><div class="li-sub">NYC LL144, IL, CO, EEOC &middot; ~50 hrs &middot; 2 weeks</div></div><div class="li-right"><div class="li-amount">$8-15K</div><div class="li-meta">per state</div></div></div>
+    </div>
+
+    <div class="card-title" style="margin-top:16px;color:var(--yellow)">Tier 2: Mid-Market ($15-40K)</div>
+    <div class="card card-flush">
+      <div class="li"><div class="li-body"><div class="li-title">Cross-Framework Mapping</div><div class="li-sub">Build once, comply everywhere &middot; ~60 hrs &middot; 2-3 wks</div></div><div class="li-right"><div class="li-amount">$15-25K</div></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">NIST AI RMF Implementation</div><div class="li-sub">Govern/Map/Measure/Manage &middot; ~80 hrs &middot; 3-4 wks</div></div><div class="li-right"><div class="li-amount">$15-30K</div></div></div>
+      <div class="li" style="background:var(--accent-bg)"><div class="li-body"><div class="li-title" style="color:var(--accent)">Agentic AI Governance</div><div class="li-sub">Delegation tokens, kill switch, multi-agent coord &middot; ~100 hrs &middot; 4-6 wks</div></div><div class="li-right"><div class="li-amount" style="color:var(--accent)">$20-40K</div><div class="li-meta" style="color:var(--accent)">Sweet spot</div></div></div>
+    </div>
+
+    <div class="card-title" style="margin-top:16px;color:var(--purple)">Tier 3: Enterprise ($25-60K)</div>
+    <div class="card card-flush">
+      <div class="li"><div class="li-body"><div class="li-title">ISO 42001 Certification</div><div class="li-sub">Full AIMS implementation &middot; ~140 hrs &middot; 6-8 wks</div></div><div class="li-right"><div class="li-amount">$25-50K</div></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Financial AI Governance</div><div class="li-sub">SEC, FCA, OSFI E-23 &middot; ~140 hrs &middot; 6-8 wks</div></div><div class="li-right"><div class="li-amount">$25-50K</div><div class="li-meta">per jurisdiction</div></div></div>
+      <div class="li" style="border-left:3px solid var(--accent-warm)"><div class="li-body"><div class="li-title" style="color:var(--accent-warm)">EU AI Act Conformity</div><div class="li-sub">Full conformity assessment prep &middot; ~160 hrs &middot; 8-12 wks</div></div><div class="li-right"><div class="li-amount" style="color:var(--accent-warm)">$30-60K</div><div class="li-meta">Highest value</div></div></div>
+    </div>
+
+    <div class="sh"><span class="sh-text">Rate Card</span></div>
+    <div class="card card-flush">
+      <div class="li"><div class="li-body"><div class="li-title">Floor Rate</div><div class="li-sub">Never go below this for any engagement</div></div><div class="li-right"><div class="li-amount" style="color:var(--red)">$200/hr</div></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Standard Consulting</div><div class="li-sub">Platform, SRE, orchestration work</div></div><div class="li-right"><div class="li-amount">$200-300/hr</div></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Governance Premium</div><div class="li-sub">Compliance-specific, regulatory work</div></div><div class="li-right"><div class="li-amount" style="color:var(--accent)">$300/hr</div></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Advisory Sessions</div><div class="li-sub">1-on-1, 60 min + 15 min prep</div></div><div class="li-right"><div class="li-amount">$300-500</div><div class="li-meta">per session</div></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Monthly Retainer</div><div class="li-sub">3-6 month commitment, 20-40 hrs/mo</div></div><div class="li-right"><div class="li-amount">$5-15K</div><div class="li-meta">per month</div></div></div>
+      <div class="li" style="background:var(--bg4)"><div class="li-body"><div class="li-title">Solo Capacity Ceiling</div><div class="li-sub">160 billable hrs/mo @ ~$250/hr effective</div></div><div class="li-right"><div class="li-amount">~$30K/mo</div><div class="li-meta">$360K/yr max</div></div></div>
+    </div>
+
+    <div class="sh"><span class="sh-text">Sales Funnel</span></div>
+    <div class="card">
+      <div style="font-family:var(--mono);font-size:12px;color:var(--text2);line-height:2">
+        <div>LinkedIn outreach / content / community</div>
+        <div style="color:var(--text3)">&ensp;&darr; 10-20% response rate</div>
+        <div style="color:var(--accent)">Free 30-min assessment (cal.com/hummbl/30min)</div>
+        <div style="color:var(--text3)">&ensp;&darr; 20-25% close rate</div>
+        <div style="color:var(--yellow)">Readiness Audit ($5-15K)</div>
+        <div style="color:var(--text3)">&ensp;&darr; 30-40% expand</div>
+        <div style="color:var(--purple)">Governance Implementation ($20-40K) or Retainer ($5-15K/mo)</div>
+        <div style="color:var(--text3)">&ensp;&darr; referral</div>
+        <div style="color:var(--accent-warm)">Enterprise engagement ($30-60K)</div>
+      </div>
+      <div style="margin-top:12px;font-size:11px;color:var(--text3)">
+        10 outreach/wk &rarr; 2 responses &rarr; 1 assessment/2 wks &rarr; 1 client/2.5 mo &rarr; 30% retainer conversion
+      </div>
+    </div>
+
+    <div class="sh"><span class="sh-text">IP Portfolio (100% HUMMBL)</span></div>
+    <div class="card card-flush">
+      <div class="li"><div class="li-body"><div class="li-title">Base120</div><div class="li-sub">780 mental models, 12 tiers</div></div><div class="li-right"><span class="badge badge-green">Published</span></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">CAES</div><div class="li-sub">Cognitive Architecture for Engineered Systems</div></div><div class="li-right"><span class="badge badge-gray">Internal</span></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">GaaS</div><div class="li-sub">Governance-as-a-Service thesis</div></div><div class="li-right"><span class="badge badge-gray">Internal</span></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">CLP</div><div class="li-sub">Cognitive Ledger Protocol v1.0</div></div><div class="li-right"><span class="badge badge-gray">Internal</span></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Delegation Tokens</div><div class="li-sub">HMAC-SHA256 signed capability tokens</div></div><div class="li-right"><span class="badge badge-yellow">Licensed</span></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Governance Bus</div><div class="li-sub">Append-only JSONL audit log</div></div><div class="li-right"><span class="badge badge-yellow">Licensed</span></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Compliance Mapper</div><div class="li-sub">SOC2 + GDPR + OWASP + EU AI Act</div></div><div class="li-right"><span class="badge badge-yellow">Licensed</span></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Arbiter</div><div class="li-sub">Quality scoring engine</div></div><div class="li-right"><span class="badge badge-green">Published</span></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">SENSE Framework</div><div class="li-sub">Sleep/Exercise/Nutrition/Soreness/Emotional</div></div><div class="li-right"><span class="badge badge-red">TBD</span></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">"Founder Mode" concept</div><div class="li-sub">Multi-agent orchestration concept</div></div><div class="li-right"><span class="badge badge-yellow">Licensed</span></div></div>
+    </div>
+
+    <div class="sh"><span class="sh-text">Monthly Expenses</span></div>
+    <div class="card card-flush">
+      <div class="li"><div class="li-body"><div class="li-title">Claude 20x Max</div></div><div class="li-right"><div class="li-amount" style="color:var(--red)">$200</div></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">GitHub Pro</div></div><div class="li-right"><div class="li-amount" style="color:var(--red)">$4</div></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Domain + Cloudflare</div></div><div class="li-right"><div class="li-amount" style="color:var(--red)">~$11</div></div></div>
+      <div class="li"><div class="li-body"><div class="li-title">Linktree Pro</div></div><div class="li-right"><div class="li-amount" style="color:var(--red)">~$5</div></div></div>
+      <div class="li" style="background:var(--bg4)"><div class="li-body"><div class="li-title" style="color:var(--red)">Total Fixed</div></div><div class="li-right"><div class="li-amount" style="color:var(--red)">~$220/mo</div></div></div>
+    </div>
+
+    <div class="sh"><span class="sh-text">foundermode-ai Compensation</span></div>
+    <div class="card">
+      <div class="stats">
+        <div class="stat"><div class="stat-label">Current Stipend</div><div class="stat-val red" style="font-size:18px">$430/mo</div></div>
+        <div class="stat"><div class="stat-label">After Tools</div><div class="stat-val red" style="font-size:18px">$230/mo</div></div>
+        <div class="stat"><div class="stat-label">Effective Rate</div><div class="stat-val red" style="font-size:18px">$1.44/hr</div></div>
+        <div class="stat"><div class="stat-label">Requested</div><div class="stat-val green" style="font-size:18px">$3,000/mo</div></div>
+      </div>
+      <div style="font-size:11px;color:var(--text3);margin-top:8px;text-align:center">Pending conversation with Dan &middot; See drafts/dan-cofounder-arrangement.md</div>
+    </div>
+
+    <div class="sh"><span class="sh-text">Market Comparables</span></div>
+    <div class="stats">
+      <div class="stat"><div class="stat-label">AI Gov Advisory</div><div class="stat-val green" style="font-size:16px">$300-600/hr</div></div>
+      <div class="stat"><div class="stat-label">EU AI Act Audit</div><div class="stat-val green" style="font-size:16px">EUR 30-50K</div></div>
+      <div class="stat"><div class="stat-label">LLM Specialist</div><div class="stat-val blue" style="font-size:16px">$150-250/hr</div></div>
+      <div class="stat"><div class="stat-label">FTE Equivalent</div><div class="stat-val yellow" style="font-size:16px">$180-220K</div></div>
+    </div>
+
+    <div class="sh"><span class="sh-text">Financial Targets</span></div>
+    <div class="stats">
+      <div class="stat"><div class="stat-label">MRR Target (Sep)</div><div class="stat-val green" style="font-size:18px">$5K</div></div>
+      <div class="stat"><div class="stat-label">MRR Target (Dec)</div><div class="stat-val green" style="font-size:18px">$15K</div></div>
+      <div class="stat"><div class="stat-label">Year 1 (Moderate)</div><div class="stat-val" style="font-size:18px">$205K</div></div>
+      <div class="stat"><div class="stat-label">ARR by Dec</div><div class="stat-val" style="font-size:18px">$180K</div></div>
+    </div>
+  </div>
+
   <!-- ═══ MORE ═══ -->
   <div class="page" id="p-more">
     <div class="sh" style="margin-top:0"><span class="sh-text">Decisions</span><button class="btn btn-sm" onclick="openSheet('decision')">+ Add</button></div>
@@ -548,6 +691,10 @@ details .details-content { padding-top: 12px; }
   <button class="tab" data-p="rates" role="tab" aria-selected="false" aria-label="Rates" aria-controls="p-rates" data-tooltip="Rate card">
     <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
     <span>Rates</span>
+  </button>
+  <button class="tab" data-p="biz" role="tab" aria-selected="false" aria-label="Business" aria-controls="p-biz" data-tooltip="Business reference">
+    <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+    <span>Biz</span>
   </button>
   <button class="tab" data-p="more" role="tab" aria-selected="false" aria-label="More options" aria-controls="p-more" data-tooltip="More options">
     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
@@ -622,6 +769,21 @@ details .details-content { padding-top: 12px; }
   <button class="btn btn-block" onclick="saveWeek()">Save Week</button>
 </div>
 
+<div class="sheet" id="sheet-outreach" role="dialog" aria-label="Log Outreach" aria-modal="true">
+  <div class="sheet-handle"></div>
+  <div class="sheet-title">Log Outreach</div>
+  <div class="field"><div class="field-label">Who</div><input class="field-input" id="f-out-who" placeholder="Name or company"></div>
+  <div class="field-row">
+    <div class="field"><div class="field-label">Channel</div><select class="field-input" id="f-out-channel"><option value="linkedin">LinkedIn DM</option><option value="email">Email</option><option value="community">Community Post</option><option value="discord">Discord</option><option value="twitter">X / Twitter</option><option value="other">Other</option></select></div>
+    <div class="field"><div class="field-label">Template Used</div><select class="field-input" id="f-out-template"><option value="cold">Cold Outreach</option><option value="warm">Warm Follow-Up</option><option value="direct">Direct Ask</option><option value="community">Community Post</option><option value="custom">Custom</option></select></div>
+  </div>
+  <div class="field"><div class="field-label">Notes</div><input class="field-input" id="f-out-notes" placeholder="Personalization, context, their profile..."></div>
+  <div class="field-row">
+    <div class="field"><div class="field-label">Create as Deal?</div><select class="field-input" id="f-out-deal"><option value="yes">Yes — add to pipeline</option><option value="no">No — just log it</option></select></div>
+  </div>
+  <button class="btn btn-block" onclick="addOutreach()">Log Outreach</button>
+</div>
+
 <div class="sheet" id="sheet-dealdetail" role="dialog" aria-label="Deal Detail" aria-modal="true">
   <div class="sheet-handle"></div>
   <div class="sheet-title" id="dd-title">Deal</div>
@@ -670,6 +832,8 @@ if(!D.timer)D.timer={running:false,start:0,client:'',elapsed:0};
 if(!D.applications)D.applications=[];
 // Migrate: add activities array to existing deals
 D.deals.forEach(d=>{if(!d.activities)d.activities=[];});
+// Migrate: add outreach log
+if(!D.outreach)D.outreach=[];
 
 const save=()=>localStorage.setItem(SK,JSON.stringify(D));
 
@@ -690,7 +854,7 @@ function showOnboarding() {
 
 // ─── Navigation ───
 const pages=['home','pipeline','revenue','score','rates','more'];
-const pageNames={home:'Overview',pipeline:'Pipeline',revenue:'Revenue',score:'Scorecard',rates:'Rate Card',more:'More'};
+const pageNames={home:'Overview',pipeline:'Pipeline',revenue:'Revenue',score:'Scorecard',rates:'Rate Card',biz:'Business',more:'More'};
 
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
   const p=t.dataset.p;
@@ -829,6 +993,103 @@ function renderHome(){
   }).join('');
 
   $('focus-text').value=D.weeklyFocus||'';
+}
+
+// ─── OUTREACH ───
+function renderOutreach(){
+  const td=today();
+  const thisWeek=D.outreach.filter(o=>{
+    const d=new Date(o.date),now=new Date(td);
+    const diff=Math.ceil((now-d)/864e5);
+    return diff<7;
+  });
+  const todayCount=D.outreach.filter(o=>o.date===td).length;
+  const weekCount=thisWeek.length;
+  const totalCount=D.outreach.length;
+  const responded=D.outreach.filter(o=>o.responded).length;
+
+  // Stats
+  $('outreach-stats').innerHTML=`<div class="stats">
+    <div class="stat"><div class="stat-label">Today</div><div class="stat-val ${todayCount>=2?'green':'yellow'}">${todayCount}</div></div>
+    <div class="stat"><div class="stat-label">This Week</div><div class="stat-val ${weekCount>=10?'green':weekCount>=5?'yellow':'red'}">${weekCount}<span style="font-size:12px;color:var(--text3)"> / 10</span></div></div>
+    <div class="stat"><div class="stat-label">Total Sent</div><div class="stat-val">${totalCount}</div></div>
+    <div class="stat"><div class="stat-label">Responses</div><div class="stat-val ${responded>0?'green':''}">${responded}${totalCount>0?' <span style="font-size:12px;color:var(--text3)">('+Math.round(responded/totalCount*100)+'%)</span>':''}</div></div>
+  </div>`;
+
+  // Today's outreach list
+  const todayItems=D.outreach.filter(o=>o.date===td);
+  const recentItems=D.outreach.filter(o=>o.date!==td).sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,10);
+
+  let html='';
+  if(todayItems.length){
+    html+=`<div class="card card-flush">`;
+    todayItems.forEach(o=>{
+      const chColors={linkedin:'var(--blue)',email:'var(--purple)',community:'var(--accent)',discord:'var(--purple)',twitter:'var(--blue)',other:'var(--text2)'};
+      html+=`<div class="li">
+        <div style="width:4px;min-height:36px;border-radius:2px;background:${chColors[o.channel]||'var(--text3)'};flex-shrink:0;align-self:stretch"></div>
+        <div class="li-body">
+          <div class="li-title">${esc(o.who)}</div>
+          <div class="li-sub">${o.channel} &middot; ${o.template} template${o.notes?' &middot; '+esc(o.notes):''}</div>
+        </div>
+        <div class="li-right">
+          ${o.responded?'<span class="badge badge-green">Replied</span>':'<button class="btn btn-sm btn-ghost" onclick="markResponded(\''+o.id+'\')">Got reply</button>'}
+        </div>
+      </div>`;
+    });
+    html+=`</div>`;
+  }
+
+  if(recentItems.length){
+    html+=`<details style="margin-top:8px"><summary style="font-size:12px;color:var(--text3);cursor:pointer;padding:6px 0">Recent outreach (${recentItems.length})</summary><div class="card card-flush" style="margin-top:8px">`;
+    recentItems.forEach(o=>{
+      const age=Math.ceil((new Date(td)-new Date(o.date))/864e5);
+      const stale=!o.responded&&age>=3;
+      html+=`<div class="li">
+        <div class="li-body">
+          <div class="li-title">${esc(o.who)}${stale?' <span style="color:var(--yellow);font-size:10px;font-weight:700">follow up ('+age+'d)</span>':''}</div>
+          <div class="li-sub">${o.date} &middot; ${o.channel} &middot; ${o.template}</div>
+        </div>
+        <div class="li-right">
+          ${o.responded?'<span class="badge badge-green">Replied</span>':'<button class="btn btn-sm btn-ghost" onclick="markResponded(\''+o.id+'\')">Got reply</button>'}
+        </div>
+      </div>`;
+    });
+    html+=`</div></details>`;
+  }
+
+  if(!todayItems.length&&!recentItems.length){
+    html=`<div class="card" style="text-align:center;color:var(--text3);padding:32px">No outreach logged yet. Tap + Log to record your first message.</div>`;
+  }
+
+  $('outreach-today').innerHTML=html;
+}
+
+function addOutreach(){
+  const who=$('f-out-who').value;if(!who)return toast('Enter who you messaged');
+  const o={id:uid(),who,channel:$('f-out-channel').value,template:$('f-out-template').value,notes:$('f-out-notes').value,date:today(),responded:false};
+  D.outreach.push(o);
+
+  // Optionally create a deal
+  if($('f-out-deal').value==='yes'){
+    D.deals.push({id:uid(),name:who,type:'advisory',value:'',stage:'prospect',notes:'Outreach: '+o.channel+' ('+o.template+'). '+o.notes,created:today(),activities:[{id:uid(),type:'email',text:'Initial outreach via '+o.channel+' using '+o.template+' template',date:today()}]});
+  }
+
+  save();closeSheet();$('f-out-who').value='';$('f-out-notes').value='';
+  renderOutreach();renderPipeline();renderHome();toast('Outreach logged'+(($('f-out-deal').value==='yes')?' + deal created':''));
+}
+
+function markResponded(id){
+  const o=D.outreach.find(x=>x.id===id);
+  if(o){o.responded=true;o.respondedDate=today();save();renderOutreach();toast('Marked as replied');}
+}
+
+function copyTemplate(name){
+  const el=$('tpl-'+name);if(!el)return;
+  navigator.clipboard.writeText(el.textContent).then(()=>toast('Template copied')).catch(()=>{
+    // Fallback for older browsers
+    const r=document.createRange();r.selectNode(el);window.getSelection().removeAllRanges();window.getSelection().addRange(r);
+    document.execCommand('copy');window.getSelection().removeAllRanges();toast('Template copied');
+  });
 }
 
 // ─── PIPELINE ───
@@ -1248,7 +1509,7 @@ function importDataPrompt(){
 }
 
 // ─── Render All ───
-function renderAll(){renderHome();renderPipeline();renderRevenue();renderTimer();renderScore();renderDecisions();renderApps();}
+function renderAll(){renderHome();renderOutreach();renderPipeline();renderRevenue();renderTimer();renderScore();renderDecisions();renderApps();}
 renderAll();
 showOnboarding();
 </script>
