@@ -8,44 +8,44 @@
   @page { size: letter landscape; margin: 0.4in; }
   @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .no-print { display: none !important; } .page { padding: 0; } }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.5; font-size: 14px; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #fafafa; color: #e0e0e0; line-height: 1.5; font-size: 14px; }
   .page { max-width: 1200px; margin: 0 auto; padding: 40px 32px 60px; }
 
   /* Print button */
-  .print-btn { position: fixed; top: 16px; right: 16px; background: #00ff88; color: #0a0a0a; border: none; padding: 10px 22px; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Courier New', monospace; z-index: 100; letter-spacing: 1px; }
+  .print-btn { position: fixed; top: 16px; right: 16px; background: #166534; color: #fafafa; border: none; padding: 10px 22px; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Courier New', monospace; z-index: 100; letter-spacing: 1px; }
   .print-btn:hover { background: #00cc6a; }
 
   /* Header */
   .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 36px; padding-bottom: 16px; border-bottom: 2px solid #222; }
-  .brand { font-family: 'Courier New', monospace; font-size: 22px; font-weight: 900; letter-spacing: 4px; color: #00ff88; }
-  .brand-sub { font-size: 11px; color: #666; letter-spacing: 1px; margin-top: 2px; }
+  .brand { font-family: 'Courier New', monospace; font-size: 22px; font-weight: 900; letter-spacing: 4px; color: #166534; }
+  .brand-sub { font-size: 11px; color: #9ca3af; letter-spacing: 1px; margin-top: 2px; }
   .header-right { text-align: right; font-size: 11px; color: #555; }
 
   /* Hero */
   .hero { text-align: center; margin-bottom: 40px; }
   .hero h1 { font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px; }
-  .hero h1 span { color: #00ff88; }
+  .hero h1 span { color: #166534; }
   .hero p { font-size: 16px; color: #888; max-width: 700px; margin: 0 auto; }
 
   /* Insight box */
-  .insight { background: #111; border: 1px solid #00ff8833; border-left: 4px solid #00ff88; padding: 20px 24px; border-radius: 6px; margin-bottom: 40px; font-size: 15px; color: #ccc; }
-  .insight strong { color: #00ff88; }
+  .insight { background: #111; border: 1px solid #16653433; border-left: 4px solid #166534; padding: 20px 24px; border-radius: 6px; margin-bottom: 40px; font-size: 15px; color: #ccc; }
+  .insight strong { color: #166534; }
 
   /* Matrix */
   .matrix-wrap { overflow-x: auto; margin-bottom: 48px; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  th, td { padding: 10px 12px; text-align: left; border: 1px solid #1a1a1a; }
-  thead th { background: #111; color: #00ff88; font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; cursor: pointer; position: sticky; top: 0; user-select: none; white-space: nowrap; }
+  th, td { padding: 10px 12px; text-align: left; border: 1px solid #f5f5f5; }
+  thead th { background: #111; color: #166534; font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; cursor: pointer; position: sticky; top: 0; user-select: none; white-space: nowrap; }
   thead th:first-child { cursor: default; min-width: 200px; }
   thead th:not(:first-child):hover { background: #1a3a28; }
-  thead th.active-filter { background: #00ff8822; border-bottom: 2px solid #00ff88; }
+  thead th.active-filter { background: #16653422; border-bottom: 2px solid #166534; }
   tbody tr { transition: background 0.15s; }
   tbody tr:nth-child(even) { background: #0f0f0f; }
   tbody tr:hover { background: #0d1f16 !important; }
   tbody td:first-child { font-weight: 600; color: #fff; }
   td.ref { color: #aaa; font-family: 'Courier New', monospace; font-size: 12px; }
   td.na { color: #333; text-align: center; }
-  td.production { background: #00ff8810; color: #00ff88; font-weight: 600; }
+  td.production { background: #16653410; color: #166534; font-weight: 600; }
   .col-highlight { background: #0d1f16 !important; }
 
   /* Column filter state */
@@ -54,46 +54,46 @@
   /* Sections */
   .section { margin-bottom: 40px; }
   .section h2 { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #222; }
-  .section h2 span { color: #00ff88; }
+  .section h2 span { color: #166534; }
 
   /* Capability cards */
   .cap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
-  .cap-card { background: #111; border: 1px solid #1a1a1a; border-radius: 8px; padding: 20px; }
-  .cap-card h3 { color: #00ff88; font-size: 15px; margin-bottom: 6px; font-family: 'Courier New', monospace; }
+  .cap-card { background: #111; border: 1px solid #f5f5f5; border-radius: 8px; padding: 20px; }
+  .cap-card h3 { color: #166534; font-size: 15px; margin-bottom: 6px; font-family: 'Courier New', monospace; }
   .cap-card p { font-size: 13px; color: #999; margin-bottom: 8px; }
-  .cap-tag { display: inline-block; background: #00ff8815; color: #00ff88; font-size: 11px; padding: 2px 8px; border-radius: 3px; margin-right: 4px; margin-bottom: 4px; font-family: 'Courier New', monospace; }
+  .cap-tag { display: inline-block; background: #16653415; color: #166534; font-size: 11px; padding: 2px 8px; border-radius: 3px; margin-right: 4px; margin-bottom: 4px; font-family: 'Courier New', monospace; }
 
   /* ROI box */
-  .roi { background: linear-gradient(135deg, #0d1f16, #111); border: 2px solid #00ff8844; border-radius: 10px; padding: 28px 32px; margin-bottom: 40px; text-align: center; }
+  .roi { background: linear-gradient(135deg, #0d1f16, #111); border: 2px solid #16653444; border-radius: 10px; padding: 28px 32px; margin-bottom: 40px; text-align: center; }
   .roi h2 { font-size: 22px; color: #fff; margin-bottom: 16px; }
   .roi-grid { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: 16px; max-width: 700px; margin: 0 auto; }
   .roi-item { text-align: center; }
-  .roi-label { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+  .roi-label { font-size: 11px; color: #9ca3af; text-transform: uppercase; letter-spacing: 1px; }
   .roi-value { font-family: 'Courier New', monospace; font-size: 24px; font-weight: 900; }
   .roi-value.cost { color: #ff4444; }
-  .roi-value.unified { color: #00ff88; }
+  .roi-value.unified { color: #166534; }
   .roi-value.savings { color: #fff; }
   .roi-arrow { color: #333; font-size: 24px; }
 
   /* Filter section */
-  .filter-section { background: #111; border: 1px solid #1a1a1a; border-radius: 8px; padding: 24px; margin-bottom: 40px; }
+  .filter-section { background: #111; border: 1px solid #f5f5f5; border-radius: 8px; padding: 24px; margin-bottom: 40px; }
   .filter-section h3 { color: #fff; margin-bottom: 4px; font-size: 16px; }
-  .filter-section p { color: #666; font-size: 13px; margin-bottom: 16px; }
+  .filter-section p { color: #9ca3af; font-size: 13px; margin-bottom: 16px; }
   .filter-checks { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
   .filter-check { display: flex; align-items: center; gap: 6px; cursor: pointer; }
-  .filter-check input { accent-color: #00ff88; width: 16px; height: 16px; cursor: pointer; }
+  .filter-check input { accent-color: #166534; width: 16px; height: 16px; cursor: pointer; }
   .filter-check label { color: #ccc; font-size: 13px; cursor: pointer; }
   #filter-results { font-size: 14px; color: #888; }
-  #filter-results .needed { color: #00ff88; font-weight: 600; }
+  #filter-results .needed { color: #166534; font-weight: 600; }
 
   /* CTA */
-  .cta { background: #00ff88; color: #0a0a0a; border-radius: 10px; padding: 32px; text-align: center; margin-bottom: 40px; }
+  .cta { background: #166534; color: #fafafa; border-radius: 10px; padding: 32px; text-align: center; margin-bottom: 40px; }
   .cta h2 { font-size: 24px; font-weight: 800; margin-bottom: 6px; }
   .cta p { font-size: 14px; margin-bottom: 4px; }
-  .cta a { color: #0a0a0a; font-weight: 700; }
+  .cta a { color: #fafafa; font-weight: 700; }
 
   /* Footer */
-  .footer { text-align: center; padding-top: 24px; border-top: 1px solid #1a1a1a; font-size: 11px; color: #444; }
+  .footer { text-align: center; padding-top: 24px; border-top: 1px solid #f5f5f5; font-size: 11px; color: #444; }
 </style>
 </head>
 <body>
