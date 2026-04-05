@@ -6,6 +6,16 @@
 - **Publication thesis**: typed governance tuples for delegation, evidence, and attestation within a HUMMBL-structured reasoning stack.
 - **Current priorities**: secure evidence-first execution, publishable standards/experiments, and reproducible assurance tooling.
 
+## By the Numbers
+
+| Metric | Value |
+|--------|-------|
+| `hummbl-governance` tests | 476 (stdlib-only, zero runtime deps) |
+| `hummbl-governance` modules | 20 |
+| `founder-mode` tests | 14,400+ |
+| CI workflows (founder-mode) | 11 active |
+| Published packages | `hummbl-governance` on [PyPI](https://pypi.org/project/hummbl-governance/) |
+
 ## Canonical public projects
 
 | Project | Purpose | Link |
@@ -18,9 +28,9 @@
 | `governed-iac-reference` | Reference infrastructure-as-code with governance policy, change validation, and audit | github.com/hummbl-dev/governed-iac-reference |
 | `HUMMBL-Unified-Tier-Framework` | Cognitive curricula & wickedness assessment for HUMMBL mental models | github.com/hummbl-dev/HUMMBL-Unified-Tier-Framework |
 
-## Case Studies
+## Architecture Reference
 
-- [Building the HUMMBL Base120 Cognitive Framework](./case-studies/base120-claude-architecture.md) — A Claude-powered architecture for structured reasoning at scale (2+ years, 120 models, 7,700+ tests, 8-module governance package)
+- [Building the HUMMBL Base120 Cognitive Framework](./case-studies/base120-claude-architecture.md) — Internal architecture case study: how Claude-powered infrastructure was used to build the Base120 framework itself (2+ years of development, 120 canonical mental models, 14,400+ tests across the founder-mode platform, 20-module governance package)
 
 ## Supporting references
 
