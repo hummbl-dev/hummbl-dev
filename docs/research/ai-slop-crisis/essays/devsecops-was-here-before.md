@@ -6,11 +6,9 @@
 
 ## The Pattern Is Not New
 
-Every infrastructure category follows the same arc: a new capability outpaces the controls around it, a gap opens between velocity and accountability, early incidents are dismissed as growing pains, a regulatory catalyst arrives, and within 36 months the gap closes with a new layer of mandatory tooling. Then the category leaders are set, and everyone else is playing catch-up.
+Every infrastructure category follows the same arc: a new capability outpaces the controls around it, a gap opens, early incidents are dismissed as growing pains, a regulatory catalyst arrives, and within 36 months the gap closes with a new layer of mandatory tooling. Then the category leaders are set, and everyone else is playing catch-up.
 
-DevSecOps traced this arc from 2010 to 2017. AI governance is tracing it now, from 2023 to an estimated 2028 -- but compressed by regulation, compressed by incident velocity, and compressed by the sheer scale of AI-generated artifacts entering production systems.
-
-This essay maps the DevSecOps timeline onto the AI governance timeline, milestone by milestone, with dates and evidence. The purpose is not analogy for its own sake. The purpose is prediction: if you know where you are on the curve, you know what happens next and how long you have to act.
+DevSecOps traced this arc from 2010 to 2017. AI governance is tracing it now, from 2023 to an estimated 2028 -- compressed by regulation, incident velocity, and the sheer scale of AI-generated artifacts entering production systems. If you know where you are on the curve, you know what happens next and how long you have to act.
 
 ---
 
@@ -32,10 +30,10 @@ The commercial vanguard is funded but pre-revenue at scale: Credo AI, Holistic A
 
 **DevSecOps:** The period from 2014 to 2016 produced the incidents that made DevSecOps real:
 
-- **Target breach (December 2013):** 40 million credit card records, 70 million personal records. Root cause: third-party HVAC vendor credentials. Cost: $162 million in direct expenses, $18.5 million settlement. This was the incident that made "supply-chain security" a phrase executives understood.
-- **Heartbleed (April 2014):** OpenSSL vulnerability affecting an estimated 17% of the internet's secure web servers. The patch required touching almost every server in a fleet -- the kind of remediation that manual security review could not scale to.
-- **OPM breach (June 2015):** 21.5 million federal employee records. Attributed to nation-state actors. The breach that made the US government take software supply-chain security seriously, eventually leading to Platform One.
-- **Equifax (September 2017, but investigation started 2015-2016):** 147 million records. Root cause: unpatched Apache Struts. Cost: $700 million settlement. The breach that made "patch velocity" a board-level metric.
+- **Target breach (December 2013):** 40 million credit card records. Root cause: third-party HVAC vendor credentials. Cost: $162 million. Made "supply-chain security" a phrase executives understood.
+- **Heartbleed (April 2014):** OpenSSL vulnerability affecting approximately 17% of the internet's secure web servers. Remediation at scale required automation that manual review could not provide.
+- **OPM breach (June 2015):** 21.5 million federal employee records. The breach that made the US government take software supply-chain security seriously.
+- **Equifax (September 2017):** 147 million records. Unpatched Apache Struts. $700 million settlement. Made "patch velocity" a board-level metric.
 
 **AI Governance:** The equivalent incidents are already happening:
 
@@ -149,13 +147,13 @@ The open-source primitives window is critical. OPA became canonical for policy-a
 
 The analogy is strong but not clean. Four places the pattern breaks, and what each means:
 
-**1. The artifact is non-deterministic.** DevSecOps scans deterministic code. AI governance must govern stochastic outputs. SBOMs and signed artifacts map loosely to model cards and eval suites, but there is no clean "CVE" equivalent for model behavior. This opens greenfield primitive design -- the eval-as-code / behavior-as-code layer does not exist yet.
+**1. The artifact is non-deterministic.** DevSecOps scans deterministic code. AI governance must govern stochastic outputs. No clean "CVE" equivalent for model behavior exists yet -- greenfield primitive design opportunity.
 
-**2. The buyer is fragmented.** DevSecOps converged on CISO + AppSec Director as the buyer. AI governance is fragmented across CISO, Chief AI Officer, Chief Risk Officer, General Counsel, and Chief Data Officer. Fragmentation slows enterprise deals but also means multiple budget lines to attack.
+**2. The buyer is fragmented.** DevSecOps converged on CISO + AppSec Director. AI governance is split across CISO, Chief AI Officer, CRO, General Counsel, and CDO. Slower deals, but multiple budget lines to attack.
 
-**3. Model providers are oligopolists.** DevSecOps tools did not depend on three to five companies. AI governance vendors face platform risk: if OpenAI ships native governance in their API, one decision shrinks a $100 million TAM. DevSecOps never had this concentration risk.
+**3. Model providers are oligopolists.** If OpenAI ships native governance in their API, one decision shrinks a $100 million TAM. DevSecOps never had this concentration risk.
 
-**4. There is no installed pipeline to piggyback on.** DevSecOps inherited CI/CD pipelines. AI governance has no equivalent universal substrate -- MLOps is fragmented, agent frameworks are days old. The primitive layer has to create the pipeline, not annotate an existing one. This is both a moat opportunity and an execution risk.
+**4. No installed pipeline to piggyback on.** DevSecOps inherited CI/CD. AI governance has no equivalent universal substrate. The primitive layer must create the pipeline, not annotate an existing one -- both a moat opportunity and an execution risk.
 
 ---
 
