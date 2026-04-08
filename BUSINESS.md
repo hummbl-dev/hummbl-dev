@@ -273,7 +273,7 @@ To hit $15K MRR by December: need 3 retainer clients. At 1 new client every 2.5 
 - **NVIDIA NemoClaw** — 16K GitHub stars, Apache 2.0. Infrastructure-layer sandboxing (Landlock/seccomp containers), NOT governance. Complementary, not competitive. Partnership angle: "NemoClaw sandboxes agents; hummbl-governance governs them."
 
 **Differentiation**:
-1. Working code, not slide decks (7,700+ tests, production-daily)
+1. Working code, not slide decks (15,000+ tests, production-daily)
 2. MCP-native (runs inside Claude — no one else does this)
 3. Stdlib-only (zero dependencies — deploys anywhere)
 4. Self-referential proof (we use HUMMBL to govern the fleet that builds HUMMBL)

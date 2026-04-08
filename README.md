@@ -2,7 +2,7 @@
 
 **Governance primitives for AI agent orchestration.** Stdlib-only. Contract-driven. Air-gap capable.
 
-AI-generated code is [42% of committed code](https://docs.research/ai-slop-crisis/03_round3_hard_data_sweep.md) and ships [2.74x more vulnerabilities](https://docs.research/ai-slop-crisis/03_round3_hard_data_sweep.md) than humans write. Insurers are [excluding it from coverage](https://docs.research/ai-slop-crisis/newsletters/2026-04-slop-tracker-01.md). Courts are [settling the liability chain](https://docs.research/ai-slop-crisis/essays/reasonable-care-age-of-agents.md). Nobody ships governance as embeddable libraries. We do.
+AI-generated code is [42% of committed code](docs/research/ai-slop-crisis/03_round3_hard_data_sweep.md) and ships [2.74x more vulnerabilities](docs/research/ai-slop-crisis/03_round3_hard_data_sweep.md) than humans write. Insurers are [excluding it from coverage](docs/research/ai-slop-crisis/newsletters/2026-04-slop-tracker-01.md). Courts are [settling the liability chain](docs/research/ai-slop-crisis/essays/reasonable-care-age-of-agents.md). Nobody ships governance as embeddable libraries. We do.
 
 ```bash
 pip install hummbl-governance
@@ -70,15 +70,32 @@ Our positioning is backed by a 24-document evidence corpus with 50+ primary-sour
 
 ---
 
+## Tools
+
+Free self-assessments and compliance references — no login, no cloud, print to PDF:
+
+| Tool | What it does |
+|---|---|
+| [**Tool Index**](index.html) | Landing page for all tools below |
+| [EU AI Act Readiness](eu-ai-act-readiness.html) | 20-question governance posture check |
+| [NIST AI RMF Readiness](nist-ai-rmf-readiness.html) | 4 functions / 19 categories / 72 subcategories |
+| [ISO 42001 Readiness](iso-42001-readiness.html) | AI Management System certification checklist |
+| [Singapore Agentic AI](singapore-agentic-readiness.html) | Agent governance architecture assessment |
+| [Colorado AI Act](colorado-ai-act-readiness.html) | State-level algorithmic decision compliance |
+| [Compliance Calendar](compliance-calendar.html) | Interactive AI governance timeline 2025-2027 |
+| [Governance Crosswalk](governance-crosswalk.html) | Side-by-side framework requirement mapping |
+
+---
+
 ## By the numbers
 
 | Metric | Value |
 |---|---|
 | Governance primitives | 20 (stdlib-only, zero runtime deps) |
 | Tests (`hummbl-governance`) | 476 passing |
-| Tests (`founder-mode` reference impl) | 15,000+ |
 | CI workflows | 11 active |
 | Research corpus | 60 documents, 50+ primary sources |
+| Governance tools | 8 (readiness assessments, crosswalk, calendar) |
 | Published on PyPI | [`hummbl-governance`](https://pypi.org/project/hummbl-governance/) v0.3.0 |
 
 ---
@@ -113,6 +130,12 @@ pip install hummbl-governance
 - **Self-assess**: [hummbl.io/readiness](https://hummbl.io/readiness.html) — 20-question governance posture check
 - **Subscribe**: [hummbl.io/tracker](https://hummbl.io/tracker.html) — monthly intelligence digest
 - **Talk to us**: reuben@hummbl.io
+
+---
+
+## About
+
+HUMMBL is a one-person AI governance consultancy founded by **Reuben Bowlby** in Atlanta, GA. Background in coaching, education, and full-stack engineering — now focused on the governance gap between AI agent capabilities and the controls enterprises need to deploy them safely.
 
 ---
 
