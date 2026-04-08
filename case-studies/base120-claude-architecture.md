@@ -58,7 +58,7 @@ Complex development tasks are orchestrated through a multi-agent system using st
 - Infrastructure tasks are delegated to specialized agents
 - Tactical execution follows authorization-gated workflows
 
-This coordination pattern — validated through 2+ years of production use — directly informed HUMMBL's governance architecture, including the `hummbl-governance` runtime package: kill switch, circuit breaker, cost governor, delegation tokens, audit log, identity registry, and schema validator — all extracted as a standalone, zero-dependency Python library (157 tests, Apache 2.0).
+This coordination pattern — validated through 2+ years of production use — directly informed HUMMBL's governance architecture, including the `hummbl-governance` runtime package: kill switch, circuit breaker, cost governor, delegation tokens, audit log, identity registry, and schema validator — all extracted as a standalone, zero-dependency Python library (476 tests, Apache 2.0).
 
 ---
 
@@ -68,9 +68,9 @@ This coordination pattern — validated through 2+ years of production use — d
 
 **Production Deployment:** [hummbl.io](https://hummbl.io) is live and serving users, with the full Base120 library accessible through both the web interface and MCP server infrastructure.
 
-**Governance Package:** The `hummbl-governance` runtime package was extracted from production infrastructure — 8 modules, 157 tests, zero third-party dependencies. Available at [github.com/hummbl-dev/hummbl-governance](https://github.com/hummbl-dev/hummbl-governance).
+**Governance Package:** The `hummbl-governance` runtime package was extracted from production infrastructure — 20 modules, 476 tests, zero third-party dependencies. Available at [github.com/hummbl-dev/hummbl-governance](https://github.com/hummbl-dev/hummbl-governance).
 
-**Test Infrastructure:** The underlying platform maintains 7,700+ automated tests across 14 CI workflows, running on every commit via self-hosted runners.
+**Test Infrastructure:** The underlying platform maintains 15,000+ automated tests across 14 CI workflows, running on every commit via self-hosted runners.
 
 **Architecture Scalability:** The Cloudflare Workers + D1 architecture handles global edge deployment without traditional server management, while the MCP server design enables any Claude user to access HUMMBL's cognitive frameworks.
 
