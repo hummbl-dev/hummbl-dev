@@ -2,7 +2,7 @@
 
 **Governance primitives for AI agent orchestration.** Stdlib-only. Contract-driven. Air-gap capable.
 
-AI-generated code is [42% of committed code](https://docs.research/ai-slop-crisis/03_round3_hard_data_sweep.md) and ships [2.74x more vulnerabilities](https://docs.research/ai-slop-crisis/03_round3_hard_data_sweep.md) than humans write. Insurers are [excluding it from coverage](https://docs.research/ai-slop-crisis/newsletters/2026-04-slop-tracker-01.md). Courts are [settling the liability chain](https://docs.research/ai-slop-crisis/essays/reasonable-care-age-of-agents.md). Nobody ships governance as embeddable libraries. We do.
+AI-generated code is [42% of committed code](docs/research/ai-slop-crisis/03_round3_hard_data_sweep.md) and ships [2.74x more vulnerabilities](docs/research/ai-slop-crisis/03_round3_hard_data_sweep.md) than humans write. Insurers are [excluding it from coverage](docs/research/ai-slop-crisis/newsletters/2026-04-slop-tracker-01.md). Courts are [settling the liability chain](docs/research/ai-slop-crisis/essays/reasonable-care-age-of-agents.md). Nobody ships governance as embeddable libraries. We do.
 
 ```bash
 pip install hummbl-governance

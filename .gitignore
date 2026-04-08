@@ -5,3 +5,9 @@ __pycache__/
 .mypy_cache/
 .env
 .DS_Store
+
+# Private / sensitive — keep local, never commit
+FINANCIAL_PLAN.md
+hummbl_productization_summary_v0.1.md
+drafts/
+job-hunt/
