@@ -8,3 +8,16 @@ __pycache__/
 
 # Internal strategy docs — never commit
 drafts/
+
+# Source images — biometric/personal data, MUST NOT be committed
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.heic
+*.HEIC
+*.png
+*.PNG
+*.webp
+images/
+faces/
