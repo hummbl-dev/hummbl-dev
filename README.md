@@ -1,143 +1,131 @@
 # HUMMBL
 
-**Governance primitives for AI agent orchestration.** Stdlib-only. Contract-driven. Air-gap capable.
+Governance infrastructure for AI agents.
 
-AI-generated code is [42% of committed code](docs/research/ai-slop-crisis/03_round3_hard_data_sweep.md) and ships [2.74x more vulnerabilities](docs/research/ai-slop-crisis/03_round3_hard_data_sweep.md) than humans write. Insurers are [excluding it from coverage](docs/research/ai-slop-crisis/newsletters/2026-04-slop-tracker-01.md). Courts are [settling the liability chain](docs/research/ai-slop-crisis/essays/reasonable-care-age-of-agents.md). Nobody ships governance as embeddable libraries. We do.
+HUMMBL builds small, inspectable control-plane primitives for agentic systems: delegation tokens, append-only receipts, kill switches, circuit breakers, capability fences, source-verification gates, and review workflows that create evidence while the system runs.
+
+The bias is explicit:
+
+- **libraries over platforms** — controls should live in the execution path, not only in a dashboard after the fact
+- **receipts over vibes** — every governance claim should leave an audit trail
+- **stdlib-first primitives** — core safety controls should survive constrained, regulated, and air-gapped environments
+- **human override preserved** — automation assists governance; it does not become the sovereign
 
 ```bash
 pip install hummbl-governance
 ```
 
 [![PyPI](https://img.shields.io/pypi/v/hummbl-governance)](https://pypi.org/project/hummbl-governance/)
-[![Tests](https://img.shields.io/badge/tests-476%20passing-brightgreen)]()
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)]()
-[![Dependencies](https://img.shields.io/badge/runtime%20deps-zero-brightgreen)]()
+[![Runtime deps](https://img.shields.io/badge/runtime%20deps-zero-brightgreen)]()
 
 ---
 
-## What you get
+## Start Here
 
-20 governance primitives, all Python stdlib-only, all independently importable:
-
-| Primitive | What it does |
+| Need | Repository |
 |---|---|
-| **KillSwitch** | Emergency halt with 4 graduated modes (DISENGAGED → EMERGENCY) |
-| **CircuitBreaker** | Automatic failure detection + recovery (CLOSED / HALF_OPEN / OPEN) |
-| **DelegationToken** | HMAC-SHA256 signed capability tokens for agent scope authorization |
-| **AuditLog** | Append-only JSONL governance trail with rotation and retention |
-| **AgentRegistry** | Identity management with aliases and trust tiers |
-| **SchemaValidator** | JSON Schema Draft 2020-12 validation (stdlib, no jsonschema dep) |
-| **CostGovernor** | Budget tracking with soft/hard caps and ALLOW/WARN/DENY decisions |
-| **BusWriter** | Append-only TSV coordination bus with flock locking |
-| **ComplianceMapper** | Map governance traces to SOC 2, GDPR, and OWASP controls |
-| **HealthCollector** | Composable health probes with latency tracking |
-| + 10 more | OutputValidator, CapabilityFence, StrideMapper, ReasoningEngine, ... |
-
-```python
-from hummbl_governance import KillSwitch, CircuitBreaker, DelegationToken
-
-ks = KillSwitch(state_dir=Path("./governance"))
-cb = CircuitBreaker(failure_threshold=5, recovery_timeout=60)
-token = DelegationToken.create(agent="codex", scope=["read", "write"], ttl=3600)
-```
+| Runtime governance primitives | [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance) |
+| Mental-model substrate | [`base120`](https://github.com/hummbl-dev/base120) |
+| Source-verification gate | [`evidence-gate`](https://github.com/hummbl-dev/evidence-gate) |
+| Code quality and governance scoring | [`arbiter`](https://github.com/hummbl-dev/arbiter) |
+| MCP access to HUMMBL models and skills | [`mcp-server`](https://github.com/hummbl-dev/mcp-server) |
+| Agent orchestration patterns | [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent) |
+| Research and citation corpus | [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography) |
+| Public profile, tools, and repo inventory | [`hummbl-dev`](https://github.com/hummbl-dev/hummbl-dev) |
 
 ---
 
-## Why libraries, not platforms
+## Current Work
 
-Every AI governance vendor (Qodo, Apiiro, Factory, Aikido, Cycode) ships a SaaS platform. Each requires sending code or telemetry to their cloud.
+| Area | What is shipping |
+|---|---|
+| Agent governance | `hummbl-governance`, `agent-governance-demo`, `hummbl-agent`, `mcp-server` |
+| Evidence and review | `evidence-gate`, `arbiter`, governed PR review protocols, source-verification rules |
+| Cognitive substrate | `base120`, `hummbl-theory`, `hummbl-bibliography`, `arcana` |
+| Operator infrastructure | `founder-mode`, `claude-config`, `hummbl-iac` |
+| Product research | `fractional-bench`, `coaching`, `hummbl-production` |
+| Experimental public repos | `autoresearch`, `governed-compression`, `sint-protocol`, `bif` |
 
-HUMMBL ships **libraries you embed inline** in your agent's execution path. No cloud dependency. No vendor lock-in. Deployable wherever your workloads deploy — including air-gapped, classified, and regulated environments.
+Some repositories are private while they contain operator workflows, client-sensitive research, or active product work. Public repositories are the durable reference surface.
 
-> "A signed delegation token is not a vendor pitch. It is a Caremark affirmative defense, a NIST AI RMF conformance record, and a reasonable-care evidence pack — generated at runtime, not reconstructed after the breach."
+---
 
-Read the full thesis: [Why Libraries, Not Platforms](docs/research/ai-slop-crisis/essays/why-libraries-not-platforms.md)
+## What HUMMBL Means by Governance
+
+Governance is not a policy PDF. It is a runtime property:
+
+1. **Who is acting?** Agent identity, trust tier, and delegation scope.
+2. **What authority do they have?** Signed capability tokens and bounded tools.
+3. **What happened?** Append-only receipts, bus messages, and evidence logs.
+4. **What should stop the system?** Kill switches, circuit breakers, cost governors, and review gates.
+5. **What can be audited later?** Source manifests, PR reviews, test evidence, and structured findings.
+
+That is the spine across the org: small primitives that make governance observable, testable, and reviewable.
+
+---
+
+## By The Numbers
+
+Inventory captured on 2026-05-08:
+
+| Metric | Count |
+|---|---:|
+| Total repositories | 54 |
+| Active public repositories | 35 |
+| Active private repositories | 17 |
+| Archived repositories | 2 |
+| Primary language family | Python-heavy, with TypeScript, HTML, Shell, TeX, Go templates, Java |
+
+Latest repo inventory: [`docs/GITHUB_REPO_INVENTORY_2026-05-08.md`](docs/GITHUB_REPO_INVENTORY_2026-05-08.md)
+
+Latest branch cleanup audit: [`docs/BRANCH_CLEANUP_AUDIT_2026-05-08.md`](docs/BRANCH_CLEANUP_AUDIT_2026-05-08.md)
 
 ---
 
 ## Research
 
-Our positioning is backed by a 24-document evidence corpus with 50+ primary-source citations, verified:
+HUMMBL's public thesis is that AI governance will move from abstract policy to runtime evidence. The research corpus tracks:
 
-**Start here:**
-- [Top 10 cite-ready findings](docs/research/ai-slop-crisis/README.md)
-- [The Observability Argument](docs/research/ai-slop-crisis/essays/the-observability-argument.md) — why AI governance is the Datadog moment
-- [The 22 Incidents](docs/research/ai-slop-crisis/essays/the-22-incidents.md) — cataloged AI code failures (2023-2026)
-- [Reasonable Care in the Age of AI Agents](docs/research/ai-slop-crisis/essays/reasonable-care-age-of-agents.md) — what courts will look for
+- AI-generated code risk and liability
+- agentic control-plane design
+- source verification before publication
+- governance receipts and audit trails
+- mental-model infrastructure for agent reasoning
+- practical compliance mapping across NIST AI RMF, ISO 42001, EU AI Act, OWASP, and related frameworks
 
-**Role-specific:**
-[CISO](docs/research/ai-slop-crisis/blog/ciso-ai-code-risk.md) | [CAIO](docs/research/ai-slop-crisis/blog/caio-governance-gap.md) | [GC/Legal](docs/research/ai-slop-crisis/blog/gc-ai-liability-chain.md) | [CTO](docs/research/ai-slop-crisis/blog/cto-developer-velocity-trap.md) | [AppSec](docs/research/ai-slop-crisis/blog/appsec-devsecops-ai-code-reality.md) | [Compliance](docs/research/ai-slop-crisis/blog/compliance-grc-ai-framework-mapping.md) | [Platform Eng](docs/research/ai-slop-crisis/blog/platform-eng-governance-layer.md) | [Risk Manager](docs/research/ai-slop-crisis/blog/risk-manager-ai-insurance-crisis.md) | [Defense/Federal](docs/research/ai-slop-crisis/blog/defense-federal-cmmc-ai-governance.md) | [AI Governance Lead](docs/research/ai-slop-crisis/blog/ai-governance-lead-building-program.md)
+Useful entry points:
+
+- [AI slop crisis research corpus](docs/research/ai-slop-crisis/README.md)
+- [Why libraries, not platforms](docs/research/ai-slop-crisis/essays/why-libraries-not-platforms.md)
+- [Reasonable care in the age of AI agents](docs/research/ai-slop-crisis/essays/reasonable-care-age-of-agents.md)
+- [The observability argument](docs/research/ai-slop-crisis/essays/the-observability-argument.md)
 
 ---
 
 ## Tools
 
-Free self-assessments and compliance references — no login, no cloud, print to PDF:
+Free self-assessments and references:
 
-| Tool | What it does |
+| Tool | Purpose |
 |---|---|
-| [**Tool Index**](index.html) | Landing page for all tools below |
-| [EU AI Act Readiness](eu-ai-act-readiness.html) | 20-question governance posture check |
-| [NIST AI RMF Readiness](nist-ai-rmf-readiness.html) | 4 functions / 19 categories / 72 subcategories |
-| [ISO 42001 Readiness](iso-42001-readiness.html) | AI Management System certification checklist |
-| [Singapore Agentic AI](singapore-agentic-readiness.html) | Agent governance architecture assessment |
-| [Colorado AI Act](colorado-ai-act-readiness.html) | State-level algorithmic decision compliance |
-| [Compliance Calendar](compliance-calendar.html) | Interactive AI governance timeline 2025-2027 |
-| [Governance Crosswalk](governance-crosswalk.html) | Side-by-side framework requirement mapping |
+| [Tool index](index.html) | Landing page for the public tools in this repo |
+| [EU AI Act readiness](eu-ai-act-readiness.html) | Governance posture check |
+| [NIST AI RMF readiness](nist-ai-rmf-readiness.html) | Framework-aligned assessment |
+| [ISO 42001 readiness](iso-42001-readiness.html) | AI management system checklist |
+| [Singapore agentic AI readiness](singapore-agentic-readiness.html) | Agent governance architecture assessment |
+| [Colorado AI Act readiness](colorado-ai-act-readiness.html) | State-level algorithmic decision compliance |
+| [Compliance calendar](compliance-calendar.html) | AI governance timeline |
+| [Governance crosswalk](governance-crosswalk.html) | Framework comparison |
 
 ---
 
-## By the numbers
+## Contact
 
-| Metric | Value |
-|---|---|
-| Governance primitives | 20 (stdlib-only, zero runtime deps) |
-| Tests (`hummbl-governance`) | 476 passing |
-| CI workflows | 11 active |
-| Research corpus | 60 documents, 50+ primary sources |
-| Governance tools | 8 (readiness assessments, crosswalk, calendar) |
-| Published on PyPI | [`hummbl-governance`](https://pypi.org/project/hummbl-governance/) v0.3.0 |
+HUMMBL, LLC is founded by **Reuben Bowlby** in Atlanta, GA.
 
----
+- Site: [hummbl.io](https://hummbl.io)
+- Email: reuben@hummbl.io
+- Package: [`hummbl-governance` on PyPI](https://pypi.org/project/hummbl-governance/)
 
-## Projects
-
-| Project | Purpose |
-|---|---|
-| [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance) | Governance primitives — [PyPI](https://pypi.org/project/hummbl-governance/) |
-| [`arbiter`](https://github.com/hummbl-dev/arbiter) | Code quality scoring engine (ruff + complexity + security + dead code + duplication) |
-| [`base120`](https://github.com/hummbl-dev/base120) | Base120 mental model reference implementation + validation CLI |
-| [`mcp-server`](https://github.com/hummbl-dev/mcp-server) | MCP server exposing Base120 models and governance skills |
-| [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent) | Deterministic agent infrastructure (registry-first, policy-bounded) |
-| [`hummbl-assurance`](https://github.com/hummbl-dev/hummbl-assurance) | Governance assurance — verification, contract compatibility, compliance |
-
----
-
-## Newsletter
-
-**[HUMMBL Slop Tracker](https://hummbl.substack.com)** — monthly digest of AI code governance incidents, regulations, lawsuits, and the governance gap nobody is filling. Free.
-
-[Read Issue #1: 5 Things Every CISO Should Know About AI-Generated Code Right Now](https://open.substack.com/pub/hummbl/p/5-things-every-ciso-should-know-about)
-
----
-
-## Get started
-
-```bash
-pip install hummbl-governance
-```
-
-- **Self-assess**: [hummbl.io/readiness](https://hummbl.io/readiness.html) — 20-question governance posture check
-- **Subscribe**: [hummbl.io/tracker](https://hummbl.io/tracker.html) — monthly intelligence digest
-- **Talk to us**: reuben@hummbl.io
-
----
-
-## About
-
-HUMMBL is a one-person AI governance consultancy founded by **Reuben Bowlby** in Atlanta, GA. Background in coaching, education, and full-stack engineering — now focused on the governance gap between AI agent capabilities and the controls enterprises need to deploy them safely.
-
----
-
-*HUMMBL, LLC | [hummbl.io](https://hummbl.io) | Atlanta, GA*
-*Apache 2.0 Licensed*
+*Governed agents need receipts, not slogans.*
