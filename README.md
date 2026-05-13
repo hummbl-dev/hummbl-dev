@@ -34,20 +34,25 @@ pip install hummbl-governance
 | Research and citation corpus | [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography) |
 | Public profile, tools, and repo inventory | [`hummbl-dev`](https://github.com/hummbl-dev/hummbl-dev) |
 
+New contributors should start with [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance), [`base120`](https://github.com/hummbl-dev/base120), [`arbiter`](https://github.com/hummbl-dev/arbiter), [`mcp-server`](https://github.com/hummbl-dev/mcp-server), or [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent), depending on whether they want runtime controls, mental-model infrastructure, code review automation, MCP interfaces, or orchestration patterns.
+
 ---
 
-## Current Work
+## Repository Directory
 
-| Area | What is shipping |
+| Category | Repositories |
 |---|---|
-| Agent governance | `hummbl-governance`, `agent-governance-demo`, `hummbl-agent`, `mcp-server` |
-| Evidence and review | `evidence-gate`, `arbiter`, governed PR review protocols, source-verification rules |
-| Cognitive substrate | `base120`, `hummbl-theory`, `hummbl-bibliography`, `arcana` |
-| Operator infrastructure | `founder-mode`, `claude-config`, `hummbl-iac` |
-| Product research | `fractional-bench`, `coaching`, `hummbl-production` |
+| Governance primitives | [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance), [`agent-governance-demo`](https://github.com/hummbl-dev/agent-governance-demo), [`evidence-gate`](https://github.com/hummbl-dev/evidence-gate) |
+| Agent systems | [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent), [`mcp-server`](https://github.com/hummbl-dev/mcp-server), [`hummbl-iac`](https://github.com/hummbl-dev/hummbl-iac) |
+| Review and quality | [`arbiter`](https://github.com/hummbl-dev/arbiter), source-verification rules, governed PR review workflows |
+| Cognitive substrate | [`base120`](https://github.com/hummbl-dev/base120), [`hummbl-theory`](https://github.com/hummbl-dev/hummbl-theory), [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography), [`arcana`](https://github.com/hummbl-dev/arcana) |
+| Product and applied research | [`fractional-bench`](https://github.com/hummbl-dev/fractional-bench), `coaching`, `hummbl-production` |
+| Public tools and content | [`hummbl-dev`](https://github.com/hummbl-dev/hummbl-dev), static readiness tools, research essays, public profile assets |
 | Experimental public repos | `autoresearch`, `governed-compression`, `sint-protocol`, `bif` |
 
 Some repositories are private while they contain operator workflows, client-sensitive research, or active product work. Public repositories are the durable reference surface.
+
+Contribution process and accepted contribution types are documented in [`CONTRIBUTING.md`](CONTRIBUTING.md). Some repositories are internal-only; open an issue in the target repo before submitting a PR.
 
 ---
 
