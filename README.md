@@ -90,6 +90,8 @@ Current archive posture: [`docs/ARCHIVE_POSTURE_2026-05-13.md`](docs/ARCHIVE_POS
 
 Archived repo retention tracker: [`docs/ARCHIVED_REPO_RETENTION_2026-05-13.md`](docs/ARCHIVED_REPO_RETENTION_2026-05-13.md)
 
+Merge queue issue-closure semantics: [`docs/MERGE_QUEUE_ISSUE_CLOSURE.md`](docs/MERGE_QUEUE_ISSUE_CLOSURE.md)
+
 ---
 
 ## Research
