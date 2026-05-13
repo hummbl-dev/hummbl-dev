@@ -120,6 +120,20 @@ Free self-assessments and references:
 
 ---
 
+## CI Posture
+
+This repository is the HUMMBL organization profile, public documentation surface, and static tool portfolio. It does not currently run GitHub Actions because there is no build step, package release, or testable runtime in this repo.
+
+Validation is manual for now:
+
+- Review Markdown changes in rendered GitHub preview.
+- Open changed HTML tools locally in a browser before publication.
+- Keep executable code, packages, and service workflows in their dedicated project repositories, where CI is configured per repo.
+
+If this repository gains generated assets, JavaScript modules, or release automation, add the smallest useful CI workflow for that surface.
+
+---
+
 ## Contact
 
 HUMMBL, LLC is founded by **Reuben Bowlby** in Atlanta, GA.
