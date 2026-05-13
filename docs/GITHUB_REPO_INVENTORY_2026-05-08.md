@@ -42,7 +42,7 @@ Read-only inventory generated from GitHub org hummbl-dev on 2026-05-08.
 | [autoresearch-win-rtx](https://github.com/hummbl-dev/autoresearch-win-rtx) | PUBLIC | master | Python | 2026-05-03 |  |
 | [autoresearch](https://github.com/hummbl-dev/autoresearch) | PUBLIC | master | Python | 2026-05-03 | AI agents running research on single-GPU nanochat training automatically |
 | [hummbl-tuples](https://github.com/hummbl-dev/hummbl-tuples) | PRIVATE | main | Python | 2026-04-30 | Governed IDP tuples for the HUMMBL reasoning mesh. |
-| [verum](https://github.com/hummbl-dev/verum) | PUBLIC | main | - | 2026-04-27 |  |
+| [krineia](https://github.com/hummbl-dev/krineia) | PUBLIC | main | - | 2026-04-27 | Formerly named verum; renamed 2026-05-13 |
 | [claude-config](https://github.com/hummbl-dev/claude-config) | PRIVATE | main | Shell | 2026-04-26 | Claude Code profile config (rules/skills/hooks/memory) — Anvil-side |
 | [hummbl-doctrine](https://github.com/hummbl-dev/hummbl-doctrine) | PRIVATE | main | Python | 2026-04-24 | HUMMBL operator framework — internal R&D |
 | [hummbl-spacetime](https://github.com/hummbl-dev/hummbl-spacetime) | PRIVATE | master | Python | 2026-04-24 | Prompt composition for spacetime mental models. v0.1 skeleton. |
