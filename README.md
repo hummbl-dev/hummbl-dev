@@ -79,12 +79,14 @@ Inventory captured on 2026-05-08:
 | Total repositories | 54 |
 | Active public repositories | 35 |
 | Active private repositories | 17 |
-| Archived repositories | 2 |
+| Archived repositories | 20 |
 | Primary language family | Python-heavy, with TypeScript, HTML, Shell, TeX, Go templates, Java |
 
 Latest repo inventory: [`docs/GITHUB_REPO_INVENTORY_2026-05-08.md`](docs/GITHUB_REPO_INVENTORY_2026-05-08.md)
 
 Latest branch cleanup audit: [`docs/BRANCH_CLEANUP_AUDIT_2026-05-08.md`](docs/BRANCH_CLEANUP_AUDIT_2026-05-08.md)
+
+Current archive posture: [`docs/ARCHIVE_POSTURE_2026-05-13.md`](docs/ARCHIVE_POSTURE_2026-05-13.md)
 
 ---
 
