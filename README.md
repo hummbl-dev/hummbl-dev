@@ -88,6 +88,8 @@ Latest branch cleanup audit: [`docs/BRANCH_CLEANUP_AUDIT_2026-05-08.md`](docs/BR
 
 Current archive posture: [`docs/ARCHIVE_POSTURE_2026-05-13.md`](docs/ARCHIVE_POSTURE_2026-05-13.md)
 
+Archived repo retention tracker: [`docs/ARCHIVED_REPO_RETENTION_2026-05-13.md`](docs/ARCHIVED_REPO_RETENTION_2026-05-13.md)
+
 ---
 
 ## Research
