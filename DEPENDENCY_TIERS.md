@@ -93,7 +93,7 @@ Tier 4: UNRESTRICTED (product/application layer)
 **Repos in this tier:**
 | Repo | Language | Key Deps | Why Tier 2 |
 |---|---|---|---|
-| `evidence-gate` | Python | `c2pa-python`, `sigstore-python` | C2PA manifest verification requires canonical implementations |
+| `mcp-server` | TypeScript | `@modelcontextprotocol/sdk` | MCP protocol reference implementation |
 | `mcp-server` | TypeScript | `@modelcontextprotocol/sdk` | MCP protocol reference implementation |
 | `NemoClaw` | TypeScript/Docker | `k3s`, `docker`, `@openshell/sdk` | NVIDIA deployment stack; not a HUMMBL-authored safety primitive |
 | `hummbl-jepa` | Python | `torch`, `numpy` | JEPA architecture requires tensor operations |
