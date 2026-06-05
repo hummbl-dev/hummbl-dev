@@ -15,7 +15,7 @@ This is a **conversion email sequence**, not a primary-source bundle or legal/co
 - Strong numeric, insurance, and legal statements should be rechecked against the current research corpus before external deployment.
 - Urgency and certainty in subject lines or CTAs are conversion choices, not standalone evidence.
 
-See [README.md](README.md) in this folder and [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+See [README.md](README.md) in this folder and [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
 
 ---
 
@@ -156,3 +156,4 @@ If you want to talk about what this looks like for your organization, pick a tim
 - Email 2 subject: "2.74x more vulnerable" vs "The number your CISO needs to see"
 - Email 5 subject: "One question for you" vs "The window is closing"
 - Email 3 CTA: blog link vs direct readiness assessment link
+

@@ -129,5 +129,5 @@ These are **hard rules**. Never do any of them without explicit in-session confi
 
 - [`../CLAUDE.md`](../CLAUDE.md) — auto-loaded concise version
 - [`../README.md`](../README.md) — repo overview
-- [`github-audit.md`](github-audit.md) — GitHub config audit
-- [`repo-decisions.md`](repo-decisions.md) — repo-level decisions
+- `github-audit.md` — GitHub config audit (internal operations doc, not published here)
+- `repo-decisions.md` — repo-level decision register (operational surface, not published here)

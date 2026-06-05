@@ -15,7 +15,7 @@ This is a **self-assessment and conversion template**, not a formal certificatio
 - Claims about auditability, insurability, or regulatory defensibility should be treated as directional unless backed by current external review.
 - External deployment should recheck any embedded legal, insurance, or compliance assertions.
 
-See [README.md](README.md) in this folder and [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+See [README.md](README.md) in this folder and [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
 
 ---
 
@@ -453,3 +453,4 @@ The five domains and 20 questions align with:
 ---
 
 *Last updated: 2026-04-05. Review when EU AI Act enforcement begins (Aug 2, 2026) or when NIST AI RMF updates publish.*
+

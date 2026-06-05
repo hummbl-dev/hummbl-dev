@@ -14,4 +14,5 @@ Before external reuse:
 - recheck legal/regulatory/insurance claims against primary sources
 - treat pricing, ROI, and risk-reduction assumptions as modeling choices, not facts
 
-See [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+See [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+

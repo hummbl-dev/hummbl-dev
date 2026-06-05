@@ -11,7 +11,7 @@ This document is a **defense/federal positioning one-pager** built from the rese
 - It should not be treated as a definitive statement of current federal procurement, CMMC audit practice, or legal advice without fresh verification.
 - Buyer, pricing, and market-window statements are strategic hypotheses, not public guarantees.
 
-See [`../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md) before external reuse.
+See [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md) before external reuse.
 
 ---
 

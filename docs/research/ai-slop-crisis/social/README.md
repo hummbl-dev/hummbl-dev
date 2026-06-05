@@ -13,4 +13,5 @@ Social copy should be treated as the **highest-drift derivative layer** in this 
 
 Before external reuse beyond social posting, re-verify the underlying research and use the repo-level posture note:
 
-- [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md)
+- [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md)
+

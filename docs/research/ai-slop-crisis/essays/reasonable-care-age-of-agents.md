@@ -11,7 +11,7 @@ This essay is a **research-backed legal/governance analysis**, not legal advice.
 - It combines case references, regulatory synthesis, insurance observations, and HUMMBL's interpretation of their implications for AI governance.
 - Legal conclusions, litigation posture, and enforcement timing should be rechecked against current primary sources before external publication, client reliance, or formal counsel-facing use.
 
-See [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md) for repo-wide guidance on using proof and research claims.
+See [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md) for repo-wide guidance on using proof and research claims.
 
 ---
 
@@ -157,3 +157,4 @@ The practical takeaway is HUMMBL's strategic view: AI governance increasingly ne
 ---
 
 *Research corpus: HUMMBL AI Slop Crisis Research, Rounds 1-5 (April 2026). All citations verified against primary sources in Round 5, Lane G.*
+

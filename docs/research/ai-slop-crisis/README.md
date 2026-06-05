@@ -95,9 +95,9 @@ This corpus is **not legal advice**. Legal, regulatory, insurance, and complianc
 
 **For legal/GC**: *"Signed delegation tokens and append-only audit logs are a Caremark affirmative defense, a NIST AI RMF conformance record, and a reasonable-care evidence pack, generated at runtime, not reconstructed after the breach."*
 
-**For defense/federal CISOs**: *"Commercial AI governance SaaS cannot touch IL4/IL5. HUMMBL deploys where your classified workloads deploy — stdlib-only, air-gap capable, contract-driven, and readable by your CMMC assessor."*
+**For defense/federal CISOs**: *"Commercial AI governance SaaS may not be the right fit for IL4/IL5 profiles. HUMMBL is intended to work where classified workloads can deploy — with stdlib-first posture, air-gap capable options, contract-defined controls, and CMMC-friendly traceability."*
 
-**For pitch decks**: *"AI generation is commoditizing. Every vendor will have it. Differentiation accrues to the layer that governs output quality, enforces policy, tracks provenance, and maintains accountability. This is the observability argument applied to AI."*
+**For pitch decks**: *"AI generation is becoming commoditized in many contexts. Differentiation often accrues to the layer that governs output quality, enforces policy, tracks provenance, and maintains accountability. This is the observability argument applied to AI."*
 
 ---
 

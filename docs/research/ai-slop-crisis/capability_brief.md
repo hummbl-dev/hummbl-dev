@@ -11,7 +11,7 @@ This brief is a **positioning and capability document**, not a sworn operational
 - Research-derived market, legal, insurance, and buyer claims should be treated as source-backed synthesis and rechecked before external high-stakes use.
 - Counts, test totals, CI totals, and competitive-market figures are snapshot claims and may drift.
 
-See [`../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md) for reuse guidance.
+See [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md) for reuse guidance.
 
 ---
 

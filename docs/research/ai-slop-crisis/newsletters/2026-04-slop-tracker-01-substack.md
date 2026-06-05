@@ -12,7 +12,7 @@ This Substack variant is a **research-backed editorial synthesis**, not a primar
 - Numbers, insurance posture, enforcement timing, and case-law implications should be rechecked before external reuse in high-stakes contexts.
 - Urgency language is editorial framing, not standalone evidence.
 
-See [README.md](README.md) in this folder and [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+See [README.md](README.md) in this folder and [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
 
 ---
 
@@ -100,3 +100,4 @@ Questions? reuben@hummbl.io
 *Next issue: May 2026. Coverage: EU AI Act countdown, first enforcement actions, procurement RFP shifts.*
 
 *HUMMBL Slop Tracker is free. Subscribe at [hummbl.io/tracker](https://hummbl.io/tracker.html).*
+

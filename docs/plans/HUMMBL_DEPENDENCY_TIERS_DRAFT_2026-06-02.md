@@ -101,9 +101,9 @@ Tier 4: UNRESTRICTED (product/application layer)
 | `hummbl-jepa` | Python | `torch`, `numpy` | JEPA architecture requires tensor operations |
 | `hummbl-medical` | Python | `pydicom`, `monai` | Medical AI requires domain-specific libraries |
 
-**Indicator:** `pyproject.toml` has deps. README has an "Admission" section listing every third-party dep with rationale. A `docs/ADMISSIONS.md` file exists with full packets.
+**Indicator:** `pyproject.toml` has deps. README has an "Admission" section listing every third-party dep with rationale, and an operator-maintained admission packet is required.
 
-**How to graduate IN from Tier 1:** File admission packet → Codex peer review → operator GO → ratify in cognitive ledger → add to `docs/ADMISSIONS.md`.
+**How to graduate IN from Tier 1:** File an admission packet → Codex peer review → operator GO → ratify in cognitive ledger.
 
 **How to graduate OUT to Tier 3:** Remove the admission process. The repo has proven its dependency choices are stable and low-risk. Requires 6 months of production use with zero CVEs in admitted deps.
 
@@ -199,10 +199,10 @@ Tier 1 repos MUST have:
 Tier 2 repos MUST have:
 ```markdown
 ## Dependencies
-This package requires third-party dependencies. Each admission is documented in [docs/ADMISSIONS.md](docs/ADMISSIONS.md).
+This package requires third-party dependencies. Each admission packet should be documented in the dependency admissions governance surface used by the operator.
 ```
 
-### In `docs/ADMISSIONS.md` (Tier 2 only)
+### In dependency admissions governance process (Tier 2 only)
 ```markdown
 # Dependency Admissions
 
@@ -237,7 +237,7 @@ The master repo inventory MUST include a "Tier" column.
 | From → To | Process |
 |---|---|
 | Tier 0 → Tier 1 | No process. Add `[project.optional-dependencies]`. Core stays `dependencies = []`. |
-| Tier 1 → Tier 2 | File admission packet → Codex peer review → operator GO → add to `docs/ADMISSIONS.md`. |
+| Tier 1 → Tier 2 | File admission packet → Codex peer review → operator GO → archive in dependency governance records. |
 | Tier 2 → Tier 3 | 6 months zero CVEs + operator approval. Remove admission requirement, keep audit scans. |
 | Any → Tier 4 | Operator decision. Usually means the repo is no longer a shared library. |
 
@@ -270,7 +270,7 @@ Every quarter, audit every active repo:
 
 - [ ] Is the tier correctly documented in the README?
 - [ ] Does the `pyproject.toml` / `package.json` / `Cargo.toml` match the claimed tier?
-- [ ] For Tier 2 repos: Is `docs/ADMISSIONS.md` up to date?
+- [ ] For Tier 2 repos: Is the dependency admission packet set current in operator governance records?
 - [ ] For Tier 2-3 repos: Are there CVEs in the dependency tree? (`pip-audit`, `npm audit`, `cargo audit`)
 - [ ] For Tier 2-3 repos: Are upper-bound pins still valid?
 - [ ] Are there any Tier 4 repos being imported by Tier 0-2 repos? (Forbidden.)

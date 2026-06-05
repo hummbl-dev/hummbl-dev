@@ -14,7 +14,7 @@ This newsletter is a **research-backed editorial synthesis**, not a primary-sour
 - Numbers, enforcement timing, insurance posture, and case-law implications should be rechecked before external reuse in high-stakes contexts.
 - Urgency language is editorial framing, not standalone evidence.
 
-See [README.md](README.md) in this folder and [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+See [README.md](README.md) in this folder and [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
 
 ---
 
@@ -102,3 +102,4 @@ Full primary-source evidence pack: [github.com/hummbl-dev/hummbl-dev/tree/main/d
 
 *Issue #1 · Published 2026-04-05 · HUMMBL, LLC · [hummbl.io](https://hummbl.io)*
 *All statistics cite primary sources verified in the research corpus. Corrections welcome: [github.com/hummbl-dev/hummbl-dev/issues](https://github.com/hummbl-dev/hummbl-dev/issues)*
+

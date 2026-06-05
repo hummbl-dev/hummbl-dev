@@ -13,4 +13,5 @@ Before reusing claims externally:
 - recheck case-law posture and insurance-market claims
 - avoid treating urgency language as direct evidence
 
-See [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+See [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+

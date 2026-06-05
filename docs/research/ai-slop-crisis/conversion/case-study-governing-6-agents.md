@@ -14,7 +14,7 @@ This is an **internal dogfooding case study**, not an independently audited publ
 - Internal counts, incident details, and governance process descriptions should be treated as organization-reported unless separately corroborated.
 - Legal/insurance framing in this document is interpretive and should not be reused as formal advice without current verification.
 
-See [README.md](README.md) in this folder and [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+See [README.md](README.md) in this folder and [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
 
 ---
 
@@ -178,3 +178,4 @@ HUMMBL packages the governance primitives from this case study --- kill switches
 - `pip install hummbl-governance` --- governance primitives as a library
 - [hummbl.io/readiness](https://hummbl.io/readiness) --- free 5-minute AI governance readiness assessment
 - [hummbl.io/tracker](https://hummbl.io/tracker) --- weekly AI Slop Tracker newsletter with incident data and regulatory updates
+
