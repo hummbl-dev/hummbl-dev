@@ -129,5 +129,4 @@ These are **hard rules**. Never do any of them without explicit in-session confi
 
 - [`../CLAUDE.md`](../CLAUDE.md) — auto-loaded concise version
 - [`../README.md`](../README.md) — repo overview
-- `github-audit.md` — GitHub config audit (internal operations doc, not published here)
-- `repo-decisions.md` — repo-level decision register (operational surface, not published here)
+- GitHub config audit and repo-level decision registers for this org are tracked in the project issues and docs (not this repo); check `#29` (branch protection audit) and `#20` (archive-retention checks) in this repo for current operational decisions.
