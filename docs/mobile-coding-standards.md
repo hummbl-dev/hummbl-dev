@@ -1,6 +1,6 @@
 # Mobile Coding Standards
 
-Standards for working on `hummbl-dev` (and collaborating with Claude Code) when the user is on a **phone**. The concise enforceable version lives in [`../CLAUDE.md`](../CLAUDE.md) at the repo root and is auto-loaded into every Claude session. This document is the longer narrative with rationale and examples.
+Standards for working on `hummbl-dev` (and collaborating with Claude Code) when the user is on a **phone**. This is an operator workflow note, not a public contributor guide or adopted repo-governance standard. The concise enforceable version lives in [`../CLAUDE.md`](../CLAUDE.md) at the repo root and is auto-loaded into every Claude session. This document is the longer narrative with rationale and examples.
 
 ## Why mobile-first standards?
 

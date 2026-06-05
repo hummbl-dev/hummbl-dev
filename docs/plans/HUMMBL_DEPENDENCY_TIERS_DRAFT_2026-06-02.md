@@ -1,9 +1,11 @@
 # HUMMBL Dependency Tiers
 
+> **Audience note**: This is a draft planning proposal. It is not adopted org-wide policy and should not be treated as current source-of-truth governance without explicit repo-local adoption.
+
 > **stdlib-first does not mean stdlib-only everywhere.** It means *safety substrate is stdlib-only*, and every dependency is a deliberate, auditable choice.
 
 **Status:** DRAFT — 2026-06-02
-**Supersedes:** `founder-mode/.claude/rules/stdlib-only.md` (repo-local rule becomes org-wide policy)
+**Proposes replacing:** `founder-mode/.claude/rules/stdlib-only.md` if later adopted through the appropriate repo-local governance path
 
 ---
 

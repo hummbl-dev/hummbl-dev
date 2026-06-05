@@ -6,6 +6,18 @@
 
 ---
 
+## Evidence posture
+
+This is an **internal dogfooding case study**, not an independently audited public incident report.
+
+- It mixes internal operational history, engineering interpretation, and public research context.
+- Internal counts, incident details, and governance process descriptions should be treated as organization-reported unless separately corroborated.
+- Legal/insurance framing in this document is interpretive and should not be reused as formal advice without current verification.
+
+See [README.md](README.md) in this folder and [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+
+---
+
 ## The Problem: AI Agents Without Guardrails Are a Liability
 
 Every enterprise deploying AI agents faces the same question: what happens when an agent goes off-script?
@@ -16,7 +28,7 @@ We run founder-mode, a multi-runtime AI orchestration platform with contract-dri
 
 The problem is not whether AI agents can write code. They can. The problem is that velocity without governance creates blast-radius risk. An agent that can modify authentication middleware, CI workflows, and service infrastructure in a single commit is an uncontrolled actor operating at machine speed.
 
-When 42% of code in production is AI-generated (Sonar 2026 survey, n=1,100+) and AI-generated code is 2.74x more vulnerable than human-written code (Veracode 2025), "trust but verify" is not a governance strategy. It is an incident report waiting to happen.
+When widely cited benchmarks suggest a growing share of code is AI-generated and that AI-generated code can carry materially higher security risk, "trust but verify" becomes too weak as a governance posture.
 
 ---
 
@@ -146,7 +158,7 @@ What works: hooks that reject commits before they land, circuit breakers that de
 
 Every governance decision we made --- probation, scope restriction, audit gate --- was backed by commit hashes, LOC counts, file lists, and timestamped bus messages. There was no ambiguity, no "he said / she said" between agents.
 
-This is the same evidence that satisfies a Caremark affirmative defense, a NIST AI RMF conformance record, or an EU AI Act compliance audit. It is generated at runtime, not reconstructed after a breach.
+This is the kind of evidence HUMMBL believes can support stronger oversight, framework mapping, and defensibility conversations. It is generated at runtime, not reconstructed after a breach.
 
 ### 3. Agent guardrails must be enforced, not advisory
 
@@ -158,7 +170,7 @@ After the incident, we moved enforcement to the launcher level. The agent does n
 
 ## What This Means for Your Organization
 
-If you are deploying AI agents --- coding assistants, autonomous workflows, agentic pipelines --- you face the same problem we did. The question is whether you discover your governance gaps through a controlled incident like ours, or through a production breach that triggers the Berkley absolute AI exclusion on your D&O policy.
+If you are deploying AI agents --- coding assistants, autonomous workflows, agentic pipelines --- you may face governance gaps similar in shape even if not in exact form. The question is whether you discover them through controlled internal review or only after a damaging incident.
 
 HUMMBL packages the governance primitives from this case study --- kill switches, circuit breakers, delegation tokens, append-only audit logs, agent scope enforcement --- as a Python library. Stdlib-only. No SaaS dependency. Deploys where your workloads deploy, including air-gapped and classified environments.
 

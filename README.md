@@ -16,8 +16,8 @@ pip install hummbl-governance
 ```
 
 [![PyPI](https://img.shields.io/pypi/v/hummbl-governance)](https://pypi.org/project/hummbl-governance/)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue)]()
-[![Runtime deps](https://img.shields.io/badge/runtime%20deps-zero-brightgreen)]()
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
+[![Runtime deps](https://img.shields.io/badge/runtime%20deps-zero-brightgreen)](https://pypi.org/project/hummbl-governance/)
 
 ---
 
@@ -35,6 +35,23 @@ pip install hummbl-governance
 | Public profile, tools, and repo inventory | [`hummbl-dev`](https://github.com/hummbl-dev/hummbl-dev) |
 
 New contributors should start with [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance), [`base120`](https://github.com/hummbl-dev/base120), [`arbiter`](https://github.com/hummbl-dev/arbiter), [`mcp-server`](https://github.com/hummbl-dev/mcp-server), or [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent), depending on whether they want runtime controls, mental-model infrastructure, code review automation, MCP interfaces, or orchestration patterns.
+
+---
+
+## Repo Boundaries
+
+This repository is the **public HUMMBL profile, static-tools, and documentation surface**.
+
+It is **not** the source of truth for:
+
+- internal operator workflow
+- private repo governance
+- live runtime or queue state
+- draft cross-repo planning proposals
+
+Some files are retained here as agent workflow scaffolding or dated planning artifacts. Treat them as internal or draft material unless they are explicitly linked from the public sections of this README or from [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Planning artifacts live under [`docs/plans/`](docs/plans/). They are useful for context, but they are not public commitments or adopted org-wide doctrine by default.
 
 ---
 
@@ -79,7 +96,7 @@ Inventory captured on 2026-05-08:
 | Total repositories | 54 |
 | Active public repositories | 35 |
 | Active private repositories | 17 |
-| Archived repositories | 20 |
+| Archived repositories | 2 |
 | Primary language family | Python-heavy, with TypeScript, HTML, Shell, TeX, Go templates, Java |
 
 Latest repo inventory: [`docs/GITHUB_REPO_INVENTORY_2026-05-08.md`](docs/GITHUB_REPO_INVENTORY_2026-05-08.md)
@@ -111,6 +128,8 @@ Useful entry points:
 - [Why libraries, not platforms](docs/research/ai-slop-crisis/essays/why-libraries-not-platforms.md)
 - [Reasonable care in the age of AI agents](docs/research/ai-slop-crisis/essays/reasonable-care-age-of-agents.md)
 - [The observability argument](docs/research/ai-slop-crisis/essays/the-observability-argument.md)
+
+Before reusing public proof or research claims externally, read the repo-level [Proof and Research Evidence Posture](docs/PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
 
 ---
 

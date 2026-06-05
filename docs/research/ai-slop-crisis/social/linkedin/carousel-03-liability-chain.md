@@ -2,6 +2,8 @@
 
 ---
 
+**Posture note:** Social editorial synthesis. Recheck case-law posture, enforcement timing, and legal implications against the current research corpus before external high-stakes reuse.
+
 ## Slide 1 (Cover)
 
 **HEADLINE:** The AI Liability Chain Is Settling in Court
@@ -14,7 +16,7 @@
 
 **HEADLINE:** The Deployer Eats It: Moffatt v. Air Canada
 
-**Body:** BC Civil Resolution Tribunal held Air Canada liable for its chatbot's misrepresentation. The court rejected the argument that the chatbot was a "separate legal entity." You own what your AI tells the world.
+**Body:** BC Civil Resolution Tribunal held Air Canada liable for its chatbot's misrepresentation. The court rejected the argument that the chatbot was a "separate legal entity." HUMMBL's takeaway: deployer accountability remains central when AI tools interact with users.
 
 **Source:** Moffatt v. Air Canada, 2024 BCCRT 149 (Feb 2024)
 
@@ -62,7 +64,7 @@
 
 **HEADLINE:** The Liability Default Is Set
 
-**Body:** Deploying company is the default bearer. Vendor liability is rising via agency theory. Individual developer exposure is emerging. The only variable is whether you have documented governance.
+**Body:** Deployer liability appears primary. Vendor liability is rising via agency theory. Individual developer exposure may emerge in some contexts. Documented governance is the strongest controllable variable.
 
 ---
 
@@ -86,6 +88,6 @@ EU AI Act: high-risk system penalties up to 35M euros or 7% global revenue, enfo
 
 The "reasonable care" standard is forming around documented governance artifacts -- delegation tokens, audit logs, policy enforcement -- generated at runtime, not reconstructed after a breach.
 
-If your company ships AI-assisted code without documented governance, the legal exposure is no longer speculative.
+If your company ships AI-assisted code without documented governance, the legal exposure is getting harder to dismiss as purely theoretical.
 
 #AILiability #AIGovernance #EUAIAct #LegalTech #CISO #GRC #ComplianceRisk #AIRegulation #SlopTracker

@@ -7,6 +7,18 @@
 
 ---
 
+## Evidence posture
+
+This is a **modeling and conversion spec**, not an actuarial, legal, or underwriting instrument.
+
+- Risk multipliers, exploit rates, incident-cost ranges, and insurance assumptions are modeling choices derived from research synthesis.
+- They may be useful for directional decision support, but they should not be presented as precise financial truth without fresh validation.
+- Regulatory and insurance logic in this document should be rechecked before external publication or customer-facing deployment.
+
+See [README.md](README.md) in this folder and [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+
+---
+
 ## Purpose
 
 Quantify the cost of NOT having AI governance for organizations deploying AI agents. Converts research corpus statistics into a personalized financial exposure estimate that drives conversion to HUMMBL consulting or library adoption.

@@ -2,6 +2,8 @@
 
 ---
 
+**Posture note:** Social editorial synthesis. Recheck insurance-market, legal, and enforcement claims against the current research corpus before external high-stakes reuse.
+
 ## Slide 1 (Cover)
 
 **HEADLINE:** Your Insurance Won't Cover This
@@ -34,7 +36,7 @@
 
 **HEADLINE:** Uninsurable Before Unprosecutable
 
-**Body:** Insurance moves faster than regulation. The EU AI Act enforces Aug 2 2026. Your D&O renewal is this quarter. The market is bifurcating: documented governance gets coverage. No governance gets exclusion.
+**Body:** Insurance moves faster than regulation. The EU AI Act enforces Aug 2 2026. Your D&O renewal may be sooner. The market may be bifurcating: documented governance improves posture; missing governance increases exclusion risk.
 
 ---
 
@@ -68,11 +70,11 @@ Here is a conversation that is not happening in most boardrooms:
 
 Berkley Insurance Group filed absolute AI exclusions on D&O, E&O, and fiduciary policies in late 2025. Hamilton Insurance filed similar terms. The exclusion language covers any claim touching AI use, deployment, AI-generated content, or inadequate AI governance.
 
-This means your directors and officers may have no coverage for AI-related claims at their next renewal -- unless you can show documented governance artifacts.
+This means your directors and officers may face materially worse coverage posture for AI-related claims at renewal -- especially without documented governance artifacts.
 
 Insurance moves faster than regulation. The EU AI Act does not enforce on high-risk systems until August 2026. Your policy renewal is sooner.
 
-The market is bifurcating: companies with documented AI governance get affirmative coverage. Companies without face absolute exclusions.
+The market may be bifurcating: companies with documented AI governance appear better positioned than companies without it.
 
 This is not a CISO-only problem. It is a CFO, GC, and board problem.
 

@@ -1,5 +1,7 @@
 # HUMMBL IaC Roadmap
 
+> **Audience note**: This is a dated planning artifact for HUMMBL infrastructure packaging strategy. It is not a public product commitment, current repo policy, or adopted org-wide governance standard.
+
 > **libraries over platforms** — controls should live in the execution path
 > **receipts over vibes** — every governance claim should leave an audit trail
 > **stdlib-first primitives** — core safety controls should survive air-gapped environments

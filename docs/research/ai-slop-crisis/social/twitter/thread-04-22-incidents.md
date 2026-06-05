@@ -2,6 +2,8 @@
 
 ---
 
+**Posture note:** Social editorial synthesis. Recheck incident counts, CVE details, and trend claims against the current research corpus before external high-stakes reuse.
+
 **1/** (103 chars)
 We catalogued 22 production incidents caused by AI-generated code. Here are the worst ones: [thread]
 
@@ -36,7 +38,7 @@ The pattern across all 22 incidents: AI agents running with developer-level priv
 The acceleration: pre-2025, agent-RCE CVEs in AI coding tools were effectively zero. H2 2025 alone: 7 named high-CVSS CVEs. Monthly rate went from ~0 to ~1/month by mid-2025. Georgia Tech's Vibe Security Radar tracked 74 AI-linked CVEs by March 2026.
 
 **12/** (222 chars)
-Every one of these was preventable with basic governance: delegation scoping, circuit breakers on destructive operations, kill switches, audit trails. The tools are powerful. Running them unsupervised is negligence.
+Many of these incidents look preventable with stronger governance: delegation scoping, circuit breakers on destructive operations, kill switches, audit trails. The tools are powerful. Running them unsupervised creates avoidable risk.
 
 ---
 

@@ -2,9 +2,23 @@
 
 **Purpose**: Evidence backbone for HUMMBL's market positioning, pitch materials, and sales conversations.
 
-**Scope**: 5 research rounds, 12 parallel lanes, ~440K tokens of primary source analysis. Every claim is cited.
+**Scope**: 5 research rounds, 12 parallel lanes, ~440K tokens of primary-source analysis and synthesis. Material claims are intended to be source-traceable, but high-stakes reuse should still be rechecked against the cited primary material.
 
 **Period**: April 2026
+
+---
+
+## Evidence posture
+
+This corpus is a **research and positioning surface**, not self-authenticating canon.
+
+- Some documents are closest to primary-source-backed synthesis.
+- Some are pitch, conversion, or narrative derivatives built from that synthesis.
+- Snapshot numbers, regulatory timing, enforcement dates, and market claims may drift after publication.
+
+Use the repo-level [Proof and Research Evidence Posture](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md) before reusing claims externally.
+
+This corpus is **not legal advice**. Legal, regulatory, insurance, and compliance claims should be rechecked against the primary material before publication, contracts, diligence, or formal counsel-facing use.
 
 ---
 
@@ -60,7 +74,7 @@
 
 ---
 
-## Top 10 cite-ready findings
+## Top 10 high-signal findings
 
 1. **42% of code is AI-generated** (Sonar 2026 survey, n=1,100+)
 2. **AI code is 2.74× more vulnerable** than human-written (Veracode 2025)

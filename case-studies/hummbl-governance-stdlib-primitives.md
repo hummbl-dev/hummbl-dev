@@ -1,21 +1,44 @@
-# Case Study: Shipping 20 Governance Primitives with Zero Dependencies
+# Case Study: Shipping a Stdlib-Only Governance Runtime
 
-**A Stdlib-Only Python Library for AI Agent Governance**
+**Public evidence from the `hummbl-governance` package surface**
 
 ---
 
 **Client:** HUMMBL, LLC (Internal Product Development)  
 **Architect:** Reuben Bowlby, Founder & Principal Architect  
-**Timeline:** Q1 2026  
-**Stack:** Python 3.11+ · stdlib only · PyPI · GitHub Actions · ruff
+**Timeline:** 2026 public package surface (snapshot updated June 2026)  
+**Stack:** Python 3.11+ · stdlib-only runtime deps · PyPI · GitHub Actions · Ruff/pytest in test extras
+
+---
+
+## Evidence Posture
+
+This case study uses the public `hummbl-governance` repo and package metadata as the primary evidence surface.
+
+**Publicly verifiable in linked repos/package metadata as of June 2026**
+
+- The package is published on PyPI as [`hummbl-governance`](https://pypi.org/project/hummbl-governance/).
+- `pyproject.toml` shows `requires-python = ">=3.11"` and `dependencies = []`.
+- The public repo currently documents **25 governance primitives** and **1031 passing tests**.
+- The public repo positions the library as extracted from and informed by HUMMBL's broader multi-agent platform work.
+
+**Interpretive or synthesized context**
+
+- Market-positioning claims about other vendors
+- internal usage frequency or runtime load
+- private operational details not independently visible from the public repo/package surfaces
 
 ---
 
 ## The Challenge
 
-Every AI governance vendor ships a SaaS platform. Qodo, Apiiro, Factory, Aikido, Cycode — all require sending code or telemetry to their cloud. For enterprises operating in air-gapped, classified, or regulated environments, that is a non-starter. For teams embedding agents in production pipelines, adding a network dependency to a governance check is a latency and reliability liability.
+Many AI-governance products are delivered primarily as cloud platforms or vendor-controlled services. That leaves a gap for teams that want governance controls to run:
 
-The market had no embeddable, inline governance library that could run wherever the agent runs — no cloud, no vendor lock-in, no transitive dependency tree to audit.
+- inline with the agent execution path
+- inside regulated or tightly controlled environments
+- without taking on a large transitive dependency surface
+
+The public `hummbl-governance` package presents a different answer: ship governance primitives as an installable Python library with zero runtime dependencies.
 
 ---
 
@@ -23,83 +46,100 @@ The market had no embeddable, inline governance library that could run wherever 
 
 ### Design Constraints
 
-The architecture followed three hard rules extracted from 2+ years of multi-agent production operations:
+The package surface makes three design choices clear:
 
-1. **Zero runtime dependencies.** Every module uses only Python's standard library. No `requests`, no `pydantic`, no `jsonschema`. This eliminates supply chain risk, simplifies air-gap deployment, and removes version conflicts.
+1. **Zero runtime dependencies.** The public package metadata declares `dependencies = []`.
+2. **Python-first embeddability.** The library is installable through PyPI and supports Python 3.11+.
+3. **Primitive-oriented design.** The public README documents individually named controls rather than a single opaque platform abstraction.
 
-2. **Independent importability.** Each primitive is a self-contained module. Teams can import `KillSwitch` without pulling in `CostGovernor`. No framework coupling, no hidden initialization.
+### Publicly Documented Primitive Surface
 
-3. **Contract-driven interfaces.** Every primitive enforces explicit contracts — typed enums for states, HMAC-SHA256 signatures for tokens, append-only semantics for audit trails. No implicit behavior.
+As of the current public snapshot, the repo documents **25 governance primitives** spanning areas such as:
 
-### The 20 Primitives
+- kill switch and circuit breaker controls
+- delegation and identity primitives
+- audit and coordination surfaces
+- compliance and reasoning helpers
+- physical-AI and execution-assurance extensions
 
-| Category | Primitives |
-|---|---|
-| **Safety controls** | KillSwitch (4 graduated modes), CircuitBreaker (CLOSED/HALF_OPEN/OPEN), CapabilityFence |
-| **Authorization** | DelegationToken (HMAC-SHA256 signed), AgentRegistry (identity + trust tiers) |
-| **Observability** | AuditLog (append-only JSONL), HealthCollector (composable probes), BusWriter (TSV coordination) |
-| **Compliance** | ComplianceMapper (SOC 2, GDPR, OWASP), StrideMapper (threat modeling) |
-| **Validation** | SchemaValidator (JSON Schema Draft 2020-12), OutputValidator, InputValidator |
-| **Cost governance** | CostGovernor (soft/hard caps, ALLOW/WARN/DENY) |
-| **Reasoning** | ReasoningEngine, and 6 additional primitives |
+That count has changed over time, which is exactly why this case study now uses a dated evidence posture instead of freezing older numbers as timeless claims.
 
-### Implementation Approach
+### Implementation Pattern
 
-**Schema validation without `jsonschema`:** The `SchemaValidator` implements JSON Schema Draft 2020-12 validation using only `json`, `re`, and `urllib.parse` from stdlib. This was the hardest primitive to build — Draft 2020-12 has recursive `$ref` resolution, `if/then/else` conditionals, and format validation. The implementation handles all of these without external dependencies.
+The public repo shows a consistent implementation bias:
 
-**Cryptographic tokens without `cryptography`:** `DelegationToken` uses `hmac` and `hashlib` from stdlib for HMAC-SHA256 signing. Tokens carry agent identity, scope arrays, and TTL — enough for capability-based authorization without a token service.
+- HMAC-SHA256 signing using stdlib cryptographic primitives
+- append-only audit/logging patterns
+- JSON-schema-related validation without runtime dependency bloat
+- MCP entry points and CLI surfaces alongside the importable library
 
-**Append-only audit without a database:** `AuditLog` writes JSONL to the filesystem with rotation and retention policies. `BusWriter` uses `fcntl.flock` for cross-process coordination on a TSV file. Both are designed for environments where the only reliable storage is the local filesystem.
+The exact internal origin story may be richer than the public surface shows, but the package metadata and README already establish the core technical posture cleanly.
 
 ---
 
 ## Results
 
-**Published on PyPI:** [`hummbl-governance`](https://pypi.org/project/hummbl-governance/) v0.3.0 — installable in any Python 3.11+ environment with `pip install hummbl-governance`.
+### Package Surface
 
-**476 tests passing.** Full coverage across all 20 modules, including edge cases for token expiry, circuit breaker state transitions, kill switch mode escalation, and schema validation against Draft 2020-12 test suites.
+As of June 2026, the public package surface shows:
 
-**Arbiter grade: A (99.5).** Scored by HUMMBL's own code quality engine across ruff lint, cyclomatic complexity, security analysis, dead code detection, and duplication.
+- PyPI package: `hummbl-governance`
+- package version in `pyproject.toml`: `1.0.0`
+- Python requirement: `>=3.11`
+- runtime dependencies: none
+- license: Apache 2.0
 
-**Zero transitive dependencies.** `pip show hummbl-governance` shows `Requires:` empty. No supply chain to audit. No Dependabot alerts possible on runtime deps.
+### Current Public Repo Metrics
 
-**Deployed in production.** The library governs HUMMBL's own multi-agent fleet — the same primitives that ship to customers are used internally to coordinate Claude, Codex, and infrastructure agents across 15,000+ tests daily.
+The current public README documents:
+
+- **25 governance primitives**
+- **1031 passing tests**
+- multiple CLI/MCP entry points
+
+These figures are stronger than the older version of this case study because they are tied to the public repo snapshot rather than presented as uncited evergreen claims.
+
+### Practical Engineering Outcome
+
+The defensible public claim is:
+
+**HUMMBL ships a stdlib-only governance runtime that is installable, inspectable, and publicly documented as a library rather than only a platform narrative.**
+
+That is the core proof surface a technical evaluator can verify quickly from the package and repository.
 
 ---
 
 ## Technical Stack Summary
 
-| Layer | Technology |
+| Layer | Publicly documented surface |
 |---|---|
-| Language | Python 3.11+ (stdlib only) |
+| Language | Python 3.11+ |
 | Package registry | PyPI |
-| Signing | HMAC-SHA256 (stdlib `hmac` + `hashlib`) |
-| Schema validation | JSON Schema Draft 2020-12 (stdlib implementation) |
-| Audit storage | Append-only JSONL + TSV with `fcntl.flock` |
-| Code quality | Arbiter (ruff + complexity + security + dead code) |
-| CI/CD | GitHub Actions |
+| Runtime dependency posture | stdlib-only (`dependencies = []`) |
+| Test/tool extras | pytest, coverage tooling, Ruff in optional/test surfaces |
+| Distribution surface | GitHub + PyPI |
 | License | Apache 2.0 |
 
 ---
 
 ## Key Takeaways
 
-**Zero dependencies is a feature, not a constraint.** Every transitive dependency is a supply chain risk surface, a version conflict waiting to happen, and a compliance audit line item. For governance code — the code that decides whether an agent can act — the dependency count should be zero.
+**Zero runtime dependencies is a meaningful product posture.** It is simple to verify and easy for a technical buyer to understand.
 
-**Governance primitives must be embeddable, not orchestrated.** A kill switch that requires a network call to a vendor API is not a kill switch. Governance checks must execute inline, in-process, at the speed of the agent's decision loop.
+**Package metadata is stronger evidence than marketing adjectives.** `dependencies = []`, Python version requirements, and installable package surfaces are durable proof points.
 
-**Self-referential proof matters.** HUMMBL uses `hummbl-governance` to govern the fleet that builds `hummbl-governance`. This is not a demo — it is daily production validation that the primitives work under real multi-agent coordination pressure.
+**Counts should be treated as snapshot claims, not timeless doctrine.** The public repo has evolved from earlier primitive/test totals, so the case study now anchors those numbers to a reviewed date.
 
 ---
 
 ## About HUMMBL
 
-HUMMBL, LLC is a boutique AI governance consultancy that helps organizations design, deploy, and harden production AI agent systems. HUMMBL develops governance libraries — not platforms — to fill the gap between AI agent capabilities and the controls enterprises need.
+HUMMBL, LLC develops governed AI infrastructure, public reasoning tools, and adjacent research surfaces. `hummbl-governance` is the clearest publicly inspectable example of HUMMBL's library-first governance posture.
 
 **Website:** [hummbl.io](https://hummbl.io)  
 **Founded by:** Reuben Bowlby  
-**Focus:** AI Agent Governance · Compliance Mapping · Stdlib-Only Libraries · MCP Development
+**Focus:** AI Agent Governance · Stdlib-Only Runtime Controls · MCP Tooling
 
 ---
 
-*© 2026 HUMMBL, LLC. All rights reserved.*
+*Snapshot note: this case study reflects publicly inspectable repo/package surfaces reviewed in June 2026. Version numbers, primitive counts, and test totals may change after publication.*

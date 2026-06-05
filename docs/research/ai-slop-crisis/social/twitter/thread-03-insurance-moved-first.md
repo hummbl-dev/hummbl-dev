@@ -2,14 +2,16 @@
 
 ---
 
+**Posture note:** Social editorial synthesis. Recheck insurance, legal, and regulatory claims against the current research corpus before external high-stakes reuse.
+
 **1/** (122 chars)
-Berkley just wrote absolute AI exclusions into D&O and E&O policies. Here's why this matters more than any regulation: [thread]
+Berkley filed broad AI exclusions into D&O and E&O policies. Here's why this may matter more than any regulation: [thread]
 
 **2/** (274 chars)
 Late 2025, Berkley Insurance Group added absolute exclusions to Directors & Officers and Errors & Omissions policies. Claims "based upon, arising out of, or attributable to" AI use, deployment, development, or inadequate AI governance -- excluded. No coverage.
 
 **3/** (269 chars)
-Hamilton Insurance Group filed similar broad exclusions. The market is bifurcating: firms with documented AI governance artifacts get affirmative coverage. Firms without face absolute exclusions at renewal. This is happening now, not in 2027.
+Hamilton Insurance Group filed similar broad exclusions. The market may be bifurcating: firms with documented AI governance artifacts appear better positioned than firms without them. This is a live signal, not a distant one.
 
 **4/** (260 chars)
 Why insurance matters more than regulation: the EU AI Act takes effect Aug 2 2026. Colorado's AI Act is delayed to June 2026. Virginia's AI bill was vetoed. But your D&O renewal is this quarter. Insurance moves faster than legislatures.
@@ -36,7 +38,7 @@ This is what governance primitives provide: signed delegation tokens (provenance
 The window between "my insurer doesn't ask about AI" and "my insurer excludes AI claims" is closing. For many companies, it already closed at last renewal. Check your D&O and E&O endorsements. The exclusion may already be there.
 
 **12/** (192 chars)
-We're building governance primitives at HUMMBL that produce the evidence trail insurers and courts will demand. Open-source, stdlib-only, air-gap capable. Because the policy PDF is not enough.
+We're building governance primitives at HUMMBL aimed at producing the evidence trail insurers and courts may demand. Open-source, stdlib-only, air-gap capable. Because the policy PDF is not enough.
 
 ---
 

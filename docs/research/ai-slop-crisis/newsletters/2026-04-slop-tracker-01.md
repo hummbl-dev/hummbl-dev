@@ -6,6 +6,18 @@
 
 ---
 
+## Evidence posture
+
+This newsletter is a **research-backed editorial synthesis**, not a primary-source bundle or legal/compliance advisory.
+
+- It compresses multiple studies, cases, and regulatory developments into short narrative claims.
+- Numbers, enforcement timing, insurance posture, and case-law implications should be rechecked before external reuse in high-stakes contexts.
+- Urgency language is editorial framing, not standalone evidence.
+
+See [README.md](README.md) in this folder and [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+
+---
+
 ## TL;DR — 5 things you should know
 
 1. **AI code is 42% of committed code now**, per Sonar's 2026 survey (n=1,100+). Veracode confirms it ships **2.74× more vulnerabilities** than human-written code — and the security pass rate has been **stuck at ~55% for two years** despite model capability gains. Capability and safety are decoupling.
