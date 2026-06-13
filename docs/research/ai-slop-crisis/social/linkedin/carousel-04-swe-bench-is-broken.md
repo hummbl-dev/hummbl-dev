@@ -2,6 +2,8 @@
 
 ---
 
+**Posture note:** Social editorial synthesis. Recheck benchmark, contamination, and model-security claims against the current research corpus before external high-stakes reuse.
+
 ## Slide 1 (Cover)
 
 **HEADLINE:** SWE-bench Is Broken
@@ -34,7 +36,7 @@
 
 **HEADLINE:** The Leaderboard No Longer Predicts Safe Code
 
-**Body:** OpenAI's own audit found frontier models could reproduce verbatim gold patches on SWE-bench Verified tasks. OpenAI stopped reporting Verified scores. Contamination rates: 8-10%.
+**Body:** OpenAI's own audit raised contamination concerns around SWE-bench-style evaluation. HUMMBL's takeaway is that leaderboard position is a weak proxy for shipping-safe code.
 
 **Source:** OpenAI audit (late 2025); UTBoost framework
 
@@ -62,7 +64,7 @@
 
 **HEADLINE:** Governance Over Capability
 
-**Body:** Better models will not fix this. Security pass rates have been stuck at 55% for two years despite capability gains. What matters is what the model is allowed to do, not how well it codes.
+**Body:** Better models alone do not solve this. Security pass rates have remained stubborn in key benchmarks despite capability gains. What matters is what the model is allowed to do, not only how well it codes.
 
 **Source:** Veracode Spring 2026 Update
 

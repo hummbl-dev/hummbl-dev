@@ -2,6 +2,8 @@
 
 ---
 
+**Posture note:** Social editorial synthesis. Recheck benchmark, vulnerability, and market-adoption claims against the current research corpus before external high-stakes reuse.
+
 ## Slide 1 (Cover)
 
 **HEADLINE:** The AI Code Crisis in 8 Numbers

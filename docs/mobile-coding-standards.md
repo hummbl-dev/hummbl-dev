@@ -1,6 +1,6 @@
 # Mobile Coding Standards
 
-Standards for working on `hummbl-dev` (and collaborating with Claude Code) when the user is on a **phone**. The concise enforceable version lives in [`../CLAUDE.md`](../CLAUDE.md) at the repo root and is auto-loaded into every Claude session. This document is the longer narrative with rationale and examples.
+Standards for working on `hummbl-dev` (and collaborating with Claude Code) when the user is on a **phone**. This is an operator workflow note, not a public contributor guide or adopted repo-governance standard. The concise enforceable version lives in [`../CLAUDE.md`](../CLAUDE.md) at the repo root and is auto-loaded into every Claude session. This document is the longer narrative with rationale and examples.
 
 ## Why mobile-first standards?
 
@@ -129,5 +129,4 @@ These are **hard rules**. Never do any of them without explicit in-session confi
 
 - [`../CLAUDE.md`](../CLAUDE.md) — auto-loaded concise version
 - [`../README.md`](../README.md) — repo overview
-- [`github-audit.md`](github-audit.md) — GitHub config audit
-- [`repo-decisions.md`](repo-decisions.md) — repo-level decisions
+- GitHub config audit and repo-level decision registers for this org are tracked in the project issues and docs (not this repo); check `#29` (branch protection audit) and `#20` (archive-retention checks) in this repo for current operational decisions.

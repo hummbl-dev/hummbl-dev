@@ -1,6 +1,6 @@
 # CLAUDE.md — hummbl-dev
 
-Project guidance for Claude Code sessions on this repo. The user frequently works from their **phone**, so optimize every interaction for small diffs, concise output, and tap-friendly approvals. Full rationale and examples: [docs/mobile-coding-standards.md](docs/mobile-coding-standards.md).
+Project guidance for Claude Code sessions on this repo. This file exists as an operator workflow surface for AI-assisted edits; it is not the public starting point for contributors and it is not HUMMBL product or governance canon. The user frequently works from their **phone**, so optimize every interaction for small diffs, concise output, and tap-friendly approvals. Full rationale and examples: [docs/mobile-coding-standards.md](docs/mobile-coding-standards.md).
 
 ## 1. How to behave on mobile
 

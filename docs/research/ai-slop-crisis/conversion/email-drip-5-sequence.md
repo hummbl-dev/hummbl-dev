@@ -7,6 +7,18 @@
 
 ---
 
+## Evidence posture
+
+This is a **conversion email sequence**, not a primary-source bundle or legal/compliance advisory.
+
+- It compresses research claims into persuasive outreach copy.
+- Strong numeric, insurance, and legal statements should be rechecked against the current research corpus before external deployment.
+- Urgency and certainty in subject lines or CTAs are conversion choices, not standalone evidence.
+
+See [README.md](README.md) in this folder and [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+
+---
+
 ## Email 1 -- Day 0: Welcome
 
 **Subject**: Your first AI Slop Tracker issue
@@ -20,7 +32,7 @@ You signed up for the AI Slop Tracker. Here is what you will get every week:
 - Regulatory updates (EU AI Act, state-level, sector-specific)
 - One data point from the vulnerability research, contextualized
 
-No predictions. No hype. Every claim is cited.
+No predictions. No hype. Claims are intended to be source-traceable through the research corpus.
 
 Your first issue is live: [Read Issue #1 here]
 
@@ -39,7 +51,7 @@ If you completed the readiness assessment, your results are in your inbox separa
 
 **Body**:
 
-Veracode's 2025 analysis found that AI-generated code is 2.74 times more vulnerable than human-written code. Not 10% worse. Not marginally riskier. Nearly three times the vulnerability rate.
+Veracode's 2025 analysis found that AI-generated code was reported as 2.74 times more vulnerable than human-written code. Not 10% worse. Not marginally riskier. Nearly three times the vulnerability rate, based on that benchmark.
 
 This number holds even as models improve. Veracode's Spring 2026 follow-up shows security pass rates stuck at roughly 55% for two years straight. The models get better at generating code. They do not get better at generating secure code.
 
@@ -60,9 +72,9 @@ The full breakdown, with methodology and caveats, is on our blog.
 
 **Body**:
 
-W.R. Berkley has introduced absolute AI exclusions on Directors & Officers and Errors & Omissions policies. Not sublimits. Not higher premiums. Absolute exclusions: if the claim involves AI-generated output, there is no coverage.
+W.R. Berkley has introduced broad AI exclusions on Directors & Officers and Errors & Omissions policies. Not sublimits. Not higher premiums. Broad exclusions that make documented governance posture materially more important.
 
-Other carriers are watching. When the first major AI-related D&O claim lands -- and it will, given Moffatt v. Air Canada (deploying company eats chatbot liability) and Mobley v. Workday (vendor-as-agent liability theory certified July 2025) -- the carriers without exclusions will follow Berkley's lead.
+Other carriers are watching. If major AI-related D&O claims continue to mature, carriers without exclusions may follow Berkley's lead. Moffatt v. Air Canada and Mobley v. Workday are part of that legal-risk signal, not a guarantee of identical downstream outcomes.
 
 The practical effect: insurance is becoming a de-facto AI governance enforcement mechanism. Your underwriter will ask what controls you have before your regulator does.
 
@@ -112,7 +124,7 @@ Here is the one question that matters: do you have runtime evidence of AI govern
 
 If the answer is "not yet," that is normal. Most organizations are in the same position. The EU AI Act enforcement begins August 2, 2026. Carrier renewals happen on their own schedule. The window to build defensible governance before you need it is closing, but it is not closed.
 
-We help organizations stand up AI governance in weeks, not quarters. Stdlib-only tooling. No SaaS dependency. Evidence that satisfies NIST AI RMF, EU AI Act, and your insurer in a single system.
+We help organizations stand up AI governance on a shorter timeline than a traditional transformation program. Stdlib-only tooling. No SaaS dependency. Evidence-oriented controls designed to support framework mapping and insurer/regulator conversations.
 
 If you want to talk about what this looks like for your organization, pick a time or reply to this email.
 
@@ -144,3 +156,4 @@ If you want to talk about what this looks like for your organization, pick a tim
 - Email 2 subject: "2.74x more vulnerable" vs "The number your CISO needs to see"
 - Email 5 subject: "One question for you" vs "The window is closing"
 - Email 3 CTA: blog link vs direct readiness assessment link
+

@@ -6,6 +6,8 @@
 
 ---
 
+**Posture note:** Social editorial synthesis. Recheck experiment framing and any linked benchmark or audit claims against the current research corpus before external high-stakes reuse.
+
 ## SLIDE 1
 **Headline:** The AI graded itself B+. It wasn't.
 

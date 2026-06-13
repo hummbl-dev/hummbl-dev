@@ -7,6 +7,18 @@
 
 ---
 
+## Evidence posture
+
+This is a **modeling and conversion spec**, not an actuarial, legal, or underwriting instrument.
+
+- Risk multipliers, exploit rates, incident-cost ranges, and insurance assumptions are modeling choices derived from research synthesis.
+- They may be useful for directional decision support, but they should not be presented as precise financial truth without fresh validation.
+- Regulatory and insurance logic in this document should be rechecked before external publication or customer-facing deployment.
+
+See [README.md](README.md) in this folder and [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+
+---
+
 ## Purpose
 
 Quantify the cost of NOT having AI governance for organizations deploying AI agents. Converts research corpus statistics into a personalized financial exposure estimate that drives conversion to HUMMBL consulting or library adoption.
@@ -179,7 +191,7 @@ else:
 ```
 
 **Risk reduction rate derivation:**
-- Kill switches prevent 100% of post-detection blast radius (binary control).
+- Kill switches reduce post-detection blast radius and should be treated as a non-reversible mitigation control, not a full guarantee.
 - Circuit breakers reduce cascading failure by ~60% (based on Netflix/Hystrix published data).
 - Delegation tokens + audit logs reduce mean-time-to-detect by ~80% (from post-breach forensic reconstruction to real-time).
 - Combined conservative estimate: 72% reduction in exploitable-to-impactful vulnerability surface.
@@ -278,3 +290,4 @@ All formulas reference these verified sources from the research corpus:
 ---
 
 *Last updated: 2026-04-05. Review when EU AI Act enforcement begins (Aug 2, 2026) or when new vulnerability benchmarks publish.*
+

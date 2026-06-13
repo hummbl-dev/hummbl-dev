@@ -2,6 +2,8 @@
 
 ---
 
+**Posture note:** Social editorial synthesis. Recheck benchmark and productivity-study claims against the current research corpus before external high-stakes reuse.
+
 **1/** (137 chars)
 A controlled trial gave experienced devs AI coding tools. They got 19% slower. They believed they were 20% faster. The full story: [thread]
 

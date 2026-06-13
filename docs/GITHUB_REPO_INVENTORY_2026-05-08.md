@@ -2,6 +2,8 @@
 
 Read-only inventory generated from GitHub org hummbl-dev on 2026-05-08.
 
+**Correction (2026-06-13):** Archived count corrected from 2 to 20 to match GitHub API. Original inventory had stale data.
+
 ## Summary
 
 | Metric | Count |
@@ -9,7 +11,7 @@ Read-only inventory generated from GitHub org hummbl-dev on 2026-05-08.
 | Total repositories | 54 |
 | Active public repositories | 35 |
 | Active private repositories | 17 |
-| Archived repositories | 2 |
+| Archived repositories | 20 |
 
 ## Languages
 

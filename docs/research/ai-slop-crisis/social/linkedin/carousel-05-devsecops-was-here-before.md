@@ -2,6 +2,8 @@
 
 ---
 
+**Posture note:** Social editorial synthesis. Recheck market-history, analyst, and adoption-curve claims against the current research corpus before external high-stakes reuse.
+
 ## Slide 1 (Cover)
 
 **HEADLINE:** We've Seen This Movie Before

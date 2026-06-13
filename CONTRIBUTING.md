@@ -18,12 +18,17 @@ This repo accepts contributions to:
 - **Research corrections** — factual errors, broken links, outdated citations
 - **Tool improvements** — bugs or accessibility issues in the HTML tools
 - **Case studies** — if you've used HUMMBL tools in production, we'd love to feature your story
+- **Repo hygiene** — templates, metadata, and public-surface clarity improvements
 
 ### Process
 
 1. Open an issue describing the change before submitting a PR.
 2. Keep PRs small and focused — one concern per PR.
 3. All content is licensed under Apache 2.0 (see [LICENSE](LICENSE)).
+
+## Security
+
+Do not report vulnerabilities in public issues. Use the private reporting path in [SECURITY.md](SECURITY.md).
 
 ## Contact
 

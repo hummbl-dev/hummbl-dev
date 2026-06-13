@@ -2,9 +2,23 @@
 
 **Purpose**: Evidence backbone for HUMMBL's market positioning, pitch materials, and sales conversations.
 
-**Scope**: 5 research rounds, 12 parallel lanes, ~440K tokens of primary source analysis. Every claim is cited.
+**Scope**: 5 research rounds, 12 parallel lanes, ~440K tokens of primary-source analysis and synthesis. Material claims are intended to be source-traceable, but high-stakes reuse should still be rechecked against the cited primary material.
 
 **Period**: April 2026
+
+---
+
+## Evidence posture
+
+This corpus is a **research and positioning surface**, not self-authenticating canon.
+
+- Some documents are closest to primary-source-backed synthesis.
+- Some are pitch, conversion, or narrative derivatives built from that synthesis.
+- Snapshot numbers, regulatory timing, enforcement dates, and market claims may drift after publication.
+
+Use the repo-level [Proof and Research Evidence Posture](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md) before reusing claims externally.
+
+This corpus is **not legal advice**. Legal, regulatory, insurance, and compliance claims should be rechecked against the primary material before publication, contracts, diligence, or formal counsel-facing use.
 
 ---
 
@@ -60,7 +74,7 @@
 
 ---
 
-## Top 10 cite-ready findings
+## Top 10 high-signal findings
 
 1. **42% of code is AI-generated** (Sonar 2026 survey, n=1,100+)
 2. **AI code is 2.74× more vulnerable** than human-written (Veracode 2025)
@@ -81,9 +95,9 @@
 
 **For legal/GC**: *"Signed delegation tokens and append-only audit logs are a Caremark affirmative defense, a NIST AI RMF conformance record, and a reasonable-care evidence pack, generated at runtime, not reconstructed after the breach."*
 
-**For defense/federal CISOs**: *"Commercial AI governance SaaS cannot touch IL4/IL5. HUMMBL deploys where your classified workloads deploy — stdlib-only, air-gap capable, contract-driven, and readable by your CMMC assessor."*
+**For defense/federal CISOs**: *"Commercial AI governance SaaS may not be the right fit for IL4/IL5 profiles. HUMMBL is intended to work where classified workloads can deploy — with stdlib-first posture, air-gap capable options, contract-defined controls, and CMMC-friendly traceability."*
 
-**For pitch decks**: *"AI generation is commoditizing. Every vendor will have it. Differentiation accrues to the layer that governs output quality, enforces policy, tracks provenance, and maintains accountability. This is the observability argument applied to AI."*
+**For pitch decks**: *"AI generation is becoming commoditized in many contexts. Differentiation often accrues to the layer that governs output quality, enforces policy, tracks provenance, and maintains accountability. This is the observability argument applied to AI."*
 
 ---
 

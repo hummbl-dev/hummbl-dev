@@ -4,6 +4,17 @@
 
 ---
 
+## Evidence posture and legal note
+
+This essay is a **research-backed legal/governance analysis**, not legal advice.
+
+- It combines case references, regulatory synthesis, insurance observations, and HUMMBL's interpretation of their implications for AI governance.
+- Legal conclusions, litigation posture, and enforcement timing should be rechecked against current primary sources before external publication, client reliance, or formal counsel-facing use.
+
+See [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md) for repo-wide guidance on using proof and research claims.
+
+---
+
 ## The Legal Framework: What "Reasonable Care" Has Always Meant
 
 For nearly a century, American tort law has used a deceptively simple formula to decide whether someone acted negligently. Judge Learned Hand articulated it in *United States v. Carroll Towing Co.* (1947): a party is negligent when the burden of precaution (B) is less than the probability of harm (P) multiplied by the magnitude of the loss (L). If it would have cost you less to prevent the harm than the expected harm itself, you should have prevented it.
@@ -19,7 +30,7 @@ Together, the Learned Hand test and the Caremark standard ask two questions:
 
 Applied to AI-assisted code generation in April 2026, both questions have clear answers. The burden of governance -- audit logs, delegation tokens, review gates, cost caps -- is measurable in engineering hours and infrastructure cost. The probability of harm is empirically documented: 25.1% of AI-generated code samples contained confirmed vulnerabilities in the AppSec Santa 2026 study (534 samples across 6 LLMs), Veracode's 2025 report found AI code is 2.74x more vulnerable than human-written code, and Apiiro's Fortune 50 analysis (Dec 2024 -- June 2025) showed AI-generated commits producing 322% more privilege-escalation paths and exposing Azure credentials nearly twice as often as human-authored code.[^1] The magnitude of loss is catastrophic: average breach remediation runs $4.5 million, and that figure excludes regulatory penalties, litigation costs, and reputational damage.
 
-B is low. P times L is high. The math is not close.
+HUMMBL's interpretive conclusion is that B is low relative to P times L in many AI-agent deployment scenarios, but that assessment should still be read as analysis rather than settled legal doctrine.
 
 ## The AI Agent Twist: Why Traditional Oversight Breaks
 
@@ -41,7 +52,7 @@ These four properties -- autonomy, scope creep, hallucination, and the supervisi
 
 The foundational precedent. Air Canada's chatbot told Jake Moffatt he could book a bereavement fare and apply for a refund within 90 days. The real policy required pre-travel approval. Air Canada argued the chatbot was a "separate legal entity" responsible for its own actions. The BC Civil Resolution Tribunal rejected that argument entirely and held Air Canada liable for $812 CAD in damages.[^6]
 
-The rule extracted: **you own what your AI tells the world.** The deploying company cannot externalize liability to the tool. This rule scales directly from chatbot misrepresentation to AI-generated code that ships a vulnerability to production.
+The rule extracted here is HUMMBL's synthesis: **deployer accountability remains central even when an AI tool is involved.** That interpretation is directionally important, but still deserves context-specific legal review before reuse as formal advice.
 
 ### Mobley v. Workday (N.D. Cal., 3:23-cv-00770)
 
@@ -59,7 +70,7 @@ Regulation moves slowly. Insurance moves fast.
 
 Berkley Insurance Group introduced **absolute AI exclusions** for D&O, E&O, and Fiduciary policies in late 2025. The exclusion language covers claims "based upon, arising out of, or attributable to" AI use, deployment, development, AI-generated content, failure to detect AI content, inadequate AI governance, or chatbot communications. Hamilton Insurance Group filed similar exclusions.[^9]
 
-This is not a coverage limitation. It is a coverage elimination. A company without documented AI governance faces the prospect of an AI-related claim with no D&O or E&O coverage to absorb it. The CFO and general counsel -- not just the CISO -- become the buyers of AI governance, because the alternative is uninsured board-level liability.
+This is framed here as a strong market signal rather than universal coverage truth. A company without documented AI governance may face materially worse insurance posture, but specific policy language and underwriting outcomes require current review.
 
 Underwriters are asking a version of the Caremark question: "Show us your AI governance artifacts." The companies that can produce signed delegation logs, cost caps, scope boundaries, and review gates will get affirmative coverage. The companies that cannot will face absolute exclusions at renewal. Insurance is becoming the fastest, hardest compliance forcing function in the AI governance space.
 
@@ -113,7 +124,7 @@ In 2026, the question is: "Did the organization implement a governance system fo
 
 Organizations that cannot produce this evidence face the inverse: no safe harbor, no good-faith defense for punitive damages, no rebuttable presumption, and absolute insurance exclusions at renewal.
 
-The legal question is no longer whether AI governance is necessary. The precedents are set, the insurance market has moved, and the EU enforcement deadline is four months away. The question is whether your governance infrastructure generates the evidence that courts, regulators, and underwriters will demand -- or whether you will be reconstructing it from memory after the subpoena arrives.
+The practical takeaway is HUMMBL's strategic view: AI governance increasingly needs to produce runtime evidence that can survive scrutiny from courts, regulators, insurers, and internal reviewers. The exact legal stakes and enforcement timelines should still be checked against current primary sources.
 
 ---
 
@@ -146,3 +157,4 @@ The legal question is no longer whether AI governance is necessary. The preceden
 ---
 
 *Research corpus: HUMMBL AI Slop Crisis Research, Rounds 1-5 (April 2026). All citations verified against primary sources in Round 5, Lane G.*
+

@@ -3,21 +3,33 @@
 
 ---
 
+## Evidence posture
+
+This brief is a **positioning and capability document**, not a sworn operational record.
+
+- Public package/repo surfaces are the strongest evidence for current product facts.
+- Research-derived market, legal, insurance, and buyer claims should be treated as source-backed synthesis and rechecked before external high-stakes use.
+- Counts, test totals, CI totals, and competitive-market figures are snapshot claims and may drift.
+
+See [`../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md) for reuse guidance.
+
+---
+
 ## Who we are
 
-**HUMMBL, LLC** — founded and operated by Reuben Bowlby (Atlanta, GA). Solo founder with a multi-agent orchestration platform, publishing open-source governance infrastructure. Production Claude systems since 2024.
+**HUMMBL, LLC** — founded and operated by Reuben Bowlby (Atlanta, GA). Solo founder publishing open-source governance infrastructure and adjacent reasoning/governance tooling.
 
 Three specializations combined:
-1. **Platform / SRE engineering** — 11 CI workflows, multi-machine fleet, launchd orchestration, health probes, circuit breakers
+1. **Platform / SRE engineering** — multi-machine agent infrastructure, health probes, circuit breakers, and governed workflow patterns
 2. **AI governance architecture** — delegation tokens, governance bus, kill switches, capability attestation
-3. **Structured reasoning at scale** — Base120 cognitive framework (120 canonical mental models, 660+ extensions), 2+ years of development
+3. **Structured reasoning at scale** — Base120 cognitive framework and related SDK / MCP delivery surfaces
 
 ---
 
 ## What we ship
 
 ### `hummbl-governance` — [PyPI](https://pypi.org/project/hummbl-governance/)
-**476 tests, 20 modules, zero runtime third-party dependencies, Python stdlib only.**
+**Public package surface: stdlib-only runtime dependencies, Python 3.11+, PyPI-distributed. Snapshot counts should be rechecked against the current public repo/package surface before reuse.**
 
 | Primitive | What it does |
 |-----------|-------------|
@@ -30,7 +42,7 @@ Three specializations combined:
 | **Event store** | SQLite event persistence with content hashing. |
 
 ### `base120` — authoritative reference implementation
-120 canonical mental models + 660 extended, with contract validation CLI. Two-year development arc, audited, versioned.
+Public reference implementation for Base120 models, SDK access, and related tooling surfaces.
 
 ### `mcp-server`
 Model Context Protocol server exposing Base120 mental models and Claude Code skills. [GitHub](https://github.com/hummbl-dev/mcp-server).
@@ -49,10 +61,10 @@ Reference IaC with governance policy, change validation, and audit trails.
 ## Why the approach is differentiated
 
 ### Stdlib-only, zero third-party runtime deps
-In a supply-chain threat landscape where npm/pip backdoors are a monthly occurrence (postmark-mcp, tj-actions, xz utils), running governance infrastructure with zero third-party attack surface is a **category of one**.
+In a supply-chain threat landscape where npm/pip compromise risk is material, running governance infrastructure with zero runtime third-party dependencies is a distinctive positioning choice.
 
 ### Open-source, auditable
-Government assessors, enterprise GC offices, and regulated-industry CISOs cannot audit proprietary SaaS. HUMMBL's entire source is reviewable.
+Open-source delivery creates a more inspectable surface for buyers who need direct review rather than dashboard-only claims.
 
 ### Library, not platform
 HUMMBL ships as a Python package you import. Not a dashboard you log into. Not a SaaS you route agent traffic through. This means:
@@ -91,7 +103,7 @@ Competitors (Qodo, Apiiro, Aikido, Snyk) scan code. HUMMBL enforces at runtime w
 ### Buyer personas
 
 1. **Defense / Federal CISO** — blocked on CMMC, needs IL4/IL5-capable governance
-2. **Chief AI Officer at regulated enterprise** — 75% deploying agentic AI, only 21% have mature governance (Deloitte 2026)
+2. **Chief AI Officer at regulated enterprise** — governance maturity still lags deployment appetite in many enterprises; verify current benchmark figures before external reuse
 3. **Platform engineer building internal agent infrastructure** — needs library primitives, not another dashboard
 4. **Legal / Risk leader** — needs documented governance as affirmative defense
 
@@ -117,11 +129,10 @@ Competitors (Qodo, Apiiro, Aikido, Snyk) scan code. HUMMBL enforces at runtime w
 ## Evidence and credibility
 
 ### Technical proof
-- **14,400+ tests** across the founder-mode platform
-- **476 tests** in hummbl-governance alone (stdlib-only)
-- **11 active CI workflows** (security scans, mutation testing, contract validation, quality scoring)
-- **2+ years of production operation** of the underlying platform
-- **Published on PyPI** with contract baseline governance
+- **Public package and repo surfaces** for `hummbl-governance`, `base120`, and `mcp-server`
+- **Installable public distributions** where available (for example, PyPI / npm)
+- **Open-source implementation detail** visible in current public repositories
+- **Research corpus** supporting the broader market and governance thesis
 
 ### Governance pattern proof
 Our own multi-agent development process demonstrates the pattern at work:
@@ -131,7 +142,7 @@ Our own multi-agent development process demonstrates the pattern at work:
 
 ### Research corpus
 - Full research library at `docs/research/ai-slop-crisis/` — 16 docs + synthesis + 2 one-pagers
-- Every positioning claim cites primary sources (arxiv, NIST, EU regulatory docs, case law)
+- Positioning claims are intended to be source-traceable, but legal/regulatory/market claims should still be rechecked against primary materials before formal external use
 
 ---
 
@@ -165,4 +176,4 @@ Our own multi-agent development process demonstrates the pattern at work:
 
 ---
 
-*This capability brief is backed by 16 research documents, 5 research rounds, ~250K tokens of primary source analysis. See `docs/research/ai-slop-crisis/` for the full evidence base.*
+*Snapshot note: this capability brief mixes public proof surfaces with research-backed synthesis. Recheck package metrics, market figures, and legal/regulatory claims before formal external reuse.*

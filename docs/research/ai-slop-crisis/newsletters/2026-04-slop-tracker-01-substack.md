@@ -4,6 +4,18 @@
 
 ---
 
+## Evidence posture
+
+This Substack variant is a **research-backed editorial synthesis**, not a primary-source bundle or legal/compliance advisory.
+
+- It compresses studies, cases, and regulatory developments into persuasive newsletter copy.
+- Numbers, insurance posture, enforcement timing, and case-law implications should be rechecked before external reuse in high-stakes contexts.
+- Urgency language is editorial framing, not standalone evidence.
+
+See [README.md](README.md) in this folder and [`../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md`](../../../PROOF_AND_RESEARCH_EVIDENCE_POSTURE.md).
+
+---
+
 AI-generated code is now ~42% of all committed code — and it ships 2.7x more vulnerabilities than humans write. Insurers have begun excluding it from coverage. Governments have begun fining it. This is the inaugural issue of the Slop Tracker — a monthly digest of the incidents, rulings, and regulatory moves reshaping how enterprises deploy AI agents.
 
 ---
@@ -88,3 +100,4 @@ Questions? reuben@hummbl.io
 *Next issue: May 2026. Coverage: EU AI Act countdown, first enforcement actions, procurement RFP shifts.*
 
 *HUMMBL Slop Tracker is free. Subscribe at [hummbl.io/tracker](https://hummbl.io/tracker.html).*
+
