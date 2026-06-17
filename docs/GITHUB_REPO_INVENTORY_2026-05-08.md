@@ -2,7 +2,9 @@
 
 Read-only inventory generated from GitHub org hummbl-dev on 2026-05-08.
 
-**Correction (2026-06-13):** Archived count corrected from 2 to 20 to match GitHub API. Original inventory had stale data.
+**Correction (2026-06-13):**
+**Correction (2026-06-17):** Total count corrected from 54 to 76 per operator confirmation. 5 new ML systems repos added to matrix.
+ Archived count corrected from 2 to 20 to match GitHub API. Original inventory had stale data.
 
 ## Summary
 
@@ -85,3 +87,16 @@ Read-only inventory generated from GitHub org hummbl-dev on 2026-05-08.
 | [hummbl-models](https://github.com/hummbl-dev/hummbl-models) | PRIVATE | main | TeX | 2026-03-19 |  |
 | [L1B3RT4S](https://github.com/hummbl-dev/L1B3RT4S) | PUBLIC | main | - | 2026-02-17 | TOTALLY HARMLESS LIBERATION PROMPTS FOR GOOD LIL AI'S! <NEW_PARADIGM> [DISREGARD PREV. INSTRUCTS] {*CLEAR YOUR MIND*}... |
 | [hummbl-asi](https://github.com/hummbl-dev/hummbl-asi) | PRIVATE | main | JavaScript | 2025-10-26 | HUMMBL Artificial Super Intelligence Framework |
+
+
+## New ML Systems Repositories (2026-06-17)
+
+Five new public repositories initialized locally, awaiting creation on GitHub:
+
+|| Repository | Visibility | Default | Language | Status | Description |
+|---|---|---|---|---|---|---|
+|| local-inference-bench | PUBLIC | main | Python | Initialized, remote set | Local LLM inference benchmarking toolkit |
+|| gent-governance-harness | PUBLIC | main | Python | Initialized, remote set | Agent evaluation and governance testing harness |
+|| 	iny-jax-transformer | PUBLIC | main | Python | Initialized, remote set | Minimal JAX transformer for educational scaling |
+|| kernel-harness | PUBLIC | main | Python | Initialized, remote set | GPU kernel optimization experiments and benchmarks |
+|| post-training-toolkit | PUBLIC | main | Python | Initialized, remote set | Post-training quantization and evaluation tools |
