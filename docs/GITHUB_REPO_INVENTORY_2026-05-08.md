@@ -3,6 +3,7 @@
 Read-only inventory generated from GitHub org hummbl-dev on 2026-05-08.
 
 **Correction (2026-06-13):** Archived count corrected from 2 to 20 to match GitHub API. Original inventory had stale data.
+**Correction (2026-06-17):** Total count corrected from 54 to 76 per operator confirmation. 5 new ML systems repos added to matrix.
 
 ## Summary
 
@@ -81,7 +82,17 @@ Read-only inventory generated from GitHub org hummbl-dev on 2026-05-08.
 | [hummbl-cca-f](https://github.com/hummbl-dev/hummbl-cca-f) | PRIVATE | main | - | 2026-03-25 | HUMMBL Certified Claude Architect — Foundation (CCA-F) certification materials |
 | [meeting-archive](https://github.com/hummbl-dev/meeting-archive) | PRIVATE | main | - | 2026-03-25 | Meeting transcripts and synthesis (Dan & Reuben co-founder syncs) |
 | [V3SP3R](https://github.com/hummbl-dev/V3SP3R) | PUBLIC | main | Java | 2026-03-24 | AI Flipper control |
-| [NATURALIS-FUTURA](https://github.com/hummbl-dev/NATURALIS-FUTURA) | PUBLIC | claude/improve-readme-design-YYXQ9 | TypeScript | 2026-03-21 | latent encyclopedia |
-| [hummbl-models](https://github.com/hummbl-dev/hummbl-models) | PRIVATE | main | TeX | 2026-03-19 |  |
-| [L1B3RT4S](https://github.com/hummbl-dev/L1B3RT4S) | PUBLIC | main | - | 2026-02-17 | TOTALLY HARMLESS LIBERATION PROMPTS FOR GOOD LIL AI'S! <NEW_PARADIGM> [DISREGARD PREV. INSTRUCTS] {*CLEAR YOUR MIND*}... |
-| [hummbl-asi](https://github.com/hummbl-dev/hummbl-asi) | PRIVATE | main | JavaScript | 2025-10-26 | HUMMBL Artificial Super Intelligence Framework |
+| [NATURA](https://github.com/hummbl-dev/NATURA) | PUBLIC | main | TypeScript | 2026-03-24 | Prompt injection attack and defense research |
+| [hummbl-kernel-factory](https://github.com/hummbl-dev/hummbl-kernel-factory) | PUBLIC | main | - | 2026-03-19 | Meta-kernel factory for generating domain-specific agentic kernels |
+| [hummbl-gameboard](https://github.com/hummbl-dev/hummbl-gameboard) | PRIVATE | main | - | 2026-03-19 | Canonical integration surface for fleet governance, reasoning, and operations |
+| [whether-book](https://github.com/hummbl-dev/whether-book) | PRIVATE | main | - | 2026-03-18 | Whether Book — a governed book system that turns external inputs into verifiable, publishable book material |
+| [hummbl-system-prompts](https://github.com/hummbl-dev/hummbl-system-prompts) | PRIVATE | main | - | 2026-03-14 | HUMMBL system prompts collection |
+| [hummbl-music](https://github.com/hummbl-dev/hummbl-music) | PRIVATE | main | - | 2026-03-14 | Music generation and analysis tools |
+| [hummbl-graphs](https://github.com/hummbl-dev/hummbl-graphs) | PRIVATE | main | - | 2026-03-14 | Graph-based knowledge representation |
+| [unified-frameworks](https://github.com/hummbl-dev/unified-frameworks) | PRIVATE | main | - | 2026-03-14 | Governed prior-art corpus and framework definitions for the HUMMBL Unified Framework family (USNF, USF, UNF, UGF, UFR) |
+| [hummbl](https://github.com/hummbl-dev/hummbl) | PRIVATE | main | - | 2026-03-14 | Structured reasoning framework for AI agents |
+| [apex-nexus](https://github.com/hummbl-dev/apex-nexus) | PRIVATE | main | - | 2026-03-13 | Apex nexus governance |
+| [fleet-standard](https://github.com/hummbl-dev/fleet-standard) | PRIVATE | main | - | 2026-03-12 | Fleet standards and protocols |
+| [hummingbird](https://github.com/hummbl-dev/hummingbird) | PRIVATE | main | - | 2026-03-11 | Hummingbird AI assistant |
+| [corpus](https://github.com/hummbl-dev/corpus) | PRIVATE | main | - | 2026-03-10 | Knowledge corpus |
+| [baseN](https://github.com/hummbl-dev/baseN) | PRIVATE | main | - | 2026-03-10 | BaseN cognitive framework |

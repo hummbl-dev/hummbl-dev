@@ -13,6 +13,11 @@ Apply the following baseline to:
 - `hummbl-assurance`
 - `hummbl-production`
 - `hummbl-iac`
+- `local-inference-bench`
+- `agent-governance-harness`
+- `tiny-jax-transformer`
+- `kernel-harness`
+- `post-training-toolkit`
 
 ## Default Branch Policy
 
@@ -81,6 +86,26 @@ Rationale:
 - require syntax/render validation if added
 - require workflow validation if CI exists
 
+### `local-inference-bench`
+- require main test workflow
+- require benchmark validation jobs
+
+### `agent-governance-harness`
+- require main test workflow
+- require evaluator conformance checks
+
+### `tiny-jax-transformer`
+- require main test workflow
+- require training convergence checks
+
+### `kernel-harness`
+- require main test workflow
+- require kernel correctness validation
+
+### `post-training-toolkit`
+- require main test workflow
+- require post-training metric checks
+
 ## CODEOWNERS Review Policy
 
 - Enable CODEOWNERS review requirement for repos with repo-local `CODEOWNERS`
@@ -91,9 +116,24 @@ Rationale:
   - `hummbl-assurance`
   - `hummbl-iac`
 
+## ML Systems Repositories (Added 2026-06-17)
+
+Five new public ML systems repos were initialized and require ruleset coverage:
+
+| Repo | Tier | Language | CI Status | Ruleset Priority |
+|------|------|----------|-----------|------------------|
+| `local-inference-bench` | Public | Python | `.github/workflows/ci.yml` | Medium |
+| `agent-governance-harness` | Public | Python | `.github/workflows/ci.yml` | Medium |
+| `tiny-jax-transformer` | Public | Python | `.github/workflows/ci.yml` | Medium |
+| `kernel-harness` | Public | Python | `.github/workflows/ci.yml` | Medium |
+| `post-training-toolkit` | Public | Python | `.github/workflows/ci.yml` | Medium |
+
+These repos are not yet created on GitHub (remotes set, awaiting repo creation).
+
 ## Manual Follow-Up
 
 1. Normalize default branches first.
 2. Clean up stale repo-local ownership files before enabling CODEOWNERS-required review.
 3. Add rulesets on the public core repos first.
 4. Extend to private operational repos once status checks are stable.
+5. Apply baseline to 5 new ML systems repos after they are created on GitHub.
