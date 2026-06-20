@@ -1,0 +1,268 @@
+{
+  "version": "2026-06-20",
+  "source_of_truth": "hummbl-dev/hummbl-dev",
+  "description": "Greenfield and near-greenfield repos in hummbl-dev org needing governance file propagation",
+  "candidate_criteria": {
+    "greenfield": "diskUsage < 30 KB, not archived",
+    "near_greenfield": "diskUsage 30–100 KB, not archived, not .github org config"
+  },
+  "scope_constraints": [
+    "Governance files only: README, LICENSE, SECURITY, CODEOWNERS, .github templates, AGENTS/CLAUDE if canonical",
+    "Never overwrite existing files",
+    "Never infer or change licenses without explicit approval",
+    "Default mode is --dry-run",
+    "Do not create PRs or commit to main"
+  ],
+  "repos": [
+    {
+      "name": "hummbl-music",
+      "disk_kb": 7,
+      "language": "Python",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "low",
+      "notes": "Minimal content, likely empty scaffold"
+    },
+    {
+      "name": "hummingbird",
+      "disk_kb": 8,
+      "language": "Python",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "low",
+      "notes": "Minimal content"
+    },
+    {
+      "name": "mtsmu",
+      "disk_kb": 9,
+      "language": "Python",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "medium",
+      "notes": "MTSMU reasoning framework — domain value"
+    },
+    {
+      "name": "baseN",
+      "disk_kb": 9,
+      "language": "Python",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "medium",
+      "notes": "BaseN multi-variant operator catalog"
+    },
+    {
+      "name": "corpus",
+      "disk_kb": 10,
+      "language": "Python",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "low",
+      "notes": "Minimal content"
+    },
+    {
+      "name": "huaomp",
+      "disk_kb": 13,
+      "language": "Python",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "medium",
+      "notes": "HUAOMP 6-lens epistemic breadth"
+    },
+    {
+      "name": "hummbl-kernel-factory",
+      "disk_kb": 14,
+      "language": "Python",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "high",
+      "notes": "HGK kernel factory — public, smallest public repo"
+    },
+    {
+      "name": "fleet-standard",
+      "disk_kb": 15,
+      "language": "Shell",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "medium",
+      "notes": "Fleet standardization scripts"
+    },
+    {
+      "name": "general-claim-validator",
+      "disk_kb": 22,
+      "language": "Python",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "medium",
+      "notes": "Claim validation tool"
+    },
+    {
+      "name": "governed-compression",
+      "disk_kb": 23,
+      "language": "Python",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "medium",
+      "notes": "Compression with governance"
+    },
+    {
+      "name": "hummbl-transparency",
+      "disk_kb": 27,
+      "language": "Python",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "medium",
+      "notes": "Transparency layer"
+    },
+    {
+      "name": "founder-mode-showcase",
+      "disk_kb": 28,
+      "language": "Python",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "high",
+      "notes": "Showcase/demo repo — public-facing"
+    },
+    {
+      "name": "adversary-emulation-playbook",
+      "disk_kb": 30,
+      "language": "Python",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "greenfield",
+      "impact": "medium",
+      "notes": "Defensive security playbook"
+    },
+    {
+      "name": "agent-governance-demo",
+      "disk_kb": 32,
+      "language": "Python",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "medium",
+      "notes": "Public demo"
+    },
+    {
+      "name": "hummbl-papers",
+      "disk_kb": 32,
+      "language": "Python",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "medium",
+      "notes": "Research papers collection"
+    },
+    {
+      "name": "hummbl-system-prompts",
+      "disk_kb": 33,
+      "language": null,
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "low",
+      "notes": "System prompt templates"
+    },
+    {
+      "name": "hummbl-spacetime",
+      "disk_kb": 34,
+      "language": "Python",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "low",
+      "notes": "Spacetime experiments"
+    },
+    {
+      "name": "evidence-gate",
+      "disk_kb": 47,
+      "language": "Python",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "high",
+      "notes": "Evidence validation — public, high governance value"
+    },
+    {
+      "name": "krineia",
+      "disk_kb": 47,
+      "language": "Python",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "high",
+      "notes": "Krineia governance primitive — public, high value"
+    },
+    {
+      "name": "hummbl-iac",
+      "disk_kb": 52,
+      "language": "Go",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "medium",
+      "notes": "IaC tooling — public"
+    },
+    {
+      "name": "hummbl-graphs",
+      "disk_kb": 71,
+      "language": "Python",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "medium",
+      "notes": "Graph utilities"
+    },
+    {
+      "name": "autoresearch-pipeline",
+      "disk_kb": 79,
+      "language": "Python",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "medium",
+      "notes": "Autoresearch pipeline"
+    },
+    {
+      "name": "hummbl-skills",
+      "disk_kb": 81,
+      "language": "Python",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "high",
+      "notes": "Public skills repo — should have strong governance"
+    },
+    {
+      "name": "bif",
+      "disk_kb": 89,
+      "language": "Python",
+      "visibility": "PUBLIC",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "medium",
+      "notes": "Public utility"
+    },
+    {
+      "name": "agent-tools",
+      "disk_kb": 90,
+      "language": "Rust",
+      "visibility": "PRIVATE",
+      "archived": false,
+      "tier": "near_greenfield",
+      "impact": "medium",
+      "notes": "Rust agent tooling"
+    }
+  ]
+}
