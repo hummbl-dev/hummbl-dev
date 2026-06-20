@@ -1,6 +1,8 @@
 # Exact Fix: `hummbl-governance/.github/dependabot.yml` (2026-04-01)
 
-## Problem
+> **Status: RESOLVED** — Fixed in commit `c620ec4` (2026-04-01). File is currently valid.
+
+## Problem (Historical)
 
 The current file is a placeholder generated from the default Dependabot template and is visibly invalid:
 

@@ -46,6 +46,7 @@ Examples surfaced in audit:
 
 ### 4. Dependabot triage and batching
 
+- ✅ `hummbl-governance` dependabot.yml fixed (commit `c620ec4`, 2026-04-01)
 - Review open dependency PR queues in `mcp-server`, `hummbl-agent`, and `hummbl-production`
 - Add repo-local batching, auto-merge, or stricter ignore rules where safe
 - Keep noise low enough that real governance and product PRs stay visible
@@ -56,7 +57,7 @@ Add repo-local `CODEOWNERS` where ownership needs to be narrower than the org de
 
 Priority repos:
 
-- `hummbl-production`
+- ✅ `hummbl-production` CODEOWNERS fixed (branch `fix/claude/gitops-cleanup-from-april-audit`, 2026-06-17)
 - `hummbl-agent`
 - `mcp-server`
 - `base120`

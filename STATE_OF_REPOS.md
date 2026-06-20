@@ -9,8 +9,8 @@ This file is the short current summary. The detailed generated inventory lives i
 
 | Metric | Count |
 |---|---:|
-| Total `hummbl-dev` repositories | 54 |
-| Active public repositories | 35 |
+| Total `hummbl-dev` repositories | 59 |
+| Active public repositories | 40 |
 | Active private repositories | 17 |
 | Archived repositories | 2 |
 | Branch audit records | 263 |
@@ -30,6 +30,11 @@ This file is the short current summary. The detailed generated inventory lives i
 | [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent) | Agent orchestration patterns |
 | [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography) | Bibliography and citation corpus |
 | [`hummbl-dev`](https://github.com/hummbl-dev/hummbl-dev) | Public profile, tools, and repo inventory |
+|| [`local-inference-bench`](https://github.com/hummbl-dev/local-inference-bench) | Modular local LLM inference benchmarking |
+|| [`agent-governance-harness`](https://github.com/hummbl-dev/agent-governance-harness) | Controlled experiment harness for agent governance |
+|| [`tiny-jax-transformer`](https://github.com/hummbl-dev/tiny-jax-transformer) | Educational JAX transformer with scaling law reconstruction |
+|| [`kernel-harness`](https://github.com/hummbl-dev/kernel-harness) | Agentic kernel generation, compilation, and benchmarking |
+|| [`post-training-toolkit`](https://github.com/hummbl-dev/post-training-toolkit) | LoRA, distillation, and quantization implementations |
 
 ## Private Active Spine
 
