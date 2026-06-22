@@ -21,7 +21,7 @@ Agents working in this repository are responsible for:
 1. **Mobile-first behavior**: Lead with the answer, skip preamble, keep text short
 2. **Small diffs**: Target < 300 lines changed per PR for phone reviewability
 3. **One concern per commit**: Imperative subject, ≤ 70 chars
-4. **Never commit to main**: Work on a branch: `claude/<slug>` or `feat/<slug>`
+4. **Never commit to main**: Work on a branch: `agent/<slug>` or `feat/<slug>`
 5. **AskUserQuestion preference**: Prefer 2–4 options over open-ended prose questions
 6. **No drive-by refactors**: No speculative abstractions, no unasked-for improvements
 7. **Surface blockers early**: Don't grind on failing approaches — diagnose, then ask
@@ -39,7 +39,7 @@ Never, without explicit in-session confirmation:
 
 ## Branching and Commit Conventions
 
-- Branch naming: `claude/<slug>` or `feat/<slug>`
+- Branch naming: `agent/<slug>` or `feat/<slug>`
 - Commit format: Conventional Commits, imperative subject, ≤ 70 chars
 - Merge strategy: squash-merge to `main`; rebase locally before PR
 - CI must be green before merge; no direct pushes to `main`
@@ -52,7 +52,7 @@ Agents coordinate via the coordination bus for:
 - Blocker alerts
 - PR review requests
 
-Bus identity: `claude-code` (no parentheticals)
+Bus identity: `ai-steward` (no parentheticals)
 
 ## Conventions
 
