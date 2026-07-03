@@ -60,11 +60,11 @@ Planning artifacts live under [`docs/plans/`](docs/plans/). They are useful for 
 | Category | Repositories |
 |---|---|
 | Governance primitives | [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance), [`agent-governance-demo`](https://github.com/hummbl-dev/agent-governance-demo), [`evidence-gate`](https://github.com/hummbl-dev/evidence-gate) |
-| Agent systems | [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent), [`mcp-server`](https://github.com/hummbl-dev/mcp-server), [`hummbl-iac`](https://github.com/hummbl-dev/hummbl-iac) |
+| Agent systems | [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent), [`mcp-server`](https://github.com/hummbl-dev/mcp-server), `hummbl-iac` (private) |
 | Review and quality | [`arbiter`](https://github.com/hummbl-dev/arbiter), source-verification rules, governed PR review workflows |
-| Cognitive substrate | [`base120`](https://github.com/hummbl-dev/base120), [`hummbl-theory`](https://github.com/hummbl-dev/hummbl-theory), [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography), [`arcana`](https://github.com/hummbl-dev/arcana) |
-| Product and applied research | [`fractional-bench`](https://github.com/hummbl-dev/fractional-bench), `coaching`, `hummbl-production` |
-|| ML systems and benchmarking | [`local-inference-bench`](https://github.com/hummbl-dev/local-inference-bench), [`agent-governance-harness`](https://github.com/hummbl-dev/agent-governance-harness), [`tiny-jax-transformer`](https://github.com/hummbl-dev/tiny-jax-transformer), [`kernel-harness`](https://github.com/hummbl-dev/kernel-harness), [`post-training-toolkit`](https://github.com/hummbl-dev/post-training-toolkit) |
+| Cognitive substrate | [`base120`](https://github.com/hummbl-dev/base120), `hummbl-theory` (private), [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography), `arcana` (private) |
+| Product and applied research | `fractional-bench` (private), `coaching`, `hummbl-production` |
+| ML systems and benchmarking | `local-inference-bench` (not publicly published), `agent-governance-harness` (renamed/retired), `tiny-jax-transformer` (not publicly published), `kernel-harness` (not publicly published), `post-training-toolkit` (not publicly published) |
 | Public tools and content | [`hummbl-dev`](https://github.com/hummbl-dev/hummbl-dev), static readiness tools, research essays, public profile assets |
 | Experimental public repos | `autoresearch`, `governed-compression`, `sint-protocol`, `bif` |
 
@@ -101,6 +101,12 @@ Inventory captured on 2026-05-08:
 | Primary language family | Python-heavy, with TypeScript, HTML, Shell, TeX, Go templates, Java |
 
 Latest repo inventory: [`docs/GITHUB_REPO_INVENTORY_2026-05-08.md`](docs/GITHUB_REPO_INVENTORY_2026-05-08.md)
+
+To validate repository links in this README against live GitHub metadata, run:
+
+```bash
+python scripts/check_readme_repo_links.py
+```
 
 Latest branch cleanup audit: [`docs/BRANCH_CLEANUP_AUDIT_2026-05-08.md`](docs/BRANCH_CLEANUP_AUDIT_2026-05-08.md)
 
