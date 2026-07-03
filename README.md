@@ -64,7 +64,7 @@ Planning artifacts live under [`docs/plans/`](docs/plans/). They are useful for 
 | Review and quality | [`arbiter`](https://github.com/hummbl-dev/arbiter), source-verification rules, governed PR review workflows |
 | Cognitive substrate | [`base120`](https://github.com/hummbl-dev/base120), [`hummbl-theory`](https://github.com/hummbl-dev/hummbl-theory), [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography), [`arcana`](https://github.com/hummbl-dev/arcana) |
 | Product and applied research | [`fractional-bench`](https://github.com/hummbl-dev/fractional-bench), `coaching`, `hummbl-production` |
-|| ML systems and benchmarking | [`local-inference-bench`](https://github.com/hummbl-dev/local-inference-bench), [`agent-governance-harness`](https://github.com/hummbl-dev/agent-governance-harness), [`tiny-jax-transformer`](https://github.com/hummbl-dev/tiny-jax-transformer), [`kernel-harness`](https://github.com/hummbl-dev/kernel-harness), [`post-training-toolkit`](https://github.com/hummbl-dev/post-training-toolkit) |
+| ML systems and benchmarking | _planned: local-inference-bench, agent-governance-harness, tiny-jax-transformer, kernel-harness, post-training-toolkit_ |
 | Public tools and content | [`hummbl-dev`](https://github.com/hummbl-dev/hummbl-dev), static readiness tools, research essays, public profile assets |
 | Experimental public repos | `autoresearch`, `governed-compression`, `sint-protocol`, `bif` |
 
