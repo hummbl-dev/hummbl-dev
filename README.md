@@ -90,17 +90,17 @@ That is the spine across the org: small primitives that make governance observab
 
 ## By The Numbers
 
-Inventory captured on 2026-05-08:
+Inventory captured on 2026-07-03:
 
 | Metric | Count |
 |---|---:|
-| Total repositories | 54 |
-| Active public repositories | 35 |
-| Active private repositories | 17 |
-| Archived repositories | 20 |
+| Total repositories | 118 |
+| Active public repositories | 15 |
+| Active private repositories | 69 |
+| Archived repositories | 34 |
 | Primary language family | Python-heavy, with TypeScript, HTML, Shell, TeX, Go templates, Java |
 
-Latest repo inventory: [`docs/GITHUB_REPO_INVENTORY_2026-05-08.md`](docs/GITHUB_REPO_INVENTORY_2026-05-08.md)
+Latest repo inventory: [`docs/GITHUB_REPO_INVENTORY_2026-05-08.md`](docs/GITHUB_REPO_INVENTORY_2026-05-08.md) _(historical — refresh pending)_
 
 Latest branch cleanup audit: [`docs/BRANCH_CLEANUP_AUDIT_2026-05-08.md`](docs/BRANCH_CLEANUP_AUDIT_2026-05-08.md)
 
