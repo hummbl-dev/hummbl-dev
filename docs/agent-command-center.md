@@ -34,7 +34,8 @@ Exclude:
 
 | Field | Type | Values / notes |
 |---|---|---|
-| Repo Target | text or single select | Public repo or generic private lane label. Do not name private repos publicly. |
+| Public Repo Target | single select | `hummbl-dev`, `.github`, `hummbl-agent`, `compendium-as-code`, `governance-as-code`, `as-code-family`, `other-public-repo`, `not-applicable` |
+| Private Lane Target | single select | `none`, `private-inventory`, `private-production`, `private-collaboration`, `private-source-work`, `private-sensitive-stop` |
 | Lane | single select | `public-surface`, `repo-seed`, `namespace-audit`, `as-code-wave`, `governed-throughput`, `review-gate`, `collaboration-routing` |
 | Priority | single select | `P0`, `P1`, `P2`, `P3` |
 | Publicness | single select | `public`, `public-safe-summary`, `private-boundary`, `sensitive-stop` |
@@ -113,7 +114,7 @@ Weekly:
 Before assigning an agent:
 
 - confirm public/private boundary
-- confirm linked repo or lane
+- confirm controlled public repo target or private lane target
 - confirm acceptance criteria
 - confirm evidence or source requirements
 - confirm whether non-author review is required
