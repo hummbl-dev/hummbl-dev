@@ -2,7 +2,7 @@
 
 Issue: [#41](https://github.com/hummbl-dev/hummbl-dev/issues/41)
 
-This memo classifies the archived public `awesome-ai-agents*` cluster so public repo inventory and agents do not treat duplicate imports as active HUMMBL-maintained projects.
+This memo classifies the archived public `awesome-ai-agents*` cluster so searched public repo inventory surfaces and agents do not treat duplicate imports as active HUMMBL-maintained projects.
 
 ## Summary
 
@@ -30,7 +30,7 @@ Search result in this repository:
 rg -n "awesome-ai-agents|awesome-ai-agents-2026|awesome-ai-agents-1" README.md docs .github governance -S
 ```
 
-Only the issue-promotion packet for #41 referenced the cluster. No active README, public routing, governance, or template surface linked these repos as active HUMMBL work.
+Within the searched surfaces, only the issue-promotion packet for #41 referenced the cluster. No searched README, public routing, governance, or template surface linked these repos as active HUMMBL work.
 
 ## Decision
 
