@@ -68,10 +68,10 @@ Planning artifacts live under [`docs/plans/`](docs/plans/). They are useful for 
 | Category | Repositories |
 |---|---|
 | Governance primitives | [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance), [`agent-governance-demo`](https://github.com/hummbl-dev/agent-governance-demo), [`evidence-gate`](https://github.com/hummbl-dev/evidence-gate) |
-| Agent systems | [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent), [`mcp-server`](https://github.com/hummbl-dev/mcp-server), [`hummbl-iac`](https://github.com/hummbl-dev/hummbl-iac) |
+| Agent systems | [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent), [`mcp-server`](https://github.com/hummbl-dev/mcp-server), `hummbl-iac` (`private/not-public`) |
 | Review and quality | [`arbiter`](https://github.com/hummbl-dev/arbiter), source-verification rules, governed PR review workflows |
-| Cognitive substrate | [`base120`](https://github.com/hummbl-dev/base120), [`hummbl-theory`](https://github.com/hummbl-dev/hummbl-theory), [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography), [`arcana`](https://github.com/hummbl-dev/arcana) |
-| Product and applied research | [`fractional-bench`](https://github.com/hummbl-dev/fractional-bench), `coaching`, `hummbl-production` |
+| Cognitive substrate | [`base120`](https://github.com/hummbl-dev/base120), [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography), `hummbl-theory` (`private/not-public`), `arcana` (`private/not-public`) |
+| Product and applied research | `fractional-bench` (`private/not-public`), `coaching`, `hummbl-production` |
 | ML systems and benchmarking | _planned: local-inference-bench, agent-governance-harness, tiny-jax-transformer, kernel-harness, post-training-toolkit_ |
 | Public tools and content | [`hummbl-dev`](https://github.com/hummbl-dev/hummbl-dev), static readiness tools, research essays, public profile assets |
 | Experimental public repos | `autoresearch`, `governed-compression`, `sint-protocol`, `bif` |
