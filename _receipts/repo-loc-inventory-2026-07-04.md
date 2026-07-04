@@ -7,23 +7,24 @@ Methodology notes:
 - Excludes untracked local work, vendor binaries, and untracked gitignored files.
 - Repo classification is heuristic based on name, description, language, size, and topics.
 - LOC measures tracked text surface area, not runtime maturity, production readiness, or strategic importance.
+- The `Archived` column is live GitHub metadata checked during PR review on 2026-07-04.
 
-## Native active development (current center of gravity)
+## Native/non-fork tracked-text inventory
 
-These repos appear to represent ongoing native HUMMBL runtime, governance, agent, and tooling work.
+These repos are native, non-fork HUMMBL repos included in the tracked-text LOC snapshot. This table is not an active-development claim; archived repos are preserved as historical surfaces.
 
-| Repo | LOC | GitHub Size | Language | Description |
-|---|---:|---:|---|---|
-| hummbl-governance | 131,675 | 2,252 KB | Python | Governance runtime — primitives, tests, audit surface |
-| hummbl-agent | 124,489 | 2,106 KB | TypeScript | Agent orchestration runtime, router, control plane |
-| mcp-server | 40,328 | 1,934 KB | TypeScript | HUMMBL MCP Server |
-| arbiter | 32,100 | 1,341 KB | Python | Agent-aware code quality scoring |
-| hummbl-dev | 20,374 | 684 KB | HTML | Public profile / organization surface |
-| base120 | 19,008 | 433 KB | Python | Deterministic governance substrate |
-| HUMMBL-Unified-Tier-Framework | 12,361 | 229 KB | Python | Problem complexity classification framework |
-| bif | 3,967 | 125 KB | Python | Batch ingestion framework |
-| .github | 3,595 | 75 KB | — | Organization profile / actions / standards |
-| evidence-gate | 1,218 | 65 KB | Python | Source-verification rule library |
-| governed-compression | 849 | 37 KB | Python | Governed compression research |
-| homebrew-hummbl | 253 | 8 KB | Ruby | Homebrew tap for HUMMBL CLI tools |
-| hummbl-toolkit | n/a | 152 KB | Python | Toolkit surface; not cloned locally for LOC |
+| Repo | Archived | LOC | GitHub Size | Language | Description |
+|---|---:|---:|---:|---|---|
+| hummbl-governance | No | 131,675 | 2,252 KB | Python | Governance runtime — primitives, tests, audit surface |
+| hummbl-agent | No | 124,489 | 2,106 KB | TypeScript | Agent orchestration runtime, router, control plane |
+| mcp-server | No | 40,328 | 1,934 KB | TypeScript | HUMMBL MCP Server |
+| arbiter | No | 32,100 | 1,341 KB | Python | Agent-aware code quality scoring |
+| hummbl-dev | No | 20,374 | 684 KB | HTML | Public profile / organization surface |
+| base120 | No | 19,008 | 433 KB | Python | Deterministic governance substrate |
+| HUMMBL-Unified-Tier-Framework | Yes | 12,361 | 229 KB | Python | Problem complexity classification framework |
+| bif | No | 3,967 | 125 KB | Python | Batch ingestion framework |
+| .github | No | 3,595 | 75 KB | — | Organization profile / actions / standards |
+| evidence-gate | Yes | 1,218 | 65 KB | Python | Source-verification rule library |
+| governed-compression | No | 849 | 37 KB | Python | Governed compression research |
+| homebrew-hummbl | No | 253 | 8 KB | Ruby | Homebrew tap for HUMMBL CLI tools |
+| hummbl-toolkit | No | n/a | 152 KB | Python | Toolkit surface; not cloned locally for LOC |
