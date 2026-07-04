@@ -1,6 +1,6 @@
 # Draft PR Promotion Packet: Issue #41
 
-Status: draft PR promotion
+Status: implemented by classification memo; pending review
 Source issue: #41
 Issue URL: https://github.com/hummbl-dev/hummbl-dev/issues/41
 Issue title: repo-hygiene: classify duplicate archived awesome-ai-agents repos
@@ -15,15 +15,17 @@ issue backlog.
 
 ## Current PR Scope
 
-This draft PR is a coordination scaffold only. It does not claim the issue is
-implemented yet.
+This PR records the disposition of the duplicate archived `awesome-ai-agents*`
+cluster in:
 
-## Expected Follow-Up
+- `docs/repo-hygiene/archived-awesome-ai-agents-classification-2026-07-04.md`
 
-- Replace this packet with the actual implementation or documentation change.
-- Preserve public/private boundary checks for any sensitive operational content.
-- Add tests, receipts, or validation appropriate to the issue scope.
-- Keep the PR draft until implementation evidence is present.
+## Validation
+
+- Live GitHub metadata checked for all three repos.
+- Repo-local search found no active public-surface links to the cluster outside
+  this promotion packet and the classification memo.
+- `git diff --check` passes after the classification memo.
 
 ## Issue Linkage
 
