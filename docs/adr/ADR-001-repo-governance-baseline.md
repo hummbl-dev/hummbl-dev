@@ -30,6 +30,11 @@ Adopt the HUMMBL Repo Standard v0.1 artifact stack for `hummbl-dev/hummbl-dev`.
 ## Consequences
 
 - **Positive:** 4 protected invariants are now constitutionally protected.
+- **Positive:** `_receipts/` now includes a tracked-text LOC inventory for normalized repo maturity discussions.
+
+## Inventory receipt
+
+- Repo-LOC inventory: `_receipts/repo-loc-inventory-2026-07-04.md`
 
 ## Receipts
 
