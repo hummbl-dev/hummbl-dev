@@ -1,6 +1,6 @@
 # Draft PR Promotion Packet: Issue #42
 
-Status: draft PR promotion
+Status: classification memo added; pending review and adoption
 Source issue: #42
 Issue URL: https://github.com/hummbl-dev/hummbl-dev/issues/42
 Issue title: public-surface: classify archived leetspeak repo cluster for brand and evidence posture
@@ -15,15 +15,16 @@ issue backlog.
 
 ## Current PR Scope
 
-This draft PR is a coordination scaffold only. It does not claim the issue is
-implemented yet.
+This PR records the disposition of the archived stylized-name repo cluster in:
 
-## Expected Follow-Up
+- `docs/repo-hygiene/archived-stylized-repo-classification-2026-07-04.md`
 
-- Replace this packet with the actual implementation or documentation change.
-- Preserve public/private boundary checks for any sensitive operational content.
-- Add tests, receipts, or validation appropriate to the issue scope.
-- Keep the PR draft until implementation evidence is present.
+## Validation
+
+- Live GitHub metadata checked for all six repos.
+- Repo-local search scoped to README, docs, `.github`, and governance surfaces.
+- Existing archive posture cross-checked.
+- `git diff --check` passes after the classification memo.
 
 ## Issue Linkage
 
