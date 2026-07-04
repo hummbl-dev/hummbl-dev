@@ -78,4 +78,3 @@ Correct disposition:
 - do not cite the CodeRabbit `SUCCESS` status alone as substantive review
   evidence;
 - preserve Codex's review comment as advisory evidence, not formal approval.
-
