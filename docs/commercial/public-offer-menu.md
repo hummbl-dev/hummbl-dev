@@ -1,33 +1,60 @@
-# Public Offer Menu
+# HUMMBL Public Offer Menu
 
-Status: draft public-safe commercial readiness packet.
+Status: public-safe commercial readiness draft  
+Source issue: #76
 
-## Offer Paths
+## Purpose
 
-| Path | Buyer question | Deliverable | Required input | Next step |
-|---|---|---|---|---|
-| Learn | "What does governed agentic work mean for us?" | Plain-English briefing or workshop | Audience, current agent use, constraints | Schedule session or send async context |
-| Diagnose | "Where are our agent risks and gaps?" | Short governance/readiness audit | Repo/process links, current workflow, risk concerns | Deliver findings and recommended next action |
-| Implement | "Can you help us install the controls?" | Scoped implementation sprint | Target workflow, authority boundaries, review path | Confirm scope, access, delivery window |
-| Operate | "Can HUMMBL help run this over time?" | Inquiry-only retainer discussion | Current operating cadence, support needs | Human review before any commitment |
+Document the compressed public HUMMBL offer surface so agents can build landing pages, intake flows, fulfillment docs, and customer-success materials without exposing private payment, customer, or production details.
 
-## Buyer Router
+## Buyer path
+
+```text
+Learn -> Diagnose -> Implement -> Operate
+```
+
+## Public offer set
+
+| Path | Offer | Price | Public action | Delivery model | Notes |
+|---|---|---:|---|---|---|
+| Learn | Free Agentic Work Readiness Checklist | $0 | Get checklist | Self-serve | Must have a real artifact before broad promotion. |
+| Diagnose | Governance Scorecard Report | $29.99 | Buy report | Self-serve / automated | Verify current fulfillment path before promotion. |
+| Learn | Governed Agentic Work Field Guide | $89 | Buy guide | Self-serve | Artifact must exist before promotion. |
+| Diagnose | Agentic Workflow Intake Review | $233 | Buy review | Async review | Requires intake form and delivery template. |
+| Diagnose | Micro-Audit | $500 | Book audit | Live + report | Requires scheduling, scope, and prep checklist. |
+| Diagnose | AI Governance Gap Assessment | $1,500 | Book assessment | Live + report | Requires scope, intake, and deliverable definition. |
+| Implement | Repo Governance Starter Pack | $3,000 | Book package | Implementation package | Requires agreement/scope and capacity check. |
+| Implement | Governed Agentic Workflow Sprint | $5,000 | Book sprint | Implementation sprint | Narrow intro sprint; do not treat as unlimited implementation. |
+| Operate | Governance Retainer / Enterprise Support | Inquiry only | Contact | Recurring/custom | Do not add checkout until scope, MSA/SOW, and capacity rules exist. |
+
+## Buyer router
 
 - Choose **Learn** when the buyer needs orientation before committing.
-- Choose **Diagnose** when the buyer has existing agent work and wants a risk/readiness read.
+- Choose **Diagnose** when the buyer has existing AI/agent work and wants a risk/readiness read.
 - Choose **Implement** when the buyer knows the target workflow and wants controls installed.
 - Choose **Operate** only after scope, capacity, data handling, and delivery responsibility are reviewed by a human.
 
-## Non-Claims
+## Public copy principle
 
-Do not imply:
+Use plain buyer language first. Keep internal ontology and BaseN/HUMMBL conceptual depth as supporting context, not as the first thing a cold buyer must parse.
 
-- legal, compliance, medical, security, or audit certification
-- guaranteed business outcomes
-- full production ownership without a signed scope
-- checkout eligibility for high-ticket or high-risk work
+## Scope boundary
 
-## Human Review Gaps
+These offers provide AI governance design, workflow review, repo/process guardrails, operating recommendations, and implementation support. They do not provide legal advice, compliance certification, security audit certification, medical advice, therapy, or regulated professional services unless separately scoped with qualified professionals.
+
+## Promotion gate
+
+Do not promote a public offer until it has:
+
+- deliverable definition
+- required inputs
+- post-purchase next step
+- refund/scope/delivery language
+- capacity rule
+- support/contact path
+- private fulfillment tracker destination
+
+## Human review gaps
 
 - delivery limits
 - refund terms
@@ -35,3 +62,5 @@ Do not imply:
 - data-handling language
 - customer intake storage
 - escalation policy
+- invoice/PO/NDA/custom-scope path
+
