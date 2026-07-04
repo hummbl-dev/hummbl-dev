@@ -24,14 +24,27 @@ for an agent-readable institutional memory layer.
 | Obsidian + Claude Code / second-brain workflows are popular | supported by public posts, repos, and plugin ecosystem | Treat as market signal. |
 | Company brain as governed memory | HUMMBL candidate architecture | Evaluate on primitives, not hype. |
 
-Public context checked on 2026-07-04:
+Public context checked on 2026-07-04.
+
+Search queries:
+
+- `Anthropic Obsidian brain company knowledge graph leak`
+- `"Anthropic" "Obsidian" "brain" leak`
+- `site:x.com Anthropic Obsidian brain leak`
+- `Anthropic internal Obsidian vault knowledge graph`
+
+Surfaced results and disposition:
 
 - X post result titled "23 PAGES. 10 ANTHROPIC TEAMS..." surfaced in search, but
-  search snippets did not establish an artifact chain.
-- Medium/Substack/LinkedIn-style posts discuss Claude Code leaks, Obsidian, and
-  second-brain patterns, but derivative posts are not source packages.
-- Public GitHub/Obsidian-plugin examples show market interest in graph-backed
-  personal knowledge workflows.
+  the surfaced snippet did not establish a repo, vault, archive, hash, or source
+  package.
+- Search surfaced Medium/Substack/LinkedIn-style posts discussing Claude Code
+  leaks, Obsidian, and second-brain patterns. These are derivative narratives,
+  not source packages for the specific Anthropic/Obsidian-vault claim.
+- Search surfaced public GitHub and Obsidian-plugin examples for graph-backed
+  personal knowledge workflows. These support market-interest analysis, not the
+  Anthropic internal-vault claim.
+- No archive or snapshot identifier was found or used in this pass.
 
 Reference surfaces checked:
 

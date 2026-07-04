@@ -79,15 +79,21 @@ No agent answer should cite memory without a source pointer.
 
 ### Governance
 
-Memory status must be explicit:
+Memory lifecycle and visibility must be separate axes.
+
+Lifecycle state:
 
 - raw,
 - candidate,
 - reviewed,
 - canon,
 - deprecated,
-- contradicted,
+- contradicted.
+
+Visibility state:
+
 - private,
+- internal-only,
 - public-safe.
 
 Promotion requires receipt-bearing review. Deprecation should preserve the old

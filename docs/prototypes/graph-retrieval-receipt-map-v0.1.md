@@ -29,16 +29,16 @@ personal data.
 JSONL nodes:
 
 ```json
-{"id":"artifact:docs/repo-map.md","type":"Artifact","status":"public-safe","source":"docs/repo-map.md"}
-{"id":"claim:repo-candidate-agent-receipts","type":"Claim","status":"candidate","source":"docs/repo-map.md"}
-{"id":"receipt:pr-87","type":"Receipt","status":"reviewed","source":"https://github.com/hummbl-dev/hummbl-dev/pull/87"}
+{"id":"artifact:docs/repo-map.md","type":"Artifact","lifecycle":"reviewed","visibility":"public-safe","source":"docs/repo-map.md","source_location":"docs/repo-map.md","provenance_confidence":"high"}
+{"id":"claim:repo-candidate-agent-receipts","type":"Claim","lifecycle":"candidate","visibility":"public-safe","source":"docs/repo-map.md","source_location":"docs/repo-map.md#candidate-repo-admission-queue","provenance_confidence":"medium"}
+{"id":"receipt:pr-87","type":"Receipt","lifecycle":"reviewed","visibility":"public-safe","source":"https://github.com/hummbl-dev/hummbl-dev/pull/87","source_location":"pull_request:87","provenance_confidence":"high"}
 ```
 
 JSONL edges:
 
 ```json
-{"from":"claim:repo-candidate-agent-receipts","to":"artifact:docs/repo-map.md","type":"cites"}
-{"from":"receipt:pr-87","to":"artifact:docs/repo-map.md","type":"reviews"}
+{"from":"claim:repo-candidate-agent-receipts","to":"artifact:docs/repo-map.md","type":"cites","source_location":"docs/repo-map.md#candidate-repo-admission-queue","provenance_confidence":"medium"}
+{"from":"receipt:pr-87","to":"artifact:docs/repo-map.md","type":"reviewed_by","source_location":"pull_request:87","provenance_confidence":"high"}
 ```
 
 ## Minimal Steps
