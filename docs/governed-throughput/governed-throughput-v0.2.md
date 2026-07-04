@@ -132,6 +132,9 @@ state.
 4. Pilot fourth: prove the full path in a small set of repos.
 5. Local overrides last: patch only repos that intentionally override defaults.
 
+Formal review gates must follow
+`docs/governed-throughput/non-author-review-gates.md`.
+
 ## Pilot Set
 
 Use these pilots unless the operator redirects:
