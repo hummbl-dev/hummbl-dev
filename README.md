@@ -1,17 +1,29 @@
 # HUMMBL
 
-Governance infrastructure for AI agents.
+HUMMBL builds governance and release infrastructure for agentic work.
 
-HUMMBL builds small, inspectable control-plane primitives for agentic systems: delegation tokens, append-only receipts, kill switches, circuit breakers, capability fences, source-verification gates, and review workflows that create evidence while the system runs.
+AI agents can increasingly do real work. But real work requires authority, review, receipts, rollback, provenance, memory discipline, and human accountability to stay trustworthy.
+
+Our first mission is to make agentic engineering reliable for teams actually shipping with agents.
 
 This repository is the public HUMMBL profile, repo directory, agent coordination surface, and collaboration router for the `hummbl-dev` account.
 
 The bias is explicit:
 
-- **libraries over platforms** — controls should live in the execution path, not only in a dashboard after the fact
-- **receipts over vibes** — every governance claim should leave an audit trail
-- **stdlib-first primitives** — core safety controls should survive constrained, regulated, and air-gapped environments
-- **human override preserved** — automation assists governance; it does not become the sovereign
+- **governance over hype** — controls should preserve reviewability before and after execution
+- **receipts over vibes** — every governance claim leaves append-only evidence
+- **small primitives over platforms** — controls run in execution paths, not only dashboards
+- **human accountability preserved** — automation assists operators, it does not replace review
+
+## Public positioning
+
+**HUMMBL makes agentic work trustworthy, inspectable, and shippable.**
+
+Ownward is an applied product for founder-operators using this governance layer.
+
+BaseN is the reasoning and routing substrate behind the system.
+
+First buyers: engineering leaders and founder-led technical teams adopting AI agents who need review, provenance, release risk management, and accountable delegation.
 
 ```bash
 pip install hummbl-governance
