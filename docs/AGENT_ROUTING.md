@@ -20,3 +20,6 @@ Agent changes should leave reviewable evidence:
 - Files changed and validation run.
 - Known gaps or follow-up work.
 - Explicit boundary when content is exploratory rather than adopted canon.
+
+For cross-repo public-surface work, use the Agent Command Center board spec in
+[`docs/agent-command-center.md`](agent-command-center.md).
