@@ -5,11 +5,14 @@ on:
     types: [opened, edited, synchronize, reopened, ready_for_review]
 
 permissions:
+  # The reusable check reads repository contents for workflow execution context.
   contents: read
+  # It reads pull request metadata and changed-file lists for report-only validation.
   pull-requests: read
 
 jobs:
   governed-pr-check:
-    uses: hummbl-dev/.github/.github/workflows/governed-pr-check.yml@main
+    # Pinned to hummbl-dev/.github main after the reusable tool-checkout fix.
+    uses: hummbl-dev/.github/.github/workflows/governed-pr-check.yml@b250900b502fe32662ba9cdf3ef8c064ab0c4cbf
     with:
       fail-on-findings: false
