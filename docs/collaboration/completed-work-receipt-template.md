@@ -11,13 +11,27 @@ Use this template to turn bounded collaboration work into a private receipt and,
 
 ## Owner / collaborator
 
-## Repo or workstream
+## Workstream
 
 ## Inputs used
 
+## Source links for claims/assertions
+
 ## Output produced
 
+## Files changed
+
+## Commands run
+
+## Tests or checks run
+
+## Authority boundary
+
 ## Review needed
+
+## Known limitations
+
+## Open questions
 
 ## Follow-up
 
@@ -29,7 +43,7 @@ Use this template to turn bounded collaboration work into a private receipt and,
 - [ ] No private personal details in public summary
 - [ ] No customer/payment/secret details in public summary
 - [ ] No legal, medical, compliance, security, or audit-certification claim
-- [ ] Sensitive artifacts remain in the private repo
+- [ ] Sensitive artifacts remain in the appropriate private lane
 ```
 
 ## Public-Safe Summary Pattern

@@ -8,23 +8,23 @@ Use this public repo only for sanitized coordination, routing, and receipts. Pri
 
 If a detail is not clearly public-safe, omit it and leave only a generic pointer.
 
-## Repos
+## Routing Lanes
 
-| Repo | Visibility | Purpose | Public-safe summary | Do not mirror here |
+| Lane | Visibility | Purpose | Public-safe summary | Do not mirror here |
 |---|---|---|---|---|
-| `hummbl-dev/hummbl-dev` | public | Agent command surface and public routing | Which repo owns which workstream, sanitized receipts, public docs | Private facts, customer data, personal records, secrets |
-| `jenna-mode/jenna-mode` | access verified by local checkout on Huxley; connector access was previously pending | Jenna-mode collaboration surface | Access status and routing boundaries only | Private Jenna-mode content or public positioning without approval |
-| `hummbl-dev/household-income-ops` | private | Household income, role, opportunity, and receipt ops | "Jenna-ready client-success, documentation, intake, QA, and income-ops tasks are tracked privately." | Household records, financial details, job-search specifics, private contact data |
-| `hummbl-dev/hummbl-physical-activity` | private | Physical-activity source work and private applied-protocol lane | Generic governance and privacy boundaries | Health/body details, protocol specifics, measurements, outcomes, photos |
-| `hummbl-dev/hummbl-production` | private | HUMMBL commercial fulfillment and production implementation | Public/private boundary for commercial work | Customer records, Stripe/payment internals, webhook details, credentials |
+| Public coordination lane | public | Agent command surface and public routing | Which lane owns which workstream, sanitized receipts, public docs | Private facts, customer data, personal records, secrets |
+| Consent-sensitive collaboration lane | private | Jenna-specific collaboration surface | Routing boundaries only | Private collaboration content or public positioning without approval |
+| Household income-ops lane | private | Household income, role, opportunity, and receipt ops | "Client-success, documentation, intake, QA, and income-ops tasks are tracked privately." | Household records, financial details, job-search specifics, private contact data |
+| Physical-activity lane | private | Physical-activity source work and private applied-protocol work | Generic governance and privacy boundaries | Health/body details, protocol specifics, measurements, outcomes, photos |
+| Commercial production lane | private | HUMMBL commercial fulfillment and production implementation | Public/private boundary for commercial work | Customer records, payment internals, webhook details, credentials |
 
 ## Routing
 
-- Public positioning, repo maps, and agent routing docs: `hummbl-dev/hummbl-dev`.
-- Jenna-specific planning or consent-sensitive collaboration: `jenna-mode/jenna-mode`.
-- Household income execution and resume-safe private receipts: `hummbl-dev/household-income-ops`.
-- Private applied physical-activity or protocol details: `hummbl-dev/hummbl-physical-activity`.
-- Offer fulfillment, customer intake, production implementation, and payment-adjacent work: `hummbl-dev/hummbl-production`.
+- Public positioning, lane maps, and agent routing docs: public coordination lane.
+- Jenna-specific planning or consent-sensitive collaboration: consent-sensitive collaboration lane.
+- Household income execution and resume-safe private receipts: household income-ops lane.
+- Private applied physical-activity or protocol details: physical-activity lane.
+- Offer fulfillment, customer intake, production implementation, and payment-adjacent work: commercial production lane.
 
 ## Agent Stop Conditions
 
@@ -37,7 +37,4 @@ Stop and route privately when work includes:
 
 ## Verification
 
-- `hummbl-dev/household-income-ops`: verified by local checkout on Huxley.
-- `hummbl-dev/hummbl-physical-activity`: verified by local checkout on Huxley.
-- `jenna-mode/jenna-mode`: verified by local checkout on Huxley after initial connector uncertainty.
-- `hummbl-dev/hummbl-production`: private repo referenced as the production lane; do not inspect or mirror private implementation unless the task explicitly requires it.
+The private lane mapping is maintained outside this public document. Agents may record verification method in private receipts or issue comments, but public docs should not preserve exact private repo identifiers, checkout paths, or access-history notes.
