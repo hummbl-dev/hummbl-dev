@@ -4,6 +4,8 @@ Governance infrastructure for AI agents.
 
 HUMMBL builds small, inspectable control-plane primitives for agentic systems: delegation tokens, append-only receipts, kill switches, circuit breakers, capability fences, source-verification gates, and review workflows that create evidence while the system runs.
 
+This repository is the public HUMMBL profile, repo directory, agent coordination surface, and collaboration router for the `hummbl-dev` account.
+
 The bias is explicit:
 
 - **libraries over platforms** — controls should live in the execution path, not only in a dashboard after the fact
@@ -34,7 +36,13 @@ pip install hummbl-governance
 | Research and citation corpus | [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography) |
 | Public profile, tools, and repo inventory | [`hummbl-dev`](https://github.com/hummbl-dev/hummbl-dev) |
 
-New contributors should start with [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance), [`base120`](https://github.com/hummbl-dev/base120), [`arbiter`](https://github.com/hummbl-dev/arbiter), [`mcp-server`](https://github.com/hummbl-dev/mcp-server), or [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent), depending on whether they want runtime controls, mental-model infrastructure, code review automation, MCP interfaces, or orchestration patterns.
+New contributors should start with [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance), [`base120`](https://github.com/hummbl-dev/base120), [`arbiter`](https://github.com/hummbl-dev/arbiter), [`mcp-server`](https://github.com/hummbl-dev/mcp-server), or [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent), depending on whether they want runtime controls, mental-model infrastructure, code review automation, MCP interfaces, or orchestration patterns. Cross-repo proposals and public profile changes belong in this repo's issues.
+
+For public collaboration routing, agent routing, and repo maturity tags, see:
+
+- [Public Collaboration](docs/PUBLIC_COLLABORATION.md)
+- [Agent Routing](docs/AGENT_ROUTING.md)
+- [Repo Maturity Model](docs/REPO_MATURITY_MODEL.md)
 
 ---
 
@@ -60,10 +68,10 @@ Planning artifacts live under [`docs/plans/`](docs/plans/). They are useful for 
 | Category | Repositories |
 |---|---|
 | Governance primitives | [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance), [`agent-governance-demo`](https://github.com/hummbl-dev/agent-governance-demo), [`evidence-gate`](https://github.com/hummbl-dev/evidence-gate) |
-| Agent systems | [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent), [`mcp-server`](https://github.com/hummbl-dev/mcp-server), [`hummbl-iac`](https://github.com/hummbl-dev/hummbl-iac) |
+| Agent systems | [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent), [`mcp-server`](https://github.com/hummbl-dev/mcp-server), `hummbl-iac` (`private/not-public`) |
 | Review and quality | [`arbiter`](https://github.com/hummbl-dev/arbiter), source-verification rules, governed PR review workflows |
-| Cognitive substrate | [`base120`](https://github.com/hummbl-dev/base120), [`hummbl-theory`](https://github.com/hummbl-dev/hummbl-theory), [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography), [`arcana`](https://github.com/hummbl-dev/arcana) |
-| Product and applied research | [`fractional-bench`](https://github.com/hummbl-dev/fractional-bench), `coaching`, `hummbl-production` |
+| Cognitive substrate | [`base120`](https://github.com/hummbl-dev/base120), [`hummbl-bibliography`](https://github.com/hummbl-dev/hummbl-bibliography), `hummbl-theory` (`private/not-public`), `arcana` (`private/not-public`) |
+| Product and applied research | `fractional-bench` (`private/not-public`), `coaching`, `hummbl-production` |
 | ML systems and benchmarking | _planned: local-inference-bench, agent-governance-harness, tiny-jax-transformer, kernel-harness, post-training-toolkit_ |
 | Public tools and content | [`hummbl-dev`](https://github.com/hummbl-dev/hummbl-dev), static readiness tools, research essays, public profile assets |
 | Experimental public repos | `autoresearch`, `governed-compression`, `sint-protocol`, `bif` |
@@ -71,6 +79,23 @@ Planning artifacts live under [`docs/plans/`](docs/plans/). They are useful for 
 Some repositories are private while they contain operator workflows, client-sensitive research, or active product work. Public repositories are the durable reference surface.
 
 Contribution process and accepted contribution types are documented in [`CONTRIBUTING.md`](CONTRIBUTING.md). Some repositories are internal-only; open an issue in the target repo before submitting a PR.
+
+### `*-as-code` Seed Family
+
+`*-as-code` means treating an operational domain as version-controlled, reviewable, testable, auditable, and agent-operable source material. These repos are early public seeds and are not adopted HUMMBL canon unless later marked and audited.
+
+| Status | Repository | Domain |
+|---|---|---|
+| `seed` | [`infrastructure-as-code`](https://github.com/hummbl-dev/infrastructure-as-code) | Cloud, local, network, runtime, and deployment infrastructure |
+| `seed` | [`governance-as-code`](https://github.com/hummbl-dev/governance-as-code) | Decision rights, review gates, escalation paths, and operating constraints |
+| `seed` | [`agent-as-code`](https://github.com/hummbl-dev/agent-as-code) | Agents, tools, permissions, prompts, evals, handoffs, and execution contracts |
+| `seed` | [`policy-as-code`](https://github.com/hummbl-dev/policy-as-code) | Security, compliance, access, and operational policies |
+| `seed` | [`security-as-code`](https://github.com/hummbl-dev/security-as-code) | Threat models, hardening baselines, detection rules, and secure defaults |
+| `seed` | [`compliance-as-code`](https://github.com/hummbl-dev/compliance-as-code) | Controls, evidence, attestations, obligations, and audit packets |
+| `seed` | [`protocol-as-code`](https://github.com/hummbl-dev/protocol-as-code) | Workflows, checklists, runbooks, playbooks, and safety procedures |
+| `seed` | [`knowledge-as-code`](https://github.com/hummbl-dev/knowledge-as-code) | Definitions, source packets, vocabularies, claims, citations, and ledgers |
+| `seed` | [`model-routing-as-code`](https://github.com/hummbl-dev/model-routing-as-code) | Model/provider selection, correctness gates, cost routing, fallback policy, and eval thresholds |
+| `seed` | [`observability-as-code`](https://github.com/hummbl-dev/observability-as-code) | Dashboards, alerts, SLOs, traces, logs, metrics, runbooks, and visibility primitives |
 
 ---
 
@@ -90,17 +115,17 @@ That is the spine across the org: small primitives that make governance observab
 
 ## By The Numbers
 
-Inventory captured on 2026-07-03:
+Inventory captured on 2026-07-04. Public-safe snapshot: [`docs/GITHUB_REPO_INVENTORY_2026-07-04.md`](docs/GITHUB_REPO_INVENTORY_2026-07-04.md)
 
 | Metric | Count |
 |---|---:|
-| Total repositories | 118 |
-| Active public repositories | 15 |
+| Total repositories | 128 |
+| Active public repositories | 25 |
 | Active private repositories | 69 |
 | Archived repositories | 34 |
 | Primary language family | Python-heavy, with TypeScript, HTML, Shell, TeX, Go templates, Java |
 
-Latest repo inventory: [`docs/GITHUB_REPO_INVENTORY_2026-05-08.md`](docs/GITHUB_REPO_INVENTORY_2026-05-08.md) _(historical — refresh pending)_
+Historical repo inventory: [`docs/GITHUB_REPO_INVENTORY_2026-05-08.md`](docs/GITHUB_REPO_INVENTORY_2026-05-08.md)
 
 Latest branch cleanup audit: [`docs/BRANCH_CLEANUP_AUDIT_2026-05-08.md`](docs/BRANCH_CLEANUP_AUDIT_2026-05-08.md)
 
@@ -162,6 +187,12 @@ Validation is manual for now:
 - Keep executable code, packages, and service workflows in their dedicated project repositories, where CI is configured per repo.
 
 If this repository gains generated assets, JavaScript modules, or release automation, add the smallest useful CI workflow for that surface.
+
+---
+
+## Work With HUMMBL
+
+If you are building agentic systems and need runtime governance, source verification, auditability, or public/private agent workflow design, start with the repos above or contact reuben@hummbl.io.
 
 ---
 
