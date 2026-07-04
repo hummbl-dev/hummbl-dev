@@ -115,7 +115,7 @@ That is the spine across the org: small primitives that make governance observab
 
 ## By The Numbers
 
-Inventory captured on 2026-07-04:
+Inventory captured on 2026-07-04. Public-safe snapshot: [`docs/GITHUB_REPO_INVENTORY_2026-07-04.md`](docs/GITHUB_REPO_INVENTORY_2026-07-04.md)
 
 | Metric | Count |
 |---|---:|
