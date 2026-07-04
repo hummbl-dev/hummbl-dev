@@ -1,83 +1,104 @@
-# Jenna Client Success Workstream
+# Jenna Client Success & Documentation Workstream
 
-Status: public-safe work packet. This does not define a public role claim.
+Status: public-safe work packet  
+Source issue: #75
 
-## Scope
+## Purpose
 
-Jenna-fit collaboration work should be bounded, optional, plain-English, and receipt-producing. The useful lane is client-success and documentation support, not technical architecture, legal advice, medical advice, compliance certification, or security review.
+Define a public-safe, bounded, receipt-producing workstream where Jenna can help Reuben and HUMMBL through client success, documentation, intake, QA, and plain-English review.
 
-## Suitable Work
+This is not a public role announcement. Do not publish Jenna-specific claims without explicit approval.
 
-- buyer-perspective QA on public offer pages
-- plain-English FAQ drafting
-- intake-form wording review
-- customer follow-up template review
+## Recommended role label
+
+**Client Success & Documentation Coordinator**
+
+Use this as an internal workstream label unless/until humans approve public wording.
+
+## Good-fit task types
+
+- buyer-perspective QA
+- plain-English review
+- buyer FAQ drafting
+- customer intake questions
+- post-purchase follow-up templates
+- fulfillment checklists
 - proof/demo packet organization
-- fulfillment checklist review
-- resume-safe completed-work receipts in private lanes
+- resume-safe completed-work receipts
 
-## Starter Tasks
+## Not in scope
 
-### Task 1: Offer QA Pass
+- legal counsel
+- medical, therapeutic, nutrition, compliance, security, or audit authority
+- technical architecture ownership
+- production secret handling
+- unsupervised customer commitments
+- public claims about Jenna's private work or personal trajectory
 
-Timebox: 45-60 minutes.
+## Starter assignments
 
-Output:
+### 1. Offer and checkout QA
 
-- unclear words or phrases
-- missing buyer questions
-- confusing next steps
-- trust gaps
-- suggested plain-English replacement wording
+Timebox: 45–60 minutes
 
-Public-safe receipt:
+Deliverable table:
 
-```text
-Completed buyer-perspective QA pass for HUMMBL public offer copy; produced plain-English clarity notes and follow-up questions.
-```
+| Offer | Price | Link opens? | Wording clear? | What happens next? | Confusing part | Buyer question |
+|---|---:|---:|---|---|---|---|
 
-### Task 2: Buyer FAQ Draft
+### 2. Buyer FAQ draft
 
-Timebox: 45-75 minutes.
+Timebox: 45–60 minutes
 
-Output:
+Prompt:
 
-- 10 likely buyer questions
-- short answer draft for each
-- questions that require human/legal/commercial review
+> Pretend you are a founder, operator, or technical team lead seeing HUMMBL for the first time. What would you need answered before trusting this?
 
-Public-safe receipt:
+Deliverable: 15–25 FAQ questions.
 
-```text
-Drafted buyer FAQ questions and answer stubs for HUMMBL public offer readiness.
-```
+### 3. Intake form v0.1
 
-### Task 3: Intake Form v0.1
+Timebox: 60–90 minutes
 
-Timebox: 60-90 minutes.
+Sections:
 
-Output:
+- About you
+- About your company/team
+- What AI or agent workflow are you using?
+- What feels risky or messy?
+- What have you already tried?
+- What files/docs/repos can you share safely?
+- What should HUMMBL avoid touching?
+- What outcome would make this worth it?
 
-- required buyer context
-- optional context
-- questions to avoid by default
-- handoff fields for scheduling or fulfillment
-
-Public-safe receipt:
+## Completed-work receipt template
 
 ```text
-Drafted a minimal intake outline for public offer fulfillment without collecting sensitive data by default.
+Task:
+Date:
+Timebox:
+What Jenna completed:
+What improved because of it:
+What Reuben/HUMMBL can use next:
+Resume-safe bullet:
+Private follow-up needed:
 ```
 
-## Privacy Boundaries
+## Resume-safe output examples
 
-Do not publish:
+```text
+Supported client intake and documentation workflows for an AI governance consulting practice, including intake forms, buyer FAQs, fulfillment checklists, and customer follow-up templates.
+```
 
-- Jenna-specific private details
-- household financial details
-- job-search specifics
-- customer or payment details
-- health/body/protocol details
-- private contact data
+```text
+Reviewed public offer and checkout flows for clarity, accuracy, and client readiness, identifying gaps in scope, delivery expectations, and customer communication.
+```
 
-Use private repos for the actual task records when the work becomes personal, customer-specific, or household-specific.
+## Privacy and agency rules
+
+- Keep assignments optional, bounded, and specific.
+- Convert completed work into visible receipts.
+- Do not treat this work as therapy.
+- Do not let this replace LSAT/job-search priorities unless humans explicitly decide that.
+- Do not publish private details or personal outcomes.
+
