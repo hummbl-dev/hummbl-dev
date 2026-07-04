@@ -1,0 +1,15 @@
+name: Governed PR Check
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  governed-pr-check:
+    uses: hummbl-dev/.github/.github/workflows/governed-pr-check.yml@main
+    with:
+      fail-on-findings: false
