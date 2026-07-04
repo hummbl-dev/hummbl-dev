@@ -20,6 +20,14 @@ This repo accepts contributions to:
 - **Case studies** — if you've used HUMMBL tools in production, we'd love to feature your story
 - **Repo hygiene** — templates, metadata, and public-surface clarity improvements
 
+Routing details:
+
+- Public collaboration paths are documented in [docs/PUBLIC_COLLABORATION.md](docs/PUBLIC_COLLABORATION.md).
+- Agent task routing is documented in [docs/AGENT_ROUTING.md](docs/AGENT_ROUTING.md).
+- Repo status tags are documented in [docs/REPO_MATURITY_MODEL.md](docs/REPO_MATURITY_MODEL.md).
+- Use the `Agent handoff` issue template for bounded agent tasks.
+- Use the `Cross-repo proposal` issue template for changes that span public HUMMBL repos.
+
 ### Process
 
 1. Open an issue describing the change before submitting a PR.
