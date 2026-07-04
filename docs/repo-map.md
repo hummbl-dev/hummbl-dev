@@ -28,6 +28,13 @@
 3. Propose changes as PRs or patch artifacts tied to those receipts.
 4. Request review for authority-bearing changes.
 
+## First five minutes
+
+1. Read the repo map entry for your target repo.
+2. Open the linked issue and confirm scope in that repo.
+3. Check open PRs and status labels before commenting.
+4. Follow issue-first workflow and receipts before requesting review.
+
 ## Contribution flow expectations
 
 - Use issue-first delegation.

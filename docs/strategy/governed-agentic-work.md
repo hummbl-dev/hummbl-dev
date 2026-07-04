@@ -62,3 +62,11 @@ Engineering leaders and founder-led technical teams adopting AI agents who need:
 ## Core promise
 
 HUMMBL makes agentic work trustworthy, inspectable, and shippable.
+
+## Read this first (under five minutes)
+
+If you are deciding whether this applies to your team:
+
+- If you need repeatable delegation with receipts, this doc gives the baseline scope.
+- If you need auditability and rollback boundaries, check the contribution model and repo map next.
+- If you need proof-ready outputs, start at `#` under the contribution and repo map docs.

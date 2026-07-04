@@ -56,6 +56,17 @@ For public collaboration routing, agent routing, and repo maturity tags, see:
 - [Agent Routing](docs/AGENT_ROUTING.md)
 - [Repo Maturity Model](docs/REPO_MATURITY_MODEL.md)
 
+## Start in under five minutes
+
+1. Open the issue you want to work on.
+2. Open the linked PR or related seed-ticket for that issue.
+3. Read the routing docs in this repo:
+   - [docs/AGENT_ROUTING.md](docs/AGENT_ROUTING.md)
+   - [docs/POV.md](docs/POV.md)
+   - [docs/repo-map.md](docs/repo-map.md)
+4. Submit a small PR with issue-first scope and explicit receipts.
+5. Leave work in `seed` or `v0.1-draft` unless explicitly adopted.
+
 ---
 
 ## Repo Boundaries

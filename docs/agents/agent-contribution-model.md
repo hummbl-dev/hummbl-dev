@@ -48,3 +48,10 @@ Agents may assist with work, but humans remain accountable for authority-bearing
 - Candidates are not approved truth.
 - Sources are evidence, not conclusions.
 - Canon exists only after authority review and merge/release approval.
+
+## Fast-path for first contribution
+
+1. Claim one issue, then open a PR with the smallest valid edit.
+2. Link the issue and include the expected packet shape in the PR body.
+3. Attach receipts for commands, checks, and scope assumptions.
+4. Mark status as `seed` or `v0.1-draft` until adoption is explicit.
