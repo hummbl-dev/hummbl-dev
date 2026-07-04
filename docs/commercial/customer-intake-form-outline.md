@@ -1,46 +1,68 @@
 # Customer Intake Form Outline
 
-Issue: hummbl-dev/hummbl-dev#76
-
-Status: public-safe draft. Do not collect secrets, regulated data, customer records, or private operational details by default.
+Status: public-safe outline  
+Source issues: #75, #76
 
 ## Purpose
 
-Collect only enough context to route a HUMMBL public offer request, schedule or scope the work, and identify whether a human review is required before delivery.
+Define a minimal, plain-English intake outline for HUMMBL async/live offers without collecting sensitive data by default.
 
-## Required Fields
+This file is an outline only. Actual customer submissions belong in private systems, not this public repository.
 
-| Field | Purpose |
+## Default intake sections
+
+### About you
+
+- Name
+- Email
+- Company or project
+- Role
+- Preferred follow-up method
+
+### About the work
+
+- What are you building or operating?
+- Where are you using AI, agents, or automation today?
+- What workflow should HUMMBL review?
+- What feels unclear, risky, slow, or hard to govern?
+- What have you already tried?
+
+### Scope and access
+
+- What docs, repo links, screenshots, or artifacts can you safely share?
+- Is anything off-limits?
+- Are there credentials, secrets, customer data, or regulated data that should not be shared?
+- Do you need an NDA, invoice, PO, or custom agreement before sharing more?
+
+### Outcome
+
+- What would make this engagement useful?
+- What deadline matters?
+- What decision are you trying to make?
+- What would you like to receive from HUMMBL?
+
+## Questions to avoid by default
+
+Do not request sensitive or unnecessary information by default:
+
+- passwords, API keys, or secrets
+- customer records
+- regulated personal data
+- medical, legal, financial, or protected data unless explicitly scoped
+- private employee records
+- confidential repo access without prior agreement
+
+## Offer routing
+
+| Offer type | Minimum intake needed |
 |---|---|
-| Name | Identify the requester. |
-| Email | Send scheduling, intake, and delivery updates. |
-| Organization or project | Understand context without requesting private details. |
-| Offer path | `Learn`, `Diagnose`, `Implement`, or `Operate inquiry`. |
-| Primary goal | One or two sentences on the desired outcome. |
-| Current agent/tool use | High-level description only. |
-| Target workflow or repo | Public link or sanitized description. |
-| Deadline or timing | Scheduling and capacity planning. |
-| Review constraints | Known approvals, stakeholders, or sensitive boundaries. |
+| Intake Review | workflow summary, risk/uncertainty, safe artifacts |
+| Micro-Audit | workflow summary, target artifact/repo/process, scheduling context |
+| Gap Assessment | team context, governance gaps, current AI/agent use, safe artifacts |
+| Starter Pack | repo/process scope, desired implementation boundary, access requirements |
+| Workflow Sprint | qualification, kickoff scope, access plan, decision-maker confirmation |
 
-## Optional Fields
-
-- public repo or documentation links
-- preferred meeting times
-- prior public materials to review
-- non-sensitive examples of current process friction
-- accessibility or communication preferences
-
-## Do Not Ask By Default
-
-- passwords, API keys, tokens, or credentials
-- customer records or payment data
-- private employee, legal, health, or HR details
-- regulated data
-- confidential contracts
-- security incident details
-- private Jenna-specific or household details
-
-## Human Review Triggers
+## Human review triggers
 
 Route to human review before accepting or delivering when intake mentions:
 
@@ -51,8 +73,13 @@ Route to human review before accepting or delivering when intake mentions:
 - urgent incident response
 - private household, health, job-search, or relationship context
 
-## Confirmation Copy
+## Confirmation copy
 
 ```text
 Thanks. We received your request and will route it based on the selected offer path. Please do not send passwords, API keys, customer records, regulated data, or confidential documents through this form.
 ```
+
+## Private handling rule
+
+Any actual customer submission, email address, company-specific fact, repo URL, file, screenshot, payment note, or scheduling record belongs in a private production/customer system, not in this public repository.
+

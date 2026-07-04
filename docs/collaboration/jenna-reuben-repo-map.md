@@ -1,40 +1,64 @@
 # Jenna + Reuben Collaboration Repo Map
 
-Status: public-safe routing note. This file is not a private work log.
+Status: public-safe coordination draft  
+Source issue: #74
 
-## Rule
+## Purpose
 
-Use this public repo only for sanitized coordination, routing, and receipts. Private Jenna-specific, household, health, job-search, legal-outreach, relationship, customer, payment, or production-secret content belongs in the private lane that owns the work.
+This document maps the current Jenna + Reuben collaboration surfaces so agents can route work without mixing public coordination, private household operations, private health/protocol work, HUMMBL production implementation, or Jenna-mode collaboration content.
 
-If a detail is not clearly public-safe, omit it and leave only a generic pointer.
+This file is intentionally sanitized. It must not contain private Jenna-specific details, relationship details, personal health information, private job-search specifics, household financial records, customer data, production secrets, or private repo contents.
 
-## Routing Lanes
+## Routing matrix
 
-| Lane | Visibility | Purpose | Public-safe summary | Do not mirror here |
-|---|---|---|---|---|
-| Public coordination lane | public | Agent command surface and public routing | Which lane owns which workstream, sanitized receipts, public docs | Private facts, customer data, personal records, secrets |
-| Consent-sensitive collaboration lane | private | Jenna-specific collaboration surface | Routing boundaries only | Private collaboration content or public positioning without approval |
-| Household income-ops lane | private | Household income, role, opportunity, and receipt ops | "Client-success, documentation, intake, QA, and income-ops tasks are tracked privately." | Household records, financial details, job-search specifics, private contact data |
-| Physical-activity lane | private | Physical-activity source work and private applied-protocol work | Generic governance and privacy boundaries | Health/body details, protocol specifics, measurements, outcomes, photos |
-| Commercial production lane | private | HUMMBL commercial fulfillment and production implementation | Public/private boundary for commercial work | Customer records, payment internals, webhook details, credentials |
+| Repo / surface | Verification state | Visibility | Use this repo for | Public-safe summary | Do not include |
+|---|---:|---:|---|---|---|
+| `hummbl-dev/hummbl-dev` | verified via GitHub connector | public | Coordination issues, public-safe repo maps, sanitized routing docs, public collaboration doctrine | Public command surface for agents | Private Jenna details, health data, household finances, customer/payment secrets |
+| `hummbl-dev/household-income-ops` | verified via GitHub connector | private | Household income operations, role/work packets, opportunity tracking, Jenna-ready private task receipts | Private lane for income/role/client-readiness ops | Public mirrors of private household records or job-search specifics |
+| `hummbl-dev/hummbl-physical-activity` | verified via GitHub connector | private | Physical-activity source work, protocol primitives, private applied protocol packets | Private lane for health/protocol work | Personal health/body details, photos, measurements, medical claims, public protocol claims |
+| `hummbl-dev/hummbl-production` | verified via GitHub connector | private | HUMMBL production/commercial implementation, fulfillment plumbing, customer/intake/payment operations | Private implementation lane for production work | Secrets, customer records, private payment data, private Jenna-specific implementation notes |
+| `jenna-mode/jenna-mode` | user-reported; connector returned 404 | unknown / pending verification | Jenna-mode collaboration, if access is verified | User-reported collaboration repo; verify before acting | Do not assume contents, access, visibility, or public permission |
 
-## Routing
+## Core routing rules
 
-- Public positioning, lane maps, and agent routing docs: public coordination lane.
-- Jenna-specific planning or consent-sensitive collaboration: consent-sensitive collaboration lane.
-- Household income execution and resume-safe private receipts: household income-ops lane.
-- Private applied physical-activity or protocol details: physical-activity lane.
-- Offer fulfillment, customer intake, production implementation, and payment-adjacent work: commercial production lane.
+1. Keep public docs generic, structural, and receipt-oriented.
+2. Route sensitive or personal work to the appropriate private repo.
+3. If a detail would embarrass, expose, identify, medicalize, legalize, or commercialize Jenna without explicit approval, do not publish it.
+4. If a task needs customer data, Stripe internals, webhooks, private URLs, or production credentials, route to `hummbl-dev/hummbl-production`.
+5. If a task concerns income tracking, role building, opportunity support, or Jenna-ready work receipts, route to `hummbl-dev/household-income-ops`.
+6. If a task concerns physical activity, health protocols, private applied plans, or body/fitness materials, route to `hummbl-dev/hummbl-physical-activity`.
+7. If a task explicitly belongs to `jenna-mode/jenna-mode`, first verify repository access and visibility. Until verified, preserve only a public-safe handoff stub.
 
-## Agent Stop Conditions
+## Public-safety stop conditions
 
-Stop and route privately when work includes:
+Agents must stop, sanitize, or move to a private repo if work includes:
 
-- personal health, body, relationship, household, financial, legal-outreach, or job-search details
-- customer, payment, fulfillment, webhook, credential, or production-secret details
-- any proposed public claim about Jenna's role, status, outcomes, or private work
-- legal, medical, therapeutic, compliance, security, or audit-certification claims
+- private relationship material
+- private household financial data
+- medical, health, body, or fitness details tied to an individual
+- legal/job-search specifics or outreach material
+- private customer or prospect data
+- payment data, Stripe internals, or production secrets
+- private repo contents from `jenna-mode/jenna-mode`
+- any claim that Jenna is legal counsel, a medical advisor, a therapist, a compliance authority, or a security auditor
 
-## Verification
+## Agent execution order
 
-The private lane mapping is maintained outside this public document. Agents may record verification method in private receipts or issue comments, but public docs should not preserve exact private repo identifiers, checkout paths, or access-history notes.
+1. Start with #74 for the repo map and routing boundaries.
+2. Use #75 for Jenna-ready work packets.
+3. Use #76 for HUMMBL commercial readiness tasks.
+4. Use #77 only after verifying `jenna-mode/jenna-mode` access.
+5. Use #78 when work becomes private household-income or role/receipt operations.
+6. Use #79 when work becomes private physical-activity or applied-protocol material.
+7. Use #80 when work involves private commercial fulfillment, customer data, production plumbing, or payment-adjacent implementation.
+
+## Agent receipt requirements
+
+When agents modify this repo map, completion comments must include:
+
+- branch name
+- PR link
+- files changed
+- verification method for each repo mentioned
+- explicit privacy-boundary confirmation
+
