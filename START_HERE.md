@@ -6,7 +6,7 @@ Narrow entry point for new visitors to HUMMBL. If you only read one file before 
 
 **HUMMBL** builds governance and release infrastructure for agentic work. The problem: AI agents can do real work, but real work requires authority, review, receipts, rollback, provenance, and human accountability to stay trustworthy. HUMMBL ships small runtime primitives — kill switches, circuit breakers, cost governors, delegation tokens, execution receipts — that make agent work inspectable, reviewable, and shippable. Governance is a runtime property, not a policy PDF.
 
-**Base120** is the mental-model substrate behind HUMMBL reasoning and routing — a v1.0.0 reference implementation lives in [`base120`](https://github.com/hummbl-dev/base120).
+**Base120** is the mental-model substrate behind HUMMBL reasoning and routing. The reference implementation lives in [`base120`](https://github.com/hummbl-dev/base120).
 
 **Governed agentic work** means every action has identity, authority, receipts, rollback, and audit. Operators stay accountable; automation assists, it does not replace review.
 
@@ -58,4 +58,3 @@ If you're still unsure where to start, open an issue in this repo (`hummbl-dev/h
 Questions or partnership inquiries: **reuben@hummbl.io**.
 
 *Governed agents need receipts, not slogans.*
-

@@ -18,7 +18,7 @@ The bias is explicit:
 ## 90-second overview
 
 - **What HUMMBL is** — governance and release infrastructure for agentic work. Small primitives (kill switches, circuit breakers, cost governors, delegation tokens, execution receipts) that make agent work inspectable, reviewable, and shippable.
-- **What Base120 is** — the mental-model substrate behind HUMMBL reasoning and routing. A v1.0.0 reference implementation lives in [`base120`](https://github.com/hummbl-dev/base120).
+- **What Base120 is** — the mental-model substrate behind HUMMBL reasoning and routing. The reference implementation lives in [`base120`](https://github.com/hummbl-dev/base120).
 - **What governed agentic work means** — every action has identity, authority, receipts, rollback, and audit. Governance is a runtime property, not a policy PDF.
 - **Which repos are canonical** — [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance) and [`base120`](https://github.com/hummbl-dev/base120) are canonical. Everything else is `active`, `v0.1-packet`, `seed`, or `hold` until explicitly promoted.
 - **Where new contributors should begin** — [`START_HERE.md`](START_HERE.md) routes you by contributor type. Pick a repo matching your interest, check its maturity in [`docs/repo-map.md`](docs/repo-map.md), open an issue first.
@@ -40,7 +40,7 @@ pip install hummbl-governance
 
 [![PyPI](https://img.shields.io/pypi/v/hummbl-governance)](https://pypi.org/project/hummbl-governance/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
-[![Runtime deps](https://img.shields.io/badge/runtime%20deps-zero-brightgreen)](https://pypi.org/project/hummbl-governance/)
+[![Core runtime deps](https://img.shields.io/badge/core%20runtime%20deps-zero-brightgreen)](https://pypi.org/project/hummbl-governance/)
 
 ---
 
@@ -54,7 +54,7 @@ New visitors: start with [`START_HERE.md`](START_HERE.md). The table below maps 
 | Mental-model substrate (canonical) | [`base120`](https://github.com/hummbl-dev/base120) |
 | Code quality and governance scoring | [`arbiter`](https://github.com/hummbl-dev/arbiter) |
 | MCP access to HUMMBL models and skills | [`mcp-server`](https://github.com/hummbl-dev/mcp-server) |
-| Agent orchestration runtime | [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent) |
+| Agent contracts and orchestration patterns | [`agent-as-code`](https://github.com/hummbl-dev/agent-as-code), [`agent-runtime-governance`](https://github.com/hummbl-dev/agent-runtime-governance), [`agentic-eng-patterns`](https://github.com/hummbl-dev/agentic-eng-patterns) |
 | Agent pattern repos (v0.1-packet) | [`agent-runtime-governance`](https://github.com/hummbl-dev/agent-runtime-governance), [`agent-handoffs`](https://github.com/hummbl-dev/agent-handoffs), [`agentic-eng-patterns`](https://github.com/hummbl-dev/agentic-eng-patterns) |
 | `*-as-code` family (v0.1-packet) | [`governance-as-code`](https://github.com/hummbl-dev/governance-as-code), [`policy-as-code`](https://github.com/hummbl-dev/policy-as-code), [`compliance-as-code`](https://github.com/hummbl-dev/compliance-as-code) |
 | Package distribution spine (v0.1-packet) | [`packages`](https://github.com/hummbl-dev/packages), [`homebrew-tap`](https://github.com/hummbl-dev/homebrew-tap), [`nix`](https://github.com/hummbl-dev/nix) |
@@ -88,9 +88,9 @@ Categories match [`docs/repo-map.md`](docs/repo-map.md). Maturity tags are defin
 | Repo | Maturity | Role |
 |---|---|---|
 | [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance) | canonical | Governance runtime primitives — on PyPI |
-| [`base120`](https://github.com/hummbl-dev/base120) | canonical | Base120 mental-model substrate — v1.0.0 |
+| [`base120`](https://github.com/hummbl-dev/base120) | canonical | Base120 mental-model substrate |
 | [`arbiter`](https://github.com/hummbl-dev/arbiter) | active | Agent-aware code quality scoring |
-| [`hummbl-agent`](https://github.com/hummbl-dev/hummbl-agent) | active | TypeScript agent orchestration runtime |
+| `hummbl-agent` | active | TypeScript agent orchestration runtime (`private/not-public`) |
 | [`mcp-server`](https://github.com/hummbl-dev/mcp-server) | active | HUMMBL MCP Server |
 | [`hummbl-toolkit`](https://github.com/hummbl-dev/hummbl-toolkit) | active | Supplementary tooling |
 | [`bif`](https://github.com/hummbl-dev/bif) | active | Batch Ingestion Framework |
@@ -186,13 +186,13 @@ That is the spine across the org: small primitives that make governance observab
 
 ## By The Numbers
 
-Inventory captured on 2026-07-04. Public-safe snapshot: [`docs/GITHUB_REPO_INVENTORY_2026-07-04.md`](docs/GITHUB_REPO_INVENTORY_2026-07-04.md)
+Headline counts captured from the GitHub API on 2026-07-05. Last detailed public-safe snapshot: [`docs/GITHUB_REPO_INVENTORY_2026-07-04.md`](docs/GITHUB_REPO_INVENTORY_2026-07-04.md)
 
 | Metric | Count |
 |---|---:|
-| Total repositories | 128 |
-| Active public repositories | 41 |
-| Active private repositories | 69 |
+| Total repositories | 150 |
+| Active public repositories | 40 |
+| Active private repositories | 76 |
 | Archived repositories | 34 |
 | Primary language family | Python-heavy, with TypeScript, HTML, Shell, TeX, Go templates, Java |
 

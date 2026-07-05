@@ -22,9 +22,9 @@ Each repo is classified by:
 | Repo | Maturity | Surface type | Contributor readiness | Role |
 |---|---|---|---|---|
 | [hummbl-governance](https://github.com/hummbl-dev/hummbl-governance) | canonical | implementation-bearing | scoped | Governance runtime primitives (kill switch, circuit breaker, cost governor, delegation tokens) — on PyPI |
-| [base120](https://github.com/hummbl-dev/base120) | canonical | implementation-bearing | scoped | Base120 mental-model substrate — v1.0.0 reference implementation |
+| [base120](https://github.com/hummbl-dev/base120) | canonical | implementation-bearing | scoped | Base120 mental-model substrate |
 | [arbiter](https://github.com/hummbl-dev/arbiter) | active | implementation-bearing | scoped | Agent-aware code quality scoring |
-| [hummbl-agent](https://github.com/hummbl-dev/hummbl-agent) | active | implementation-bearing | scoped | TypeScript agent orchestration runtime |
+| hummbl-agent | active | implementation-bearing | closed | TypeScript agent orchestration runtime (`private/not-public`) |
 | [mcp-server](https://github.com/hummbl-dev/mcp-server) | active | implementation-bearing | scoped | HUMMBL MCP Server |
 | [hummbl-toolkit](https://github.com/hummbl-dev/hummbl-toolkit) | active | implementation-bearing | scoped | Supplementary tooling (evidence-gate, batch ingestion) |
 | [bif](https://github.com/hummbl-dev/bif) | active | implementation-bearing | scoped | Batch Ingestion Framework |
@@ -105,7 +105,7 @@ hummbl-governance (canonical primitives)
   └── referenced by: agent-runtime-governance, governance-as-code, arbiter
 
 base120 (canonical substrate)
-  └── referenced by: hummbl-agent, hummbl-bibliography
+  └── referenced by: hummbl-bibliography and internal/private agent runtimes
 
 *-as-code family (pattern/reference, non-canon)
   └── no downstream dependencies yet
