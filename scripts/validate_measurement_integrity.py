@@ -46,6 +46,8 @@ def check_required_fields(receipt: dict[str, Any]) -> None:
         "n_seeds",
         "per_seed_metric",
         "noise_floor",
+        "metric_direction",
+        "delta",
         "evaluator_hash",
         "baseline_evaluator_hash",
         "holdout_provenance",
@@ -81,11 +83,18 @@ def ic1_seed_variance(receipt: dict[str, Any], min_seeds: int = DEFAULT_MIN_SEED
             f"IC-1 FAIL: per_seed_metric has {len(per_seed)} entries, "
             f"expected {n_seeds}"
         )
-    if status == "keep" and abs(delta) <= noise_floor:
-        raise ValidationError(
-            f"IC-1 FAIL: delta={delta} within noise_floor={noise_floor} "
-            "(improvement is seed luck, not real)"
-        )
+    if status == "keep":
+        direction = receipt.get("metric_direction", "")
+        if direction == "minimize" and delta >= -noise_floor:
+            raise ValidationError(
+                f"IC-1 FAIL: delta={delta} >= -noise_floor={-noise_floor} "
+                "(minimize: improvement not beyond noise floor)"
+            )
+        if direction == "maximize" and delta <= noise_floor:
+            raise ValidationError(
+                f"IC-1 FAIL: delta={delta} <= noise_floor={noise_floor} "
+                "(maximize: improvement not beyond noise floor)"
+            )
 
 
 def ic2_evaluator_integrity(receipt: dict[str, Any]) -> None:
@@ -153,8 +162,16 @@ def ic5_failure_receipt(receipt: dict[str, Any]) -> None:
             )
 
 
-def validate_receipt(receipt: dict[str, Any]) -> list[str]:
-    """Run all IC checks. Returns list of check names that passed."""
+def validate_receipt(receipt: dict[str, Any]) -> dict[str, Any]:
+    """Run all IC checks. Returns a machine-readable report dict.
+
+    Report shape:
+        {
+            "valid": bool,
+            "checks": {"IC-1": {"pass": bool, "error": str|None}, ...},
+            "receipt": {"status": str, "n_seeds": int, "decision_rule": str}
+        }
+    """
     check_required_fields(receipt)
     checks = [
         ("IC-1", ic1_seed_variance),
@@ -163,35 +180,66 @@ def validate_receipt(receipt: dict[str, Any]) -> list[str]:
         ("IC-4", ic4_decision_rule),
         ("IC-5", ic5_failure_receipt),
     ]
-    passed = []
+    results: dict[str, Any] = {}
+    all_pass = True
     for name, check in checks:
-        check(receipt)
-        passed.append(name)
-    return passed
+        try:
+            check(receipt)
+            results[name] = {"pass": True, "error": None}
+        except ValidationError as exc:
+            results[name] = {"pass": False, "error": str(exc)}
+            all_pass = False
+
+    return {
+        "valid": all_pass,
+        "checks": results,
+        "receipt": {
+            "status": receipt.get("status", ""),
+            "n_seeds": receipt.get("n_seeds", 0),
+            "decision_rule": receipt.get("decision_rule", ""),
+        },
+    }
 
 
 def main(argv: list[str]) -> int:
-    if len(argv) != 2:
+    if len(argv) not in (2, 3):
         print(
-            "Usage: python scripts/validate_measurement_integrity.py <receipt.json>",
+            "Usage: python scripts/validate_measurement_integrity.py "
+            "<receipt.json> [--json]",
             file=sys.stderr,
         )
         return 2
 
     fixture_path = Path(argv[1])
+    emit_json = len(argv) == 3 and argv[2] == "--json"
+
     try:
         receipt = load_json(fixture_path)
-        passed = validate_receipt(receipt)
+        report = validate_receipt(receipt)
     except ValidationError as exc:
-        print(f"VALIDATION FAILED: {exc}", file=sys.stderr)
+        if emit_json:
+            print(json.dumps({"valid": False, "error": str(exc)}))
+        else:
+            print(f"VALIDATION FAILED: {exc}", file=sys.stderr)
         return 1
 
-    print(
-        f"VALIDATION PASSED: {passed} "
-        f"(status={receipt['status']}, n_seeds={receipt['n_seeds']}, "
-        f"decision_rule={receipt['decision_rule']})"
-    )
-    return 0
+    if emit_json:
+        print(json.dumps(report, indent=2))
+    else:
+        passed = [name for name, r in report["checks"].items() if r["pass"]]
+        failed = [name for name, r in report["checks"].items() if not r["pass"]]
+        if failed:
+            print(f"VALIDATION FAILED: {failed}")
+            for name in failed:
+                print(f"  {name}: {report['checks'][name]['error']}", file=sys.stderr)
+        else:
+            print(
+                f"VALIDATION PASSED: {passed} "
+                f"(status={report['receipt']['status']}, "
+                f"n_seeds={report['receipt']['n_seeds']}, "
+                f"decision_rule={report['receipt']['decision_rule']})"
+            )
+    return 0 if report["valid"] else 1
 
 
 if __name__ == "__main__":

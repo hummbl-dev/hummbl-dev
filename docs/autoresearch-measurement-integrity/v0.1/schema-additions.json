@@ -9,6 +9,8 @@
     "n_seeds",
     "per_seed_metric",
     "noise_floor",
+    "metric_direction",
+    "delta",
     "evaluator_hash",
     "baseline_evaluator_hash",
     "holdout_provenance",
@@ -23,6 +25,7 @@
   "properties": {
     "integrity_version": { "const": "0.1" },
     "n_seeds": { "type": "integer", "minimum": 1 },
+    "metric_direction": { "enum": ["minimize", "maximize"] },
     "per_seed_metric": {
       "type": "array",
       "minItems": 1,

@@ -181,7 +181,7 @@
 
 ---
 
-## Cross-system IC coverage matrix
+## Cross-system IC coverage matrix (public systems)
 
 | System | IC-1 | IC-2 | IC-3 | IC-4 | IC-5 |
 |--------|------|------|------|------|------|
@@ -192,8 +192,21 @@
 | pi-autoresearch | Partial | No | No | Partial | Partial |
 | AutoResearchClaw | No | Partial | No | Yes | Yes |
 | EurekAgent | No | Yes | Partial | Partial | No |
-| **HUMMBL v0.1 (this spec)** | **Yes** | **Yes** | **Yes** | **Yes** | **Yes** |
 
 **Classification**: [INF] — the matrix synthesizes public-source facts into a comparison structure. Individual cells are [PRIM]; the matrix layout is a derived synthesis.
 
-**Key finding**: No public system covers all five integrity checks. IC-1 (seed variance) is the most universally missing — only pi-autoresearch computes a noise floor, and even there it's advisory. IC-2 (evaluator integrity) is strongest in EurekAgent (Docker isolation + OS hooks). HUMMBL v0.1 would be the first to enforce all five as hard gates.
+**Key finding**: No public system covers all five integrity checks. IC-1 (seed variance) is the most universally missing — only pi-autoresearch computes a noise floor, and even there it's advisory. IC-2 (evaluator integrity) is strongest in EurekAgent (Docker isolation + OS hooks).
+
+## HUMMBL v0.1 target state (not a public system)
+
+This spec is a candidate, not a deployed system. The target state is shown separately to avoid blurring the public-system crosswalk:
+
+| IC | Target | Note |
+|----|--------|------|
+| IC-1 | Yes | Seed variance gate with signed delta |
+| IC-2 | Yes | Evaluator hash comparison |
+| IC-3 | Yes | Holdout path isolation |
+| IC-4 | Yes | Explicit decision rule + reseed |
+| IC-5 | Yes | Error code required for failures |
+
+If adopted, HUMMBL would be the first system to enforce all five as hard gates.

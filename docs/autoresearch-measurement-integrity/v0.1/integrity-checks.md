@@ -34,14 +34,18 @@ The five checks below map to documented failure modes in the autoresearch litera
 **Check**:
 - `n_seeds >= k` (default k=3) for any keep verdict
 - `noise_floor` = measured baseline seed variance (std dev across ≥3 baseline seeds)
-- **Reject keep if `delta < noise_floor`** (improvement is within noise)
+- `delta` = candidate_mean − baseline_mean (signed)
+- `metric_direction` = "minimize" or "maximize"
+- **Reject keep if improvement is within noise floor:**
+  - For `minimize`: reject if `delta >= -noise_floor` (improvement is `delta < 0`; must exceed noise)
+  - For `maximize`: reject if `delta <= noise_floor` (improvement is `delta > 0`; must exceed noise)
 - `per_seed_metric[]` must have exactly `n_seeds` entries
 
-**Inputs**: `n_seeds`, `per_seed_metric[]`, `noise_floor`, `delta` (candidate mean − baseline mean)
+**Inputs**: `n_seeds`, `per_seed_metric[]`, `noise_floor`, `metric_direction`, `delta` (candidate mean − baseline mean)
 
-**Pass condition**: `n_seeds >= k` AND `delta > noise_floor` AND `len(per_seed_metric) == n_seeds`
+**Pass condition**: `n_seeds >= k` AND `len(per_seed_metric) == n_seeds` AND (for minimize: `delta < -noise_floor`; for maximize: `delta > noise_floor`)
 
-**Fail condition**: `n_seeds < k` OR `delta <= noise_floor` OR `len(per_seed_metric) != n_seeds`
+**Fail condition**: `n_seeds < k` OR `len(per_seed_metric) != n_seeds` OR (for minimize: `delta >= -noise_floor`; for maximize: `delta <= noise_floor`)
 
 ---
 
