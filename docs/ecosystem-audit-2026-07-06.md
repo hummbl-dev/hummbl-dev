@@ -22,7 +22,7 @@ Most items from #103 have already been resolved. Of 20 repos flagged in the orig
 | founder-mode-mdo-tuple vs founder-mode | `founder-mode-mdo-tuple` does not exist. `founder-mode` exists (active, PRIVATE, updated 2026-07-05). | **Resolved.** No action. |
 | Whether vs whether-book | `Whether` does not exist. `whether-book` exists (active, PUBLIC, updated 2026-06-25). | **Resolved.** No action. |
 
-**Verdict**: All duplicate pairs have been consolidated. The `-new`, `-continue`, `-mdo-tuple`, and bare `Whether` repos were deleted or merged into their canonical counterparts.
+**Verdict**: All duplicate pairs show only one repo present in the live snapshot. The `-new`, `-continue`, `-mdo-tuple`, and bare `Whether` repos are not present in the current org state; whether they were deleted, never created, or renamed cannot be determined from a snapshot alone.
 
 ---
 
@@ -30,10 +30,10 @@ Most items from #103 have already been resolved. Of 20 repos flagged in the orig
 
 | Repo | Current state | Recommendation |
 |------|---------------|----------------|
-| hummbl-prompt-engineering | Does not exist. | **Resolved.** Already deleted. |
-| hummbl-engineering | Does not exist. | **Resolved.** Already deleted. |
+| hummbl-prompt-engineering | Does not exist. | **Resolved.** Not present in live snapshot. |
+| hummbl-engineering | Does not exist. | **Resolved.** Not present in live snapshot. |
 
-**Verdict**: Both empty repos have been deleted.
+**Verdict**: Both empty repos are not present in the live snapshot. Whether they were deleted or never created cannot be determined from a snapshot alone.
 
 ---
 
@@ -44,9 +44,9 @@ Most items from #103 have already been resolved. Of 20 repos flagged in the orig
 | hummbl-fractional-bench | Does not exist. `fractional-bench` exists (active, PRIVATE, updated 2026-06-25, has description). | **Resolved (renamed).** `fractional-bench` is the canonical name. Active — keep. |
 | hummbl-iac | Exists (active, PRIVATE, updated 2026-06-25, has description: "Infrastructure-as-Code for the HUMMBL dev fleet"). | **Not stale.** Active with description. Keep. |
 | hummbl-kernel-forge | Does not exist. `hummbl-kernel-factory` exists (active, PRIVATE, updated 2026-06-25, has description: "Meta-kernel factory"). | **Resolved (renamed).** `hummbl-kernel-factory` is the canonical name. Active — keep. |
-| hummbl-rubric-templates | Does not exist. | **Resolved.** Already deleted. |
+| hummbl-rubric-templates | Does not exist. | **Resolved.** Not present in live snapshot. |
 
-**Verdict**: All stale repos either deleted or renamed to their canonical names. No stale repos remain.
+**Verdict**: All stale repos are either not present in the live snapshot or exist under a different name. No stale repos remain under the flagged names.
 
 ---
 
@@ -54,13 +54,13 @@ Most items from #103 have already been resolved. Of 20 repos flagged in the orig
 
 | Repo | Current state | Recommendation |
 |------|---------------|----------------|
-| governed-counterpart | Does not exist. | **Resolved.** Already deleted. |
-| ops-secrets | Does not exist. | **Resolved.** Already deleted. |
-| data | Does not exist. | **Resolved.** Already deleted. |
-| industry-watch | Does not exist. | **Resolved.** Already deleted. |
-| reubenbowlby-site | Does not exist. | **Resolved.** Already deleted. |
+| governed-counterpart | Does not exist. | **Resolved.** Not present in live snapshot. |
+| ops-secrets | Does not exist. | **Resolved.** Not present in live snapshot. |
+| data | Does not exist. | **Resolved.** Not present in live snapshot. |
+| industry-watch | Does not exist. | **Resolved.** Not present in live snapshot. |
+| reubenbowlby-site | Does not exist. | **Resolved.** Not present in live snapshot. |
 
-**Verdict**: All repos flagged for missing READMEs have been deleted. No action needed.
+**Verdict**: All repos flagged for missing READMEs are not present in the live snapshot. No action needed.
 
 ---
 
