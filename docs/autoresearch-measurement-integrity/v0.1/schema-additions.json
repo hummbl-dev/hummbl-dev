@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hummbl-dev/hummbl-dev/docs/autoresearch-measurement-integrity/v0.1/schema-additions.json",
+  "title": "Autoresearch Measurement Integrity v0.1 — Schema Additions",
+  "description": "Fields to add to Autoresearch Packet v0.1 (#108) experiments and receipts. These extend, not fork, the packet schema.",
+  "type": "object",
+  "required": [
+    "integrity_version",
+    "n_seeds",
+    "per_seed_metric",
+    "noise_floor",
+    "evaluator_hash",
+    "baseline_evaluator_hash",
+    "holdout_provenance",
+    "holdout_path",
+    "train_paths",
+    "decision_rule",
+    "reseeded_verification",
+    "status",
+    "error_code"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "integrity_version": { "const": "0.1" },
+    "n_seeds": { "type": "integer", "minimum": 1 },
+    "per_seed_metric": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "number" }
+    },
+    "noise_floor": { "type": "number", "minimum": 0 },
+    "delta": { "type": "number" },
+    "evaluator_hash": { "type": "string", "minLength": 8 },
+    "baseline_evaluator_hash": { "type": "string", "minLength": 8 },
+    "holdout_provenance": { "type": "string" },
+    "holdout_path": { "type": "string" },
+    "train_paths": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "decision_rule": { "type": "string", "minLength": 1 },
+    "reseeded_verification": {
+      "type": "object",
+      "required": ["ran"],
+      "additionalProperties": false,
+      "properties": {
+        "ran": { "type": "boolean" },
+        "delta": { "type": "number" }
+      }
+    },
+    "status": {
+      "enum": ["keep", "discard", "failed", "crash"]
+    },
+    "error_code": { "type": ["string", "null"] }
+  }
+}
