@@ -39,6 +39,9 @@
       ]
     },
     "node_status": { "enum": ["open", "merged", "closed", "active", "candidate", "superseded"] },
+    "evidence_grade": {
+      "enum": ["A", "B", "C", "D", "ungraded"]
+    },
     "edge_relation": {
       "enum": [
         "grounds",
@@ -71,7 +74,9 @@
         "locator": { "type": "string", "minLength": 1 },
         "fact_posture": { "$ref": "#/$defs/fact_posture" },
         "status": { "$ref": "#/$defs/node_status" },
-        "summary": { "type": "string", "minLength": 1 }
+        "summary": { "type": "string", "minLength": 1 },
+        "evidence_grade": { "$ref": "#/$defs/evidence_grade" },
+        "claim_scope": { "type": "string" }
       }
     },
     "edge": {

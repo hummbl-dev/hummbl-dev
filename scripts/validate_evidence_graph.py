@@ -107,6 +107,31 @@ def validate_edge_endpoints(graph: dict[str, Any]) -> None:
                 raise ValidationError(f"$.edges[{index}].{endpoint} references unknown node id: {node_id}")
 
 
+def validate_release_facing_claims(graph: dict[str, Any]) -> None:
+    """Release-facing nodes (paper_pr, research_pr with merged/active status)
+    must have at least one incoming grounds or supports edge."""
+    release_types = {"paper_pr", "research_pr"}
+    release_statuses = {"merged", "active"}
+    grounds_relations = {"grounds", "supports"}
+
+    release_nodes = {
+        node["id"]
+        for node in graph["nodes"]
+        if node["type"] in release_types and node["status"] in release_statuses
+    }
+    supported = {
+        edge["to"]
+        for edge in graph["edges"]
+        if edge["relation"] in grounds_relations
+    }
+    unsupported = sorted(release_nodes - supported)
+    if unsupported:
+        raise ValidationError(
+            f"release-facing node(s) without grounds/supports edge: "
+            f"{', '.join(unsupported)}"
+        )
+
+
 def main(argv: list[str]) -> int:
     if len(argv) != 2:
         print("Usage: python scripts/validate_evidence_graph.py <graph.json>", file=sys.stderr)
@@ -118,6 +143,7 @@ def main(argv: list[str]) -> int:
         graph = load_json(fixture_path)
         validate_schema(schema, graph, schema)
         validate_edge_endpoints(graph)
+        validate_release_facing_claims(graph)
     except ValidationError as exc:
         print(f"VALIDATION FAILED: {exc}", file=sys.stderr)
         return 1
