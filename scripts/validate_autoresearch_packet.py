@@ -132,11 +132,10 @@ def validate_measurement_command(packet: dict[str, Any]) -> None:
 
 
 def validate_budget_conditional(packet: dict[str, Any]) -> None:
-    """Enforce if/then conditional constraints on budget.type (schema allOf).
+    """Enforce if/then conditional constraints on budget.type.
 
-    - time_seconds: requires time_budget_seconds
-    - step_count: requires step_budget
-    - combined: requires both step_budget and time_budget_seconds
+    Mirrors the allOf/if/then rules in schema.json $defs.budget.
+    Keep in sync with schema.json when budget conditional rules change.
     """
     budget = packet.get("budget", {})
     btype = budget.get("type")
@@ -144,11 +143,11 @@ def validate_budget_conditional(packet: dict[str, Any]) -> None:
         raise ValidationError(
             "$.budget.type='time_seconds' requires time_budget_seconds"
         )
-    elif btype == "step_count" and "step_budget" not in budget:
+    if btype == "step_count" and "step_budget" not in budget:
         raise ValidationError(
             "$.budget.type='step_count' requires step_budget"
         )
-    elif btype == "combined":
+    if btype == "combined":
         missing = []
         if "step_budget" not in budget:
             missing.append("step_budget")
