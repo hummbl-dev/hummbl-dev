@@ -1,0 +1,74 @@
+{
+  "packet_version": "0.1",
+  "packet_id": "autoresearch-packet-v0.1-valid-minimal",
+  "title": "Minimal valid autoresearch packet",
+  "status": "candidate",
+  "objective": {
+    "metric_name": "val_bpb",
+    "metric_direction": "minimize",
+    "description": "Minimize validation bits-per-byte for a small language model trained on TinyStories.",
+    "program_md_path": "program.md"
+  },
+  "measurement": {
+    "command": "python train.py > run.log 2>&1",
+    "deterministic": true,
+    "evaluator_path": "prepare.py::evaluate_bpb",
+    "metric_extraction": "grep '^val_bpb:' run.log",
+    "seed_control": true
+  },
+  "scope": {
+    "editable": ["train.py"],
+    "readonly": ["prepare.py", "program.md"],
+    "immutable": ["pyproject.toml"]
+  },
+  "budget": {
+    "type": "combined",
+    "value": 1150,
+    "safety_margin": 2.0,
+    "step_budget": 1150,
+    "time_budget_seconds": 600
+  },
+  "ledgers": {
+    "experiments": {
+      "path": "results.tsv",
+      "format": "tsv",
+      "append_only": true,
+      "columns": ["commit", "val_bpb", "memory_gb", "status", "description"]
+    },
+    "claims": {
+      "path": "claims.jsonl",
+      "format": "jsonl",
+      "append_only": true
+    },
+    "receipts_dir": "receipts/",
+    "review_path": "review.md"
+  },
+  "safety": {
+    "autonomy_level": "bounded",
+    "auto_rollback": true,
+    "max_changed_lines": 300,
+    "no_network": true,
+    "no_new_dependencies": true,
+    "gpu_preflight": true,
+    "crash_recovery": true,
+    "human_review_required": false
+  },
+  "fact_posture": "candidate_claim",
+  "receipts": [
+    {
+      "id": "local-validator-pass",
+      "locator": "python scripts/validate_autoresearch_packet.py docs/autoresearch-packet/v0.1/fixtures/valid-minimal-packet/packet.json",
+      "fact_posture": "local_execution_fact",
+      "summary": "Validator passes on this fixture."
+    }
+  ],
+  "review": {
+    "path": "review.md",
+    "reviewer": "pending",
+    "status": "pending",
+    "notes": "Awaiting operator review before adoption."
+  },
+  "crosswalk_refs": [
+    "docs/autoresearch-packet/v0.1/crosswalks/public-autoresearch-repos.md"
+  ]
+}

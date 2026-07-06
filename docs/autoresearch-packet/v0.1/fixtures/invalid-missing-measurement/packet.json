@@ -1,0 +1,41 @@
+{
+  "packet_version": "0.1",
+  "packet_id": "autoresearch-packet-v0.1-invalid-missing-measurement",
+  "title": "Invalid packet missing measurement command",
+  "status": "candidate",
+  "objective": {
+    "metric_name": "val_bpb",
+    "metric_direction": "minimize",
+    "description": "Minimize validation bits-per-byte."
+  },
+  "measurement": {
+    "command": "",
+    "deterministic": true
+  },
+  "scope": {
+    "editable": ["train.py"],
+    "readonly": ["prepare.py"]
+  },
+  "budget": {
+    "type": "time_seconds",
+    "value": 300
+  },
+  "ledgers": {
+    "experiments": {
+      "path": "results.tsv",
+      "format": "tsv",
+      "append_only": true,
+      "columns": ["commit", "val_bpb", "status", "description"]
+    },
+    "claims": {
+      "path": "claims.jsonl",
+      "format": "jsonl",
+      "append_only": true
+    }
+  },
+  "safety": {
+    "autonomy_level": "bounded",
+    "auto_rollback": true
+  },
+  "fact_posture": "candidate_claim"
+}
