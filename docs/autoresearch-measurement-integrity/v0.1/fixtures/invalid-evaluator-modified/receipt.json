@@ -1,0 +1,20 @@
+{
+  "integrity_version": "0.1",
+  "n_seeds": 3,
+  "per_seed_metric": [0.9912, 0.9915, 0.9910],
+  "noise_floor": 0.0008,
+  "metric_direction": "minimize",
+  "delta": -0.0061,
+  "evaluator_hash": "f9e8d7c6b5a4f3e2",
+  "baseline_evaluator_hash": "a1b2c3d4e5f6a7b8",
+  "holdout_provenance": "TinyStories VAL_SHARD=6542, reserved from training data",
+  "holdout_path": "data/shard_6542.bin",
+  "train_paths": ["data/shard_0.bin", "data/shard_1.bin", "data/shard_2.bin"],
+  "decision_rule": "threshold_vs_noise_floor",
+  "reseeded_verification": {
+    "ran": true,
+    "delta": -0.0058
+  },
+  "status": "keep",
+  "error_code": null
+}
