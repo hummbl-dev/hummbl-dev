@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hummbl-dev/hummbl-dev/docs/evidence-graph/v0.1/schema.json",
+  "title": "Evidence Graph v0.1",
+  "type": "object",
+  "required": ["version", "graph_id", "title", "status", "nodes", "edges", "receipts"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 0.1 },
+    "graph_id": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "status": { "$ref": "#/$defs/graph_status" },
+    "nodes": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/node" } },
+    "edges": { "type": "array", "items": { "$ref": "#/$defs/edge" } },
+    "receipts": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/receipt" } }
+  },
+  "$defs": {
+    "graph_status": { "enum": ["candidate", "active", "deprecated"] },
+    "node_type": {
+      "enum": [
+        "bibliography_pr",
+        "source_packet_pr",
+        "paper_pr",
+        "research_pr",
+        "issue",
+        "receipt",
+        "meta_issue",
+        "implementation_issue"
+      ]
+    },
+    "fact_posture": {
+      "enum": [
+        "public_source_fact",
+        "local_execution_fact",
+        "user_reported_fact",
+        "candidate_claim",
+        "derived_synthesis",
+        "deprecated_or_superseded"
+      ]
+    },
+    "node_status": { "enum": ["open", "merged", "closed", "active", "candidate", "superseded"] },
+    "edge_relation": {
+      "enum": [
+        "grounds",
+        "supports",
+        "derives_from",
+        "records",
+        "links_to",
+        "implements",
+        "pairs_with",
+        "supersedes"
+      ]
+    },
+    "evidence_posture": {
+      "enum": [
+        "public_source_fact",
+        "local_execution_fact",
+        "user_reported_fact",
+        "candidate_claim",
+        "derived_synthesis"
+      ]
+    },
+    "node": {
+      "type": "object",
+      "required": ["id", "type", "repo", "locator", "fact_posture", "status", "summary"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "type": { "$ref": "#/$defs/node_type" },
+        "repo": { "type": "string", "minLength": 1 },
+        "locator": { "type": "string", "minLength": 1 },
+        "fact_posture": { "$ref": "#/$defs/fact_posture" },
+        "status": { "$ref": "#/$defs/node_status" },
+        "summary": { "type": "string", "minLength": 1 }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "required": ["from", "to", "relation", "evidence_posture"],
+      "additionalProperties": false,
+      "properties": {
+        "from": { "type": "string", "minLength": 1 },
+        "to": { "type": "string", "minLength": 1 },
+        "relation": { "$ref": "#/$defs/edge_relation" },
+        "evidence_posture": { "$ref": "#/$defs/evidence_posture" }
+      }
+    },
+    "receipt": {
+      "type": "object",
+      "required": ["id", "locator", "fact_posture", "summary"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "locator": { "type": "string", "minLength": 1 },
+        "fact_posture": { "$ref": "#/$defs/fact_posture" },
+        "summary": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}
