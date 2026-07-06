@@ -1,0 +1,37 @@
+{
+  "version": 0.1,
+  "graph_id": "evidence-graph-v0.1-2026-07-05-scientific-grounding-batch",
+  "title": "Scientific grounding cross-repo evidence batch",
+  "status": "candidate",
+  "nodes": [
+    { "id": "hummbl-bibliography#75", "type": "bibliography_pr", "repo": "hummbl-dev/hummbl-bibliography", "locator": "https://github.com/hummbl-dev/hummbl-bibliography/pull/75", "fact_posture": "public_source_fact", "status": "merged", "summary": "Merged bibliography validation substrate; merge commit efa2182aba72425889760a62115155bc6f7522d3." },
+    { "id": "research-source-packets#7", "type": "source_packet_pr", "repo": "hummbl-dev/research-source-packets", "locator": "https://github.com/hummbl-dev/research-source-packets/pull/7", "fact_posture": "public_source_fact", "status": "merged", "summary": "Merged source-packet example substrate; merge commit 0f615d3eb53244f593957a84b14d39e8f54ee8d7." },
+    { "id": "hummbl-papers#13", "type": "paper_pr", "repo": "hummbl-dev/hummbl-papers", "locator": "https://github.com/hummbl-dev/hummbl-papers/pull/13", "fact_posture": "public_source_fact", "status": "merged", "summary": "Merged coordination-bus paper seed; merge commit d25f5db4a152d295bd1ca55629dae31d1e710e89." },
+    { "id": "hummbl-research#42", "type": "research_pr", "repo": "hummbl-dev/hummbl-research", "locator": "https://github.com/hummbl-dev/hummbl-research/pull/42", "fact_posture": "public_source_fact", "status": "merged", "summary": "Merged research grounding and score-claim routing; merge commit 0317a412a8284cf23b91873177c7d3a27f7dcb06." },
+    { "id": "hummbl-research#44", "type": "research_pr", "repo": "hummbl-dev/hummbl-research", "locator": "https://github.com/hummbl-dev/hummbl-research/pull/44", "fact_posture": "public_source_fact", "status": "merged", "summary": "Merged model-placeholder debt cleanup; merge commit f3dd32036cff355b2a17eccbe97b45b5089119c7." },
+    { "id": "hummbl-papers#15", "type": "receipt", "repo": "hummbl-dev/hummbl-papers", "locator": "https://github.com/hummbl-dev/hummbl-papers/issues/15", "fact_posture": "public_source_fact", "status": "open", "summary": "Batch receipt for the scientific-grounding merge order and hold clearance." },
+    { "id": "hummbl-dev#104", "type": "meta_issue", "repo": "hummbl-dev/hummbl-dev", "locator": "https://github.com/hummbl-dev/hummbl-dev/issues/104", "fact_posture": "public_source_fact", "status": "open", "summary": "Canonical meta-thread for the first visible HUMMBL evidence-graph example." },
+    { "id": "hummbl-dev#105", "type": "implementation_issue", "repo": "hummbl-dev/hummbl-dev", "locator": "https://github.com/hummbl-dev/hummbl-dev/issues/105", "fact_posture": "public_source_fact", "status": "open", "summary": "Implementation issue for the minimal Evidence Graph v0.1 schema and validator." },
+    { "id": "hummbl-papers#14", "type": "issue", "repo": "hummbl-dev/hummbl-papers", "locator": "https://github.com/hummbl-dev/hummbl-papers/issues/14", "fact_posture": "public_source_fact", "status": "open", "summary": "Paired next-lane synthesis artifact candidate." },
+    { "id": "research-source-packets#8", "type": "issue", "repo": "hummbl-dev/research-source-packets", "locator": "https://github.com/hummbl-dev/research-source-packets/issues/8", "fact_posture": "public_source_fact", "status": "open", "summary": "Paired next-lane evidence substrate candidate." }
+  ],
+  "edges": [
+    { "from": "hummbl-bibliography#75", "to": "research-source-packets#7", "relation": "grounds", "evidence_posture": "derived_synthesis" },
+    { "from": "research-source-packets#7", "to": "hummbl-papers#13", "relation": "grounds", "evidence_posture": "derived_synthesis" },
+    { "from": "hummbl-papers#13", "to": "hummbl-research#42", "relation": "supports", "evidence_posture": "derived_synthesis" },
+    { "from": "hummbl-research#42", "to": "hummbl-research#44", "relation": "supports", "evidence_posture": "derived_synthesis" },
+    { "from": "hummbl-research#44", "to": "hummbl-papers#15", "relation": "records", "evidence_posture": "public_source_fact" },
+    { "from": "hummbl-papers#15", "to": "hummbl-dev#104", "relation": "records", "evidence_posture": "public_source_fact" },
+    { "from": "hummbl-dev#104", "to": "hummbl-dev#105", "relation": "links_to", "evidence_posture": "public_source_fact" },
+    { "from": "hummbl-papers#14", "to": "research-source-packets#8", "relation": "pairs_with", "evidence_posture": "public_source_fact" },
+    { "from": "research-source-packets#8", "to": "hummbl-papers#14", "relation": "pairs_with", "evidence_posture": "public_source_fact" },
+    { "from": "hummbl-papers#14", "to": "hummbl-dev#104", "relation": "links_to", "evidence_posture": "derived_synthesis" },
+    { "from": "research-source-packets#8", "to": "hummbl-dev#104", "relation": "links_to", "evidence_posture": "derived_synthesis" }
+  ],
+  "receipts": [
+    { "id": "hummbl-papers#15-batch-receipt", "locator": "https://github.com/hummbl-dev/hummbl-papers/issues/15", "fact_posture": "public_source_fact", "summary": "Public receipt anchor for the completed cross-repo batch and paired next lane." },
+    { "id": "local-gh-verification", "locator": "gh pr view / gh issue view checks run before fixture creation", "fact_posture": "local_execution_fact", "summary": "Local GitHub CLI checks verified the public PR and issue states used in this fixture." },
+    { "id": "operator-handoff-scope", "locator": "agent-handoff:2026-07-05:hummbl-dev#105", "fact_posture": "user_reported_fact", "summary": "Operator handoff constrained v0.1 to the exact completed batch and paired lane." },
+    { "id": "graph-invariant", "locator": "https://github.com/hummbl-dev/hummbl-dev/issues/104", "fact_posture": "derived_synthesis", "summary": "The graph invariant is synthesized from the meta-thread, implementation issue, and batch receipt." }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 0.1,
+  "graph_id": "invalid-missing-fact-posture",
+  "title": "Invalid graph missing node fact posture",
+  "status": "candidate",
+  "nodes": [
+    {
+      "id": "hummbl-dev#105",
+      "type": "implementation_issue",
+      "repo": "hummbl-dev/hummbl-dev",
+      "locator": "https://github.com/hummbl-dev/hummbl-dev/issues/105",
+      "status": "open",
+      "summary": "This node intentionally omits fact_posture."
+    }
+  ],
+  "edges": [],
+  "receipts": [
+    {
+      "id": "invalid-fixture-receipt",
+      "locator": "docs/evidence-graph/v0.1/fixtures/invalid-missing-fact-posture.json",
+      "fact_posture": "local_execution_fact",
+      "summary": "Invalid fixture used to verify schema failure reporting."
+    }
+  ]
+}
