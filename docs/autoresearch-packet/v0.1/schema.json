@@ -108,7 +108,21 @@
         "safety_margin": { "type": "number", "minimum": 1 },
         "step_budget": { "type": "integer", "minimum": 1 },
         "time_budget_seconds": { "type": "integer", "minimum": 1 }
-      }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "type": { "const": "time_seconds" } } },
+          "then": { "required": ["time_budget_seconds"] }
+        },
+        {
+          "if": { "properties": { "type": { "const": "step_count" } } },
+          "then": { "required": ["step_budget"] }
+        },
+        {
+          "if": { "properties": { "type": { "const": "combined" } } },
+          "then": { "required": ["step_budget", "time_budget_seconds"] }
+        }
+      ]
     },
     "ledgers": {
       "type": "object",

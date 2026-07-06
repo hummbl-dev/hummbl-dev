@@ -61,7 +61,7 @@ This packet formalizes that common denominator so that:
 
 ## Files
 
-```
+```text
 docs/autoresearch-packet/v0.1/
 ├── README.md                          # this file
 ├── schema.json                        # candidate JSON schema

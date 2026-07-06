@@ -4,6 +4,8 @@
 **Date**: 2026-07-06
 **Purpose**: Bounded comparison of public autoresearch-style systems against the Autoresearch Packet v0.1 candidate schema.
 
+> **Note on star counts**: All star/fork counts are point-in-time snapshots as of 2026-07-06 and will drift. They are labeled with `~` to indicate approximation.
+
 ## Fact Posture Legend
 
 - **public-source fact**: Directly verifiable from GitHub repo, README, code, commits, or releases

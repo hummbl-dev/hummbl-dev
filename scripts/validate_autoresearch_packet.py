@@ -114,8 +114,9 @@ def validate_array(
     min_items = schema.get("minItems")
     if min_items is not None and len(value) < min_items:
         raise ValidationError(f"{path} must contain at least {min_items} item(s)")
-    item_schema = schema.get("items")
-    if item_schema:
+    # Validate items whenever the "items" key is present, even if schema is {}
+    if "items" in schema:
+        item_schema = schema["items"]
         for index, item in enumerate(value):
             validate_schema(item_schema, item, root, f"{path}[{index}]")
 
@@ -128,6 +129,36 @@ def validate_measurement_command(packet: dict[str, Any]) -> None:
             "$.measurement.command must be a non-empty string "
             "(the measurement entrypoint is required)"
         )
+
+
+def validate_budget_conditional(packet: dict[str, Any]) -> None:
+    """Enforce if/then conditional constraints on budget.type (schema allOf).
+
+    - time_seconds: requires time_budget_seconds
+    - step_count: requires step_budget
+    - combined: requires both step_budget and time_budget_seconds
+    """
+    budget = packet.get("budget", {})
+    btype = budget.get("type")
+    if btype == "time_seconds" and "time_budget_seconds" not in budget:
+        raise ValidationError(
+            "$.budget.type='time_seconds' requires time_budget_seconds"
+        )
+    elif btype == "step_count" and "step_budget" not in budget:
+        raise ValidationError(
+            "$.budget.type='step_count' requires step_budget"
+        )
+    elif btype == "combined":
+        missing = []
+        if "step_budget" not in budget:
+            missing.append("step_budget")
+        if "time_budget_seconds" not in budget:
+            missing.append("time_budget_seconds")
+        if missing:
+            raise ValidationError(
+                "$.budget.type='combined' requires "
+                f"{', '.join(missing)}"
+            )
 
 
 def main(argv: list[str]) -> int:
@@ -144,6 +175,7 @@ def main(argv: list[str]) -> int:
         packet = load_json(fixture_path)
         validate_schema(schema, packet, schema)
         validate_measurement_command(packet)
+        validate_budget_conditional(packet)
     except ValidationError as exc:
         print(f"VALIDATION FAILED: {exc}", file=sys.stderr)
         return 1
