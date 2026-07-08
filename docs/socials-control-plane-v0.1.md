@@ -117,6 +117,14 @@ Repo creation requires GitHub org permissions. The following repos need to be cr
 
 Once repos exist, the bootstrap files from this plan can be committed directly.
 
+## Status update (2026-07-08)
+
+Both repos created:
+- `hummbl-dev/hummbl-socials` — PUBLIC
+- `hummbl-dev/hummbl-socials-private` — PRIVATE
+
+Next: add README and bootstrap files to each repo per the plan above.
+
 ## Non-canon notice
 
 This plan is a **candidate**. It has not been adopted as HUMMBL canon. No social strategy, voice, or posting cadence is canonized until operator approval.
