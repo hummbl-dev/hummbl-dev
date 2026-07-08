@@ -10,13 +10,13 @@
 
 ## Repo state
 
-Three repos already exist and are bootstrapped with the structure from issue #52:
+Three repos exist and are bootstrapped with the structure from issue #52:
 
 | Repo | Visibility | Purpose | Status |
 |------|-----------|---------|--------|
 | `hummbl-dev/ccl-workbench-private` | PRIVATE | Raw source discovery, transcript processing, extracted claims, unreviewed claims, internal notes, unsafe claim quarantine | Bootstrapped |
-| `hummbl-dev/carnivore-claims-ledger` | PRIVATE | Public-bound clean repo: sanitized reviewed claims, public-safe evidence summaries, claim family pages, methodology | Bootstrapped |
-| `hummbl-dev/carnivore-claims` | PRIVATE | Appears to be a third repo (possibly a duplicate or earlier name) | Bootstrapped |
+| `hummbl-dev/carnivore-claims-ledger` | PRIVATE | Private workbench: detailed analysis, internal reviews, red-team artifacts, protocol drafts | Bootstrapped |
+| `hummbl-dev/carnivore-claims` | PUBLIC | Public-facing clean repo: sanitized reviewed claims, public-safe evidence summaries, claim family pages, methodology | Bootstrapped |
 
 All three repos contain: README, CANONICAL_QUESTION, GOVERNANCE, SAFETY, schema/, data/, claim_families/, contributors/, reviews/, docs/, scripts/, tests/.
 
@@ -44,19 +44,21 @@ All three repos contain: README, CANONICAL_QUESTION, GOVERNANCE, SAFETY, schema/
 - [ ] Begin manual seed ingestion: 10 contributors x 5 sources x 10 claims each
 - [ ] Clarify relationship between `carnivore-claims` and `carnivore-claims-ledger` (possible duplicate)
 
-## Possible duplicate
+## Repo distinction clarified
 
-Three repos exist where the issue specifies two. `carnivore-claims` may be an earlier name or duplicate of `carnivore-claims-ledger`. Operator should clarify whether to:
-1. Archive `carnivore-claims` and use `carnivore-claims-ledger` as the public-bound repo
-2. Merge `carnivore-claims` into `carnivore-claims-ledger`
-3. Keep all three with distinct purposes
+Operator clarified 2026-07-08: keep both with careful distinction.
+
+- `carnivore-claims` (PUBLIC) — public-facing clean repo for sanitized reviewed claims, public-safe evidence summaries, claim family pages, methodology
+- `carnivore-claims-ledger` (PRIVATE) — private workbench for detailed analysis, internal reviews, red-team artifacts, protocol drafts
+- `ccl-workbench-private` (PRIVATE) — raw source discovery, transcript processing, extracted claims, unreviewed claims, internal notes, unsafe claim quarantine
 
 ## Next steps
 
-1. Operator clarifies `carnivore-claims` vs `carnivore-claims-ledger`
-2. Populate P0 contributor stubs
-3. Add issue templates
-4. Begin seed ingestion
+1. Populate P0 contributor stubs
+2. Add issue templates
+3. Add initial docs: methodology, risk taxonomy, evidence grading, source quality, protocol admission, public language policy, glossary
+4. Add script stubs: validate_schema.py, export_public.py, dedupe_claims.py, check_receipts.py
+5. Begin seed ingestion: 10 contributors x 5 sources x 10 claims each
 
 ## Non-canon notice
 
