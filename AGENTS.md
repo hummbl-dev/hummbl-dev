@@ -44,6 +44,32 @@ Never, without explicit in-session confirmation:
 - Merge strategy: squash-merge to `main`; rebase locally before PR
 - CI must be green before merge; no direct pushes to `main`
 
+## Safe PR Creation Pattern
+
+When creating PRs, always verify the current branch matches the intended branch. The `gh pr create` command creates a PR from the **current working branch**, not the branch you specify in the command.
+
+**Correct pattern:**
+```bash
+git checkout docs/feature-branch
+gh pr create --title "docs: feature" --body-file pr_body.md
+```
+
+**Incorrect pattern:**
+```bash
+git checkout docs/feature-branch
+git checkout main  # Oops — wrong branch now
+gh pr create --title "docs: feature"  # Creates PR from main, not feature-branch
+```
+
+**Helper script:**
+```bash
+python scripts/safe_pr_create.py docs/feature-branch "docs: feature" --body-file pr_body.md
+```
+
+This helper verifies the current branch before creating the PR and exits with an error if branches don't match.
+
+Origin: AAR 2026-07-08 — PR #115 was created from wrong branch due to working tree drift.
+
 ## Multi-Agent Coordination
 
 Agents coordinate via the coordination bus for:
