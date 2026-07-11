@@ -39,8 +39,8 @@ List everything that must stay behaviorally identical between source and target.
 - [ ] Public API surface unchanged
 - [ ] CLI commands and flags unchanged
 - [ ] Output format (stdout/stderr/exit codes) unchanged
-- [ ] Error messages: identical or improved (no regression in clarity)
-- [ ] Performance: no regression beyond ___% on benchmark ___
+- [ ] Error messages: byte-for-byte identical, OR explicitly documented exceptions approved by a human (list each exception below)
+- [ ] Performance: no regression beyond `TBD%` on benchmark `TBD`
 - [ ] File formats: read/write compatibility maintained
 - [ ] Protocol compatibility (HTTP, WebSocket, etc.): unchanged
 - [ ] Other: ___
@@ -69,7 +69,7 @@ List the transformations agents may perform without additional review:
 
 ## 6. Disallowed transformations [REQUIRED]
 
-List transformations that require explicit human approval:
+List transformations that require explicit human approval. Any transformation not listed in §5 (allowed) is disallowed by default and must be added here with human approval before execution.
 
 - [ ] Changing function signatures (parameter order, arity)
 - [ ] Splitting or merging modules/files
@@ -77,7 +77,7 @@ List transformations that require explicit human approval:
 - [ ] Changing control flow (loops → iterators, callbacks → async)
 - [ ] Introducing new abstractions not present in source
 - [ ] Removing code the agent "believes is dead" without verification
-- [ ] Adding comments longer than 2 lines (flag for review — long comments often mask workarounds)
+- [ ] Adding comments that explain or justify a workaround (flag for review — workarounds indicate the migration is not mechanical)
 - [ ] Other: ___
 
 ## 7. Compatibility expectations [REQUIRED]
@@ -117,13 +117,17 @@ List decisions that must be made by a human, not an agent:
 
 ## 11. Test/evidence contract [REQUIRED]
 
+The primary test suite must be independent of source/target language to validate behavioral equivalence. Supplemental source-native or target-native tests may be added to cover language-specific behavior, but cannot replace the independent suite as the migration gate.
+
 | Field | Value |
 |---|---|
 | Test suite location | |
 | Test suite language (must be independent of source/target) | |
+| Supplemental source-native tests (if any) | |
+| Supplemental target-native tests (if any) | |
 | Test runner command | |
-| Expected pass rate before migration | |
-| Expected pass rate after migration | |
+| Exact test outcomes before migration (pass count / fail count / skip count) | |
+| Exact test outcomes after migration (must match before counts) | |
 | Platforms to validate | |
 | Coverage requirement | |
 | Fuzzing requirement (if any) | |
@@ -132,11 +136,11 @@ List decisions that must be made by a human, not an agent:
 
 Define when to abort the migration rather than continue:
 
-- [ ] Abort if test pass rate drops below ___% after ___ rounds
-- [ ] Abort if more than ___ regressions are introduced
-- [ ] Abort if migration exceeds ___ days of wall-clock time
-- [ ] Abort if cost exceeds $___
-- [ ] Abort if a security vulnerability is introduced that cannot be fixed within ___ hours
+- [ ] Abort if test pass rate drops below `TBD%` after `TBD` rounds
+- [ ] Abort if more than `TBD` regressions are introduced
+- [ ] Abort if migration exceeds `TBD` days of wall-clock time
+- [ ] Abort if cost exceeds `$TBD`
+- [ ] Abort if a security vulnerability is introduced that cannot be fixed within `TBD` hours
 - [ ] Other: ___
 
 Rollback procedure:
