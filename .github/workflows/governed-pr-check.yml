@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   governed-pr-check:
-    # Pinned to hummbl-dev/.github main after the reusable tool-checkout fix.
-    uses: hummbl-dev/.github/.github/workflows/governed-pr-check.yml@b250900b502fe32662ba9cdf3ef8c064ab0c4cbf
+    # Pinned to hummbl-dev/.github main after the self-hosted runner fix.
+    uses: hummbl-dev/.github/.github/workflows/governed-pr-check.yml@2d38e93
     with:
       fail-on-findings: false
