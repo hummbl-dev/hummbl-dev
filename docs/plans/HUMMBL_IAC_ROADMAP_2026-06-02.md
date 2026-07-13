@@ -261,7 +261,7 @@ A package is "shipped" when:
 - [ ] `ARCHITECTURE.md` explaining design decisions and dependency boundaries
 - [ ] If MCP server: JSON-RPC schema + `hummbl-<name>-mcp` CLI entry point
 - [ ] If CLI: `hummbl-<name>` entry point with `--help`
-- [ ] No hardcoded operator paths (`C:/Users/Owner`, `/Users/others`, `anvil.tail0ff7b3.ts.net`)
+- [ ] No hardcoded operator paths (`C:/Users/Owner`, `/Users/others`, internal hostnames)
 - [ ] All secrets via env vars with documented defaults
 - [ ] Bus receipt posted: `PROPOSAL` → `ADR` → `ship` with Conventional Commits
 - [ ] Version tagged: `v0.1.0` with release notes
