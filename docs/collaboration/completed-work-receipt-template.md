@@ -1,5 +1,7 @@
 # Completed Work Receipt Template
 
+> **DEPRECATED 2026-07-18.** Canonical copy moved to `hummbl-dev/jenna-collaboration-routing` (private, `bridges/completed-work-receipt-template.md`). This file is a stale snapshot kept for historical reference only.
+
 Use this template to turn bounded collaboration work into a private receipt and, when appropriate, a public-safe summary.
 
 ## Private Receipt

@@ -1,5 +1,7 @@
 # Jenna-mode Routing
 
+> **DEPRECATED 2026-07-18.** Canonical routing note moved to `hummbl-dev/jenna-collaboration-routing` (private, `bridges/jenna-mode-routing.md`). This file is a stale snapshot — `jenna-mode/jenna-mode` access is now VERIFIED; do not apply the "pending verification" state from this file.
+
 Status: public-safe access-verification and routing note  
 Source issue: #77
 

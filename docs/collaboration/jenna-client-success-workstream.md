@@ -1,5 +1,7 @@
 # Jenna Client Success & Documentation Workstream
 
+> **DEPRECATED 2026-07-18.** Canonical copy moved to `hummbl-dev/jenna-collaboration-routing` (private, `bridges/jenna-client-success-workstream.md`). This file is a stale snapshot kept for historical reference only.
+
 Status: public-safe work packet  
 Source issue: #75
 
