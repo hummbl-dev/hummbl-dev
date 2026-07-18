@@ -22,6 +22,7 @@ The bias is explicit:
 - **What governed agentic work means** — every action has identity, authority, receipts, rollback, and audit. Governance is a runtime property, not a policy PDF.
 - **Which repos are canonical** — [`hummbl-governance`](https://github.com/hummbl-dev/hummbl-governance) and [`base120`](https://github.com/hummbl-dev/base120) are canonical. Everything else is `active`, `v0.1-packet`, `seed`, or `hold` until explicitly promoted.
 - **Where new contributors should begin** — [`START_HERE.md`](START_HERE.md) routes you by contributor type. Pick a repo matching your interest, check its maturity in [`docs/repo-map.md`](docs/repo-map.md), open an issue first.
+- **Sponsorship readiness** — [`SPONSORSHIP.md`](SPONSORSHIP.md) is the canonical draft policy. Sponsorship is not active, and it cannot buy support, priority, findings, or roadmap control.
 - **What not to touch yet** — `homebrew-hummbl` and `mintlify-docs` have open decision issues. Any repo marked `hold` is frozen. `seed` / `v0.1-packet` repos accept docs/schema/fixture contributions only — no runtime changes.
 
 ## Public positioning
