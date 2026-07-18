@@ -34,9 +34,9 @@ evidence without exposing private user data.
 
 - Active sponsor count band:
 - MRR band:
-- Completed sponsorships attributed by source:
+- Completed sponsorships attributed by source, using fixed bands or suppression per source cell:
 - Suppression/differencing review:
-- Optional paid-sponsorship acknowledgements and permission records:
+- Optional paid-sponsorship acknowledgements and non-identifying permission references:
 
 Use only the fixed bands and suppression rules in
 [`SPONSORSHIP.md`](../SPONSORSHIP.md). Never publish exact low-volume counts,

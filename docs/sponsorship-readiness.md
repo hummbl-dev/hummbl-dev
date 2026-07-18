@@ -58,10 +58,10 @@ inactive.
 
 ## Experiment clock and scorecard
 
-`T0` is the UTC timestamp when the public Sponsors profile and logged-out
-checkout first pass smoke testing. Platform review time before `T0` does not
-consume experiment days. Any later platform outage longer than 24 hours is
-recorded and pauses sponsor-conversion measurement for that interval.
+`T0` is the UTC timestamp immediately after the public Sponsors profile and
+logged-out checkout smoke tests both pass. Platform review time before `T0`
+does not consume experiment days. Any later platform outage longer than 24
+hours is recorded and pauses sponsor-conversion measurement for that interval.
 
 Adoption minimums:
 

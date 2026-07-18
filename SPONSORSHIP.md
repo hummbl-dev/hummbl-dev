@@ -49,7 +49,7 @@ These candidates are not live offers:
 | $75 monthly   | Optional name or logo in a quarterly public sponsor roll                     | No analysis, meeting, or roadmap input            |
 | $250 monthly  | Optional logo in quarterly public stewardship receipts                       | No briefing, SLA, agenda control, or priority Q&A |
 | $25 one-time  | Optional acknowledgement for one month                                       | No selected deliverable                           |
-| $100 one-time | Optional acknowledgement in the next public receipt                          | Unrestricted support; no selected milestone       |
+| $100 one-time | Optional acknowledgement in the next public receipt                          | Unrestricted sponsorship; no selected milestone   |
 
 Support and consulting remain separate commercial services. No sponsorship tier
 grants private-repository access.
@@ -79,12 +79,14 @@ private. No sponsor contact database is created for v0.1.
 
 ## Legal and marks
 
-Sponsorships are generally not tax-deductible unless the actual recipient
-specifically confirms otherwise. Public name or logo placement is labeled paid
-sponsorship, not endorsement. A sponsor grants only limited, revocable
-permission to display sponsor-supplied marks and may request removal from future
-acknowledgements. GitHub and its payment provider govern payment processing,
-cancellation, refunds, and transactions under their applicable terms.
+Sponsorship tax-deductibility depends on the sponsor's jurisdiction, the
+recipient's entity status, and any benefits received; sponsors should consult
+their own tax adviser rather than relying on recipient confirmation. Public
+name or logo placement is labeled paid sponsorship, not endorsement. A sponsor
+grants only limited, revocable permission to display sponsor-supplied marks
+and may request removal from future acknowledgements. GitHub and its payment
+provider govern payment processing, cancellation, refunds, and transactions
+under their applicable terms.
 
 Maintenance receipts report aggregate activity categories. They do not claim
 that a sponsor's payment funded a particular output.
