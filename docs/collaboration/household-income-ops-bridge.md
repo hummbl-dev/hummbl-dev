@@ -1,5 +1,7 @@
 # Household Income Ops Bridge
 
+> **DEPRECATED 2026-07-18.** Canonical copy moved to `hummbl-dev/jenna-collaboration-routing` (private, `bridges/household-income-ops-bridge.md`). This file is a stale snapshot kept for historical reference only.
+
 Status: public-safe bridge note  
 Source issue: #78
 

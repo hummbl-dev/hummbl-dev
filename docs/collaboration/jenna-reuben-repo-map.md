@@ -1,5 +1,7 @@
 # Jenna + Reuben Collaboration Repo Map
 
+> **DEPRECATED 2026-07-18.** Canonical routing map moved to `hummbl-dev/jenna-collaboration-routing` (private). This file is a stale snapshot — do not update, do not route from here. Kept for historical reference only.
+
 Status: public-safe coordination draft  
 Source issue: #74
 
