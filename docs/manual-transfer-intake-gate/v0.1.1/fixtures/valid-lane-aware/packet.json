@@ -1,0 +1,19 @@
+{
+  "protocol_version": "0.1.1-alpha",
+  "packet_id": "mtig-2026-07-19-002",
+  "source": {
+    "origin": "Claude Code review",
+    "agent_or_human": "Claude",
+    "session_ref": "claude-sess-def456"
+  },
+  "subject_key": "hummbl-dev/hummbl-dev/issue-161/review",
+  "content_types": ["review", "finding"],
+  "evidentiary_posture": "observed",
+  "maturity": "active",
+  "currentness": { "status": "current" },
+  "authority": { "scope": "advisory" },
+  "requested_action": { "action_type": "review" },
+  "preservation": { "destination": "issue", "locator": "https://github.com/hummbl-dev/hummbl-dev/issues/161" },
+  "uncertainty": "Review covers validator logic only; field trial reproduction not attempted.",
+  "verification": { "status": "verified", "method": "local execution" }
+}

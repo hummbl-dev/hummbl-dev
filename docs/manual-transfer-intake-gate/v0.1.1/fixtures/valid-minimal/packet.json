@@ -1,0 +1,18 @@
+{
+  "protocol_version": "0.1.1-alpha",
+  "packet_id": "mtig-2026-07-19-001",
+  "source": {
+    "origin": "ChatGPT session",
+    "agent_or_human": "ChatGPT",
+    "session_ref": "sess-abc123"
+  },
+  "subject_key": "hummbl-dev/hummbl-dev/issue-161/implementation",
+  "content_types": ["decision", "procedure"],
+  "evidentiary_posture": "source-reported",
+  "maturity": "candidate",
+  "currentness": { "status": "current" },
+  "authority": { "scope": "advisory" },
+  "requested_action": { "action_type": "preserve" },
+  "preservation": { "destination": "receipt" },
+  "uncertainty": "Package not yet committed to a repository; provenance from ChatGPT session only."
+}

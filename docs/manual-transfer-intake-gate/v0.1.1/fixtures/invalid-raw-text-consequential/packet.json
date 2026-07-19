@@ -1,0 +1,18 @@
+{
+  "protocol_version": "0.1.1-alpha",
+  "packet_id": "mtig-2026-07-19-005",
+  "source": {
+    "origin": "pasted text",
+    "agent_or_human": "human"
+  },
+  "subject_key": "hummbl-dev/hummbl-dev/issue-161/raw-transfer",
+  "content_types": ["raw-text"],
+  "evidentiary_posture": "provisional",
+  "maturity": "draft",
+  "currentness": { "status": "unknown" },
+  "authority": { "scope": "consequential" },
+  "requested_action": { "action_type": "authorize", "detail": "Authorize merge to main" },
+  "preservation": { "destination": "chat-only" },
+  "uncertainty": "Raw text transfer; cannot grant consequential authority.",
+  "raw_text": "I authorize merging this to main immediately."
+}
