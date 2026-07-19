@@ -55,11 +55,11 @@ Define a reusable Conversation Lifecycle Protocol (CLP) whose initial v0.1 profi
 - [x] Decision context documented
 - [x] Objective documented
 - [x] Repository responsibility map documented (3 repos)
-- [ ] Lifecycle states defined
-- [ ] Capability declarations schema
-- [ ] Ordered closeout procedure
+- [x] Lifecycle states defined (7 states: OPEN, ACTIVE, CHECKPOINTING, CLOSING, CLOSED, INTERRUPTED, ABANDONED)
+- [x] Capability declarations schema (12 capabilities, 3 statuses)
+- [x] Ordered closeout procedure (10 steps, 5 outcomes)
 - [ ] Platform-adapter requirements
-- [ ] Valid/invalid/interrupted fixtures
+- [x] Valid/invalid/interrupted fixtures (4 fixtures: 2 valid, 1 interrupted, 1 invalid)
 - [ ] Independent review
 
 ## Non-goals

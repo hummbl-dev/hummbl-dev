@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hummbl-dev/hummbl-dev/docs/conversation-lifecycle-protocol/v0.1/schema.json",
+  "title": "Conversation Lifecycle Protocol v0.1",
+  "type": "object",
+  "required": ["protocol_version", "session_id", "profile", "lifecycle_state", "capabilities", "steps", "disposition"],
+  "additionalProperties": false,
+  "properties": {
+    "protocol_version": { "const": "0.1" },
+    "session_id": { "type": "string", "minLength": 1 },
+    "profile": { "$ref": "#/$defs/profile" },
+    "lifecycle_state": { "$ref": "#/$defs/lifecycle_state" },
+    "capabilities": { "$ref": "#/$defs/capability_set" },
+    "steps": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/step" } },
+    "disposition": { "$ref": "#/$defs/disposition" },
+    "handoff": { "$ref": "#/$defs/handoff" }
+  },
+  "$defs": {
+    "profile": {
+      "enum": ["end-chat", "end-work-session", "session-checkpoint"]
+    },
+    "lifecycle_state": {
+      "enum": ["OPEN", "ACTIVE", "CHECKPOINTING", "CLOSING", "CLOSED", "INTERRUPTED", "ABANDONED"]
+    },
+    "capability": {
+      "enum": [
+        "chat_context_read",
+        "connected_source_read",
+        "connected_source_write",
+        "local_filesystem_read",
+        "local_filesystem_write",
+        "shell_execution",
+        "git_state_read",
+        "coordination_bus_write",
+        "durable_memory_write",
+        "artifact_creation",
+        "artifact_verification",
+        "automation_creation"
+      ]
+    },
+    "capability_status": {
+      "enum": ["available", "unavailable", "declined"]
+    },
+    "capability_declaration": {
+      "type": "object",
+      "required": ["capability", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "capability": { "$ref": "#/$defs/capability" },
+        "status": { "$ref": "#/$defs/capability_status" }
+      }
+    },
+    "capability_set": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/capability_declaration" }
+    },
+    "step_outcome": {
+      "enum": ["PASS", "FAIL", "NOT_APPLICABLE", "UNAVAILABLE", "DECLINED"]
+    },
+    "step": {
+      "type": "object",
+      "required": ["order", "name", "outcome"],
+      "additionalProperties": false,
+      "properties": {
+        "order": { "type": "integer", "minimum": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "outcome": { "$ref": "#/$defs/step_outcome" },
+        "notes": { "type": "string" }
+      }
+    },
+    "disposition": {
+      "enum": ["READY_TO_RESUME", "READY_WITH_GAPS", "NOT_READY", "CHECKPOINT_ONLY"]
+    },
+    "handoff": {
+      "type": "object",
+      "required": ["next_action"],
+      "additionalProperties": false,
+      "properties": {
+        "next_action": { "type": "string", "minLength": 1 },
+        "owner": { "type": "string" },
+        "blockers": { "type": "array", "items": { "type": "string" } },
+        "expiry": { "type": "string" }
+      }
+    }
+  }
+}

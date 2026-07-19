@@ -1,0 +1,39 @@
+{
+  "protocol_version": "0.1",
+  "session_id": "clp-2026-07-19-strategy-chat-001",
+  "profile": "end-chat",
+  "lifecycle_state": "CLOSED",
+  "capabilities": [
+    { "capability": "chat_context_read", "status": "available" },
+    { "capability": "connected_source_read", "status": "unavailable" },
+    { "capability": "connected_source_write", "status": "unavailable" },
+    { "capability": "local_filesystem_read", "status": "unavailable" },
+    { "capability": "local_filesystem_write", "status": "unavailable" },
+    { "capability": "shell_execution", "status": "unavailable" },
+    { "capability": "git_state_read", "status": "unavailable" },
+    { "capability": "coordination_bus_write", "status": "unavailable" },
+    { "capability": "durable_memory_write", "status": "unavailable" },
+    { "capability": "artifact_creation", "status": "available" },
+    { "capability": "artifact_verification", "status": "unavailable" },
+    { "capability": "automation_creation", "status": "unavailable" }
+  ],
+  "steps": [
+    { "order": 1, "name": "freeze_and_scope", "outcome": "PASS", "notes": "Entered CLOSING; declared end-chat profile." },
+    { "order": 2, "name": "outcome_and_decision_audit", "outcome": "PASS", "notes": "Two decisions preserved; no external writes." },
+    { "order": 3, "name": "artifact_reconciliation", "outcome": "NOT_APPLICABLE", "notes": "No external artifacts claimed." },
+    { "order": 4, "name": "unpreserved_value_audit", "outcome": "PASS", "notes": "Architectural boundary identified and preserved in handoff." },
+    { "order": 5, "name": "preservation_routing", "outcome": "PASS", "notes": "In-chat handoff produced; no canonical home existed." },
+    { "order": 6, "name": "privacy_and_disclosure_check", "outcome": "PASS", "notes": "No external writes; chat-only preservation." },
+    { "order": 7, "name": "open_work_and_dependency_map", "outcome": "PASS", "notes": "One open question recorded." },
+    { "order": 8, "name": "handoff_and_receipt", "outcome": "PASS", "notes": "Structured handoff packet emitted in chat." },
+    { "order": 9, "name": "readiness_disposition", "outcome": "PASS", "notes": "READY_WITH_GAPS: no durable memory write available." },
+    { "order": 10, "name": "final_response", "outcome": "PASS", "notes": "Concise closeout delivered." }
+  ],
+  "disposition": "READY_WITH_GAPS",
+  "handoff": {
+    "next_action": "Review the architectural boundary decision and confirm or reject.",
+    "owner": "operator",
+    "blockers": ["No durable memory write available in this adapter."],
+    "expiry": "2026-08-19"
+  }
+}

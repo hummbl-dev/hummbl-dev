@@ -1,0 +1,39 @@
+{
+  "protocol_version": "0.1",
+  "session_id": "clp-2026-07-19-interrupted-003",
+  "profile": "session-checkpoint",
+  "lifecycle_state": "INTERRUPTED",
+  "capabilities": [
+    { "capability": "chat_context_read", "status": "available" },
+    { "capability": "connected_source_read", "status": "available" },
+    { "capability": "connected_source_write", "status": "unavailable" },
+    { "capability": "local_filesystem_read", "status": "unavailable" },
+    { "capability": "local_filesystem_write", "status": "unavailable" },
+    { "capability": "shell_execution", "status": "unavailable" },
+    { "capability": "git_state_read", "status": "unavailable" },
+    { "capability": "coordination_bus_write", "status": "unavailable" },
+    { "capability": "durable_memory_write", "status": "unavailable" },
+    { "capability": "artifact_creation", "status": "available" },
+    { "capability": "artifact_verification", "status": "unavailable" },
+    { "capability": "automation_creation", "status": "unavailable" }
+  ],
+  "steps": [
+    { "order": 1, "name": "freeze_and_scope", "outcome": "PASS", "notes": "Entered CHECKPOINTING; context-window pressure detected." },
+    { "order": 2, "name": "outcome_and_decision_audit", "outcome": "PASS", "notes": "Partial: one decision in progress, one blocked." },
+    { "order": 3, "name": "artifact_reconciliation", "outcome": "UNAVAILABLE", "notes": "Cannot verify artifacts without git_state_read." },
+    { "order": 4, "name": "unpreserved_value_audit", "outcome": "PASS", "notes": "One unresolved question preserved in checkpoint." },
+    { "order": 5, "name": "preservation_routing", "outcome": "PASS", "notes": "In-chat checkpoint packet produced." },
+    { "order": 6, "name": "privacy_and_disclosure_check", "outcome": "PASS", "notes": "No external writes attempted." },
+    { "order": 7, "name": "open_work_and_dependency_map", "outcome": "PASS", "notes": "Next action and blocker recorded." },
+    { "order": 8, "name": "handoff_and_receipt", "outcome": "PASS", "notes": "Checkpoint packet emitted; not a full closeout." },
+    { "order": 9, "name": "readiness_disposition", "outcome": "PASS", "notes": "CHECKPOINT_ONLY: session not complete." },
+    { "order": 10, "name": "final_response", "outcome": "DECLINED", "notes": "No final closeout; checkpoint only." }
+  ],
+  "disposition": "CHECKPOINT_ONLY",
+  "handoff": {
+    "next_action": "Resume session and complete the in-progress decision.",
+    "owner": "operator",
+    "blockers": ["Context window limit reached; artifact verification unavailable."],
+    "expiry": "2026-07-26"
+  }
+}
