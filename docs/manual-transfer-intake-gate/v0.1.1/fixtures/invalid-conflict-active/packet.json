@@ -1,0 +1,17 @@
+{
+  "protocol_version": "0.1.1-alpha",
+  "packet_id": "mtig-2026-07-19-004",
+  "source": {
+    "origin": "ChatGPT session",
+    "agent_or_human": "ChatGPT"
+  },
+  "subject_key": "hummbl-dev/hummbl-dev/issue-161/implementation",
+  "content_types": ["decision"],
+  "evidentiary_posture": "source-reported",
+  "maturity": "candidate",
+  "currentness": { "status": "conflict", "conflict_detail": "Two packets claim current for the same coarse subject key." },
+  "authority": { "scope": "target-bound", "target": "hummbl-dev/hummbl-dev", "granted_by": "operator" },
+  "requested_action": { "action_type": "implement", "detail": "Deploy intake gate to production" },
+  "preservation": { "destination": "memory" },
+  "uncertainty": "Current conflict unresolved; active_packet_id must be null."
+}

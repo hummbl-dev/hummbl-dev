@@ -1,0 +1,17 @@
+{
+  "protocol_version": "0.1.1-alpha",
+  "packet_id": "mtig-2026-07-19-003",
+  "source": {
+    "origin": "human transfer",
+    "agent_or_human": "human"
+  },
+  "subject_key": "hummbl-dev/hummbl-dev/issue-161/authorization",
+  "content_types": ["decision"],
+  "evidentiary_posture": "provisional",
+  "maturity": "candidate",
+  "currentness": { "status": "current" },
+  "authority": { "scope": "none" },
+  "requested_action": { "action_type": "authorize", "detail": "Authorize production deployment" },
+  "preservation": { "destination": "issue" },
+  "uncertainty": "Authorization requested without target-bound authority."
+}

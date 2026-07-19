@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hummbl-dev/hummbl-dev/docs/manual-transfer-intake-gate/v0.1.1/schema.json",
+  "title": "Manual Transfer Intake Gate v0.1.1-alpha",
+  "type": "object",
+  "required": ["protocol_version", "packet_id", "source", "subject_key", "content_types", "evidentiary_posture", "maturity", "currentness", "authority", "requested_action", "preservation", "uncertainty"],
+  "additionalProperties": false,
+  "properties": {
+    "protocol_version": { "const": "0.1.1-alpha" },
+    "packet_id": { "type": "string", "minLength": 1 },
+    "source": { "$ref": "#/$defs/source" },
+    "subject_key": { "type": "string", "minLength": 1 },
+    "content_types": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "evidentiary_posture": { "$ref": "#/$defs/evidentiary_posture" },
+    "maturity": { "$ref": "#/$defs/maturity" },
+    "currentness": { "$ref": "#/$defs/currentness" },
+    "authority": { "$ref": "#/$defs/authority" },
+    "requested_action": { "$ref": "#/$defs/requested_action" },
+    "preservation": { "$ref": "#/$defs/preservation" },
+    "uncertainty": { "type": "string" },
+    "attachments": { "type": "array", "items": { "type": "string" } },
+    "verification": { "$ref": "#/$defs/verification" },
+    "promotion": { "$ref": "#/$defs/promotion" },
+    "supersession": { "$ref": "#/$defs/supersession" },
+    "raw_text": { "type": "string" }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["origin", "agent_or_human"],
+      "additionalProperties": false,
+      "properties": {
+        "origin": { "type": "string", "minLength": 1 },
+        "agent_or_human": { "type": "string", "minLength": 1 },
+        "session_ref": { "type": "string" }
+      }
+    },
+    "evidentiary_posture": {
+      "enum": ["observed", "source-reported", "inferred", "provisional", "verified", "refuted", "unresolved"]
+    },
+    "maturity": {
+      "enum": ["candidate", "draft", "active", "deprecated", "superseded"]
+    },
+    "currentness": {
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": { "enum": ["current", "stale", "conflict", "unknown"] },
+        "conflict_detail": { "type": "string" }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "required": ["scope"],
+      "additionalProperties": false,
+      "properties": {
+        "scope": { "enum": ["none", "advisory", "target-bound", "consequential"] },
+        "target": { "type": "string" },
+        "granted_by": { "type": "string" }
+      }
+    },
+    "requested_action": {
+      "type": "object",
+      "required": ["action_type"],
+      "additionalProperties": false,
+      "properties": {
+        "action_type": { "enum": ["preserve", "review", "implement", "authorize", "none"] },
+        "detail": { "type": "string" }
+      }
+    },
+    "preservation": {
+      "type": "object",
+      "required": ["destination"],
+      "additionalProperties": false,
+      "properties": {
+        "destination": { "enum": ["chat-only", "issue", "pr", "receipt", "memory", "handoff"] },
+        "locator": { "type": "string" }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": { "enum": ["verified", "unverified", "failed"] },
+        "method": { "type": "string" }
+      }
+    },
+    "promotion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": { "enum": ["alpha", "candidate", "promoted", "rejected"] },
+        "posture": { "type": "string" }
+      }
+    },
+    "supersession": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "supersedes": { "type": "string" },
+        "superseded_by": { "type": "string" }
+      }
+    }
+  }
+}

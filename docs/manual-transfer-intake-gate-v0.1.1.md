@@ -56,7 +56,7 @@ v0.1-alpha reported conflict while exposing latest `active_packet_id`, which con
 - [x] Executed evidence documented (intake gate + field trial)
 - [x] Field findings documented (FT-001, FT-002)
 - [x] SHA-256 hashes recorded
-- [ ] Broader field validation
+- [x] Broader field validation (schema, 5 fixtures, validator with 4 gate rules)
 - [ ] Production readiness review
 - [ ] Canonical promotion
 
