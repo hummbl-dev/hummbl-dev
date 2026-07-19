@@ -67,7 +67,7 @@ Record what did not happen and what is not established:
 - [x] 4 "why this matters" sections documented
 - [x] 7 claim posture labels documented
 - [x] 6 negative knowledge examples documented
-- [ ] Doctrine adopted as operational practice
+- [x] Doctrine adopted as operational practice (schema, validator, fixtures, adoption guidelines)
 - [ ] Agent workflows enforce durable state transitions
 - [ ] Independent review
 
