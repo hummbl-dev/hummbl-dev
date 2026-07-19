@@ -1,0 +1,16 @@
+{
+  "protocol_version": "0.1",
+  "session_id": "clp-2026-07-19-invalid-004",
+  "profile": "session-checkpoint",
+  "lifecycle_state": "CLOSED",
+  "capabilities": [
+    { "capability": "chat_context_read", "status": "available" }
+  ],
+  "steps": [
+    { "order": 1, "name": "freeze_and_scope", "outcome": "PASS" }
+  ],
+  "disposition": "READY_TO_RESUME",
+  "handoff": {
+    "next_action": "Resume."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "protocol_version": "0.1",
+  "session_id": "clp-2026-07-19-work-session-002",
+  "profile": "end-work-session",
+  "lifecycle_state": "CLOSED",
+  "capabilities": [
+    { "capability": "chat_context_read", "status": "available" },
+    { "capability": "connected_source_read", "status": "available" },
+    { "capability": "connected_source_write", "status": "available" },
+    { "capability": "local_filesystem_read", "status": "available" },
+    { "capability": "local_filesystem_write", "status": "available" },
+    { "capability": "shell_execution", "status": "available" },
+    { "capability": "git_state_read", "status": "available" },
+    { "capability": "coordination_bus_write", "status": "available" },
+    { "capability": "durable_memory_write", "status": "unavailable" },
+    { "capability": "artifact_creation", "status": "available" },
+    { "capability": "artifact_verification", "status": "available" },
+    { "capability": "automation_creation", "status": "unavailable" }
+  ],
+  "steps": [
+    { "order": 1, "name": "freeze_and_scope", "outcome": "PASS", "notes": "Entered CLOSING; declared end-work-session profile." },
+    { "order": 2, "name": "outcome_and_decision_audit", "outcome": "PASS", "notes": "Three decisions preserved; one PR merged." },
+    { "order": 3, "name": "artifact_reconciliation", "outcome": "PASS", "notes": "PR #230 confirmed merged; branch deleted confirmed." },
+    { "order": 4, "name": "unpreserved_value_audit", "outcome": "PASS", "notes": "One constraint preserved in issue comment." },
+    { "order": 5, "name": "preservation_routing", "outcome": "PASS", "notes": "Updated canonical issue; created handoff packet." },
+    { "order": 6, "name": "privacy_and_disclosure_check", "outcome": "PASS", "notes": "No private context exposed; references used." },
+    { "order": 7, "name": "open_work_and_dependency_map", "outcome": "PASS", "notes": "One open work item with owner and blocker." },
+    { "order": 8, "name": "handoff_and_receipt", "outcome": "PASS", "notes": "Handoff packet and execution receipt produced." },
+    { "order": 9, "name": "readiness_disposition", "outcome": "PASS", "notes": "READY_TO_RESUME: all checks passed." },
+    { "order": 10, "name": "final_response", "outcome": "PASS", "notes": "Concise closeout delivered." }
+  ],
+  "disposition": "READY_TO_RESUME",
+  "handoff": {
+    "next_action": "Review open work item #231 and assign owner.",
+    "owner": "operator",
+    "blockers": ["durable_memory_write unavailable — constraint preserved in issue only."],
+    "expiry": "2026-08-19"
+  }
+}
