@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   governed-pr-check:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     # Pinned to hummbl-dev/.github main after the self-hosted runner fix.
     uses: hummbl-dev/.github/.github/workflows/governed-pr-check.yml@2d38e93
     with:
